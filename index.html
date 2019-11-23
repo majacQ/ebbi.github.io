@@ -247,6 +247,9 @@
       nav details ul {
          padding: 0 0 0 1.5vw;
       }
+      #colour-scheme {
+         padding: 1vh 0;
+      }
 
       nav>details>a {
          display: block;
@@ -388,12 +391,11 @@
          padding: 0.25em 0;
       }
 
-      .slide pre code {
+      .slide pre code{
          font-size: calc(6px + 1.75vw);
       }
-
       .slide code {
-         color: red;
+         font-size: 1em;
       }
 
       .lab-sheet ul li,
@@ -556,10 +558,9 @@
                      The rain in Spain falls mainly on the plane. It&apos;s bear sick init!
                   </span>
 
-               </div>
 
                <nav>
-                  <ul>
+                  <ul id="colour-scheme">
                      <li><button id="day">&#127774; day</button></li>
                      <li><button id="night">&#9790; night</button></li>
                      <li><button id="high-contrast">High Contrast</button></li>
@@ -575,6 +576,7 @@
 
                </nav>
 
+               </div>
             </details>
 
             <details open class="nav-section-end">
@@ -609,7 +611,7 @@
                   <summary>Lecture Notes</summary>
                   <ul class="nav-section-end">
                      <li data-article="internet-slide">The Internet</li>
-                     <li data-article="http-slide">HTTP</li>
+                     <li data-article="client-server-slide">Client&dash;Server</li>
                   </ul>
                   <ul class="nav-section-end">
                      <li data-article="html-slide">HTML</li>
@@ -620,7 +622,7 @@
                      <li data-article="css-slide">CSS</li>
                   </ul>
                   <ul class="nav-section-end">
-                     <li data-article="mime-slide">MIME types</li>
+                     <li data-article="temporal-slide">Temporal Data</li>
                   </ul>
                   <ul class="nav-section-end">
                      <li data-article="js-slide">JavaScript</li>
@@ -1515,7 +1517,7 @@
             <summary>Lecture Notes</summary>
             <ul class="nav-section-end">
                <li data-article="internet-slide"> The Internet</li>
-               <li data-article="http-slide"> HTTP</li>
+               <li data-article="client-server-slide"> HTTP</li>
             </ul>
             <ul class="nav-section-end">
                <li data-article="html-slide"> HTML</li>
@@ -1526,7 +1528,7 @@
                <li data-article="css-slide"> CSS</li>
             </ul>
             <ul class="nav-section-end">
-               <li data-article="mime-slide">MIME types</li>
+               <li data-article="temporal-slide">MIME types</li>
             </ul>
             <ul class="nav-section-end">
                <li data-article="js-slide"> JavaScript</li>
@@ -1583,7 +1585,7 @@
 
                <li class="list-style-none left-margin-none">
                   <details>
-                     <summary>A tree of HTML objects</summary>
+                     <summary>A tree of HTML Objects</summary>
                      <p class="slide-small">Browser converts HTML to Document Object Model(DOM)</p>
                      <pre><code class="prettyprint">var myHeading = document.querySelector('h1');
 myHeading.onclick = function() {
@@ -1823,7 +1825,7 @@ punchline {
                <div class="slide-article">
                      <span data-class="image width-three-quarter" data-image="rendering html and css" data-local-src="assets/rendering.svg.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Frendering.svg?1549284189095"></span>
                   <details>
-                     <summary>Selected DOM tree nodes properties set with <em>CSS</em></summary>
+                     <summary>Selected DOM Object properties set with <em>CSS</em></summary>
                      <pre class="slide-small"><code lang="css" class="prettyprint">&lt;p&gt;
    Let's use: &lt;span&gt;CSS&lt;/span&gt;
 &lt;/p&gt;</code></pre>
@@ -2011,13 +2013,13 @@ a:focus {
          </div>
       </article>
 
-      <article id="mime-slide" class="slide panel">
-         <h2>MIME types</h2>
+      <article id="temporal-slide" class="slide panel">
+         <h2>Temporal data (Audio, Video)</h2>
          <div class="slide-article">
             <ul class="list-style-none">
                <li class="panel">
                   <details>
-                     <summary>MIME types</summary>
+                     <summary>Remember MIME types</summary>
                      <ul>
                         <li>
                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME (Multipart Mail Extensions) or Media Type</a> is a standard that indicates the nature and format of content.
@@ -2042,14 +2044,14 @@ a:focus {
 
                <li class="panel">
                   <details>
-                     <summary>It&apos;s all in <code>bits</code>! Text, Image, Audio, Video</summary>
+                     <summary>It&apos;s all in <code>bits</code>! Text, <code>Image, Audio, Video</code></summary>
                      <ul>
                         <li>
                            Text &dash; unicode
                         </li>
                         <li>
                            <details>
-                              <summary>Image &dash; lossy, lossless, Vector vs Raster</summary>                              
+                              <summary>Image &dash; Lossy vs Lossless, Vector vs Raster</summary>                              
                               <span data-class="image width-quarter" data-image="star png" data-local-src="assets/star.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Fstar.png?v=1574026048430"></span>
                               <span data-class="image width-quarter" data-image="star svg" data-local-src="assets/star.svg" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Fstar.svg?v=1574026054890"></span>  
                               
@@ -2103,61 +2105,76 @@ a:focus {
 
       <article id="js-slide" class="slide panel">
          <h2>JavaScript</h2>
-         <div class="slide-article">
-            <ul class="list-style-none">
-               <li class="panel">
-                  <details>
-                     <summary>Event Driven, Object Oriented, Prototype based Language</summary>
 
+            <details class="panel">
+               <summary>(HTML, CSS) &#8594; DOM &#8592; JavaScript</summary>
+ 
+                     <span data-class="image width-full" data-image="rendering html and css" data-local-src="assets/rendering_js.png" data-cdn-src="assets/rendering_js.png"></span>
+                  <details>
+                     <summary>Selected DOM Object properties set with <em>CSS</em></summary>
+                     <pre class="slide-small"><code class="prettyprint">&lt;p&gt;CSS is declarative&lt;/p&gt;</code></pre>
+                     <pre class="slide-small"><code class="prettyprint" lang="css">p { background-color: red; }</code></pre>
+                     <p class="panel"><span style="background-color: red;">CSS is declarative</span></p>
+                  </details>
+                  
+                  <details>
+                     <summary>A tree of DOM Objects used in JavaScript</summary>
+                     <pre><code class="prettyprint">const myParagraph = document.querySelector("p");
+myParagraph.style.color = "black";
+myParagraph.style.backgoroundColor = "red";
+</code></pre>
+                  </details>                  
+                  
+
+            </details>
+
+            <details class="panel">
+               <summary>Object Oriented, Event Driven, Prototype based Language</summary>
+
+               <ul>
+                  <li>
+                     <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics">Object</a>
+                  </li>
+                  <li>
+                     <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object Oriented</a>
+                  </li>
+                  <li>
+                     <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#A_simple_example">Events (unobtrusive JS)</a>
+                  </li>
+                  <li>
+                     <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset#Examples">JS and DOM <code class="prettyprint">data-*</code></a>
+                  </li>
+                  <li>
+                     <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Prototype based language</a>
+                  </li>
+               </ul>
+            </details>
+
+            <details class="panel">
+               <summary>What does it do?</summary>
+               <ul>
+                  <li>
+                     JS built into browsers, canva, libraries, frameworks
                      <ul>
                         <li>
-                           <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics">Object</a>
+                           <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Dynamically script web pages &mdash; document API</a>
                         </li>
                         <li>
-                           <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS">Object Oriented</a>
+                           HTML <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations#An_animated_solar_system">canvas</a>
                         </li>
                         <li>
-                           <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes">Prototype based language</a>
-                        </li>
-                        <li>
-                           <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#A_simple_example">Events (unobtrusive JS)</a>
-                        </li>
-                        <li>
-                           <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset#Examples">JS and DOM <code class="prettyprint">data-*</code></a>
+                           Libraries and Frameworks, <a target="_blank" href="http://expressjs.com/en/starter/hello-world.html">Express &amp; Node.js</a>
                         </li>
                      </ul>
-                  </details>
-               </li>
+                  </li>
+                  <li>
+                     <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#Common_browser_APIs">Browser &amp; Third party APIs</a>
+                  </li>
 
-               <li class="panel">
-                  <details>
-                     <summary>What does it do?</summary>
-                     <ul>
-                        <li>
-                           JS built into browsers, canva, libraries, frameworks
-                           <ul>
-                              <li>
-                                 <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Dynamically script web pages &mdash; document API</a>
-                              </li>
-                              <li>
-                                 HTML <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations#An_animated_solar_system">canvas</a>
-                              </li>
-                              <li>
-                                 Libraries and Frameworks, <a target="_blank" href="http://expressjs.com/en/starter/hello-world.html">Express &amp; Node.js</a>
-                              </li>
-                           </ul>
-                        </li>
-                        <li>
-                           <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#Common_browser_APIs">Browser &amp; Third party APIs</a>
-                        </li>
+               </ul>
 
-                     </ul>
+            </details>
 
-                  </details>
-               </li>
-
-            </ul>
-         </div>
       </article>
 
       <article id="internet-slide" class="slide panel">
@@ -2231,30 +2248,62 @@ a:focus {
          </ol>
       </article>
 
-      <article id="http-slide" class="slide panel">
-         <h2>HTTP and URI</h2>
-         <article class="slide-article panel">
+      <article id="client-server-slide" class="slide panel">
+         <h2>Client&mdash;Server</h2>
+         
+
+         <details>
+            <summary>Client&mdash;Server</summary>         
+            <article class="slide-article panel">
+                            
             <h3>Hyper Text Transport Protocol (HTTP)</h3>
-               <span data-class="image width-three-quarter" data-image="CORS rquest response" data-local-src="assets/CORS_principle.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2FCORS_principle.png?v=1572209987335"></span>
-         </article>
+            <span data-class="image width-three-quarter" data-image="CORS rquest response" data-local-src="assets/CORS_principle.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2FCORS_principle.png?v=1572209987335"></span>
+            <details>
+               <summary>MIME types</summary>
+               <ul>
+                  <li>
+                     <small><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME (Multipart Mail Extensions) or Media Type</a> is a standard that indicates the nature and format of content.</small>
+                     <details>
+                        <summary><small>Example MIME types</small></summary>
+                        <ul class="slide-small">
+                           <li><code>text/html, text/css, text/javascript</code></li>
+                           <li><code>image/jpeg, image/png, image/svg+xml</code></li>
+                           <li><code>audio/mpeg, audio/vorbis</code></li>
+                           <li><code>font/woff, font/ttf</code></li>
+                           <li><code>video/mp4, video/ogg</code></li>
+                           <li><code>multipart/form-data</code></li>
+                        </ul>
+                     </details>
+                  </li>
+                  <li>
+                     <small>Developer tools, Network<br /> <span class="slide-small">(note the MIME type of each request)</span></small>
+                  </li>
+               </ul>
+            </details>
 
-         <article class="slide-article panel">
-            <h3>HTTP &amp; Layers</h3>
-               <span data-class="image width-three-quarter" data-image="HTTP & layers" data-local-src="assets/HTTP & layers.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2FHTTP%20%26%20layers.png?1548629484459"></span>
-         </article>
-
-         <article class="slide-article panel">
-            <h3>Universal Resource Locator (URL)</h3>
+                </article>
+         </details>
+            
+         <details>
+            <summary>URI and URL</summary>
+            <article class="slide-article panel">
+               <small>
+                  Universal Resource Locator (URL) is a particular type of Universal Resource Identifier(URI) used to surf the web.
+               </small>
+               <h3>Universal Resource Locator (URL)</h3>
                <span data-class="image width-three-quarter" data-image="url protocol" data-local-src="assets/mdn-url-protocol@x2.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Fmdn-url-protocol%40x2.png?1548837727042"></span>
                <span data-class="image width-three-quarter" data-image="url domain" data-local-src="assets/mdn-url-domain@x2.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Fmdn-url-domain%40x2.png?1549052969112"></span>
                <span data-class="image width-three-quarter" data-image="url port" data-local-src="assets/mdn-url-port@x2.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Fmdn-url-port%40x2.png?1549053252859"></span>
                <span data-class="image width-three-quarter" data-image="url path" data-local-src="assets/mdn-url-path%40x2.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Fmdn-url-path%40x2.png?1549053939520"></span>
                <span data-class="image width-three-quarter" data-image="HTTP Request" data-local-src="assets/HTTP_Request.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2FHTTP_Request.png?1548838012913"></span>
                <span data-class="image width-three-quarter" data-image="HTTP Response" data-local-src="assets/HTTP_Response.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2FHTTP_Response.png?1548838088508"></span>
-         </article>
-
-         <article class="slide-article panel">
-            <h3>URIs &amp; URLs</h3>
+            </article>
+         </details>
+         
+         <details>
+            <summary>URL is powerful!</summary>         
+            <article class="slide-article panel">
+            <h3>URL to a part of a document</h3>
             <ul>
                <li>
                   Target of an HTTP request is called a <em>resource</em>
@@ -2279,12 +2328,21 @@ a:focus {
                   <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web">Identifying Resources on the Web (top of the document)</a>
                </li>
                <li>
-                  <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#Syntax_of_Uniform_Resource_Identifiers_(URIs)">Identifying Resources on the Web (particular section of the document)</a>
+                  <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#Fragment">Identifying Resources on the Web (particular section of the document)</a>
                </li>
             </ul>
 
          </article>
-
+         </details>
+         
+         <details>
+            <summary>&apos;The Web&apos; and &apos;The Internet&apos;</summary>         
+            <article class="slide-article panel">
+            <h3>Layered Architecture</h3>
+               <span data-class="image width-three-quarter" data-image="HTTP & layers" data-local-src="assets/HTTP & layers.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2FHTTP%20%26%20layers.png?1548629484459"></span>
+         </article>
+         </details>
+         
       </article>
 
       <article id="android-overview" class="lab-sheet panel">
