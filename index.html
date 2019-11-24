@@ -487,6 +487,25 @@
       .padding-left-1vw {
          padding-left: 1vw;
       }
+      
+      #btnToTop {
+         display: none;
+         position: fixed;
+         bottom: 1vh;
+         left: 1vw;
+         z-index: 99;
+         border: none;
+         background-color: #f6f8f8;
+         color: grey;
+         cursor: pointer;
+         padding: 0.5em;
+         border-radius: 5em;
+         width: auto;
+      }
+
+      #btnToTop:hover {
+         background-color: #e1c56e;
+      }      
 
    </style>
 
@@ -770,9 +789,11 @@
          </div>
 
       </div>
+   
    </main>
 
-
+   <button id="btnToTop" title="Go to top">Top</button>
+   
    <!-- HIDDEN section *********************************************** -->
 
    <!-- Hidden slides dynamically loaded by JS 
@@ -5451,6 +5472,29 @@ public static Intent newIntent(
    </div>
 
    <script>
+      window.addEventListener('DOMContentLoaded', scrollToTop(), false);
+      
+      function scrollToTop() {
+         const btnToTop = document.getElementById("btnToTop");
+         btnToTop.onclick = function() {
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+            });
+         }
+      }
+      
+      // When the user scrolls down 50px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+        const btnToTop = document.getElementById("btnToTop");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          btnToTop.style.display = "block";
+        } else {
+          btnToTop.style.display = "none";
+        }
+      }
       
       window.addEventListener('DOMContentLoaded', toggleNav(), false);
 
