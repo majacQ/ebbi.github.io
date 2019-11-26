@@ -41,8 +41,8 @@ public class ThreadDemo {
       try { threadWorld.join(); } catch(Exception e){}
       
       /* check if method is alive after join */
-      System.out.println(threadHello.getName() + threadHello.isAlive());
-      System.out.println(threadWorld.getName() +  threadWorld.isAlive());
+      System.out.println(threadHello.getName() + " " + threadHello.isAlive());
+      System.out.println(threadWorld.getName() + " " +  threadWorld.isAlive());
       
       System.out.println("Time for poetry");
       

@@ -29,7 +29,7 @@
          font-family: 'Source Code Pro', monospace;
       }
       pre code {
-         font-size: calc(6px + 1.25vw);         
+         font-size: calc(6px + 1.25vw);
       }
 
       header>ul,
@@ -4222,25 +4222,19 @@ Git checkout master and merge room branch
             <span data-class="image width-three-quarter" data-image="Android MVVM architecture" data-local-src="assets/android-final-architecture.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Fandroid-final-architecture.png?v=1573684803675"></span>
          </div>        
       </article>           
-
+      
       <article id="java-review" class="lab-sheet panel">
-         <h1>Java Review &nbsp;
-               <svg data-speak="true" data-event="click" data-speak-id="speech-java-review" class="icon speak-icon-java-review" x="0" y="0" viewbox="0 0 295.928 295.928">
-                  <use xlink:href="#speaker" href="#speaker" />
-               </svg>
-            <span hidden="hidden" id="speech-java-review">
-               The Introduction to Programming in Java is a good concise reference. See the lecture notes and complete the exercises. This is a minimum needed before attempting any framework.
-            </span>
-         </h1>
+         <h2>Java Review</h2>
+         
+         <details>
+            <summary>Start here!</summary>
+            <p>
+               The Introduction to Programming in Java is a good concise reference. See the lecture notes and complete the exercises. This is a minimum needed before attempting to code in any framework such as Android.
+            </p>              
+            <details open>
+               <summary>can you explain <code class="prettyprint">static</code> types and methods?</summary>
 
-
-         <p>
-            The Introduction to Programming in Java is a good concise reference. See the lecture notes and complete the exercises. This is a minimum needed before attempting to code in any framework such as Android.
-         </p>
-         <details open>
-            <summary>can you explain <code class="prettyprint">static</code> types and methods?</summary>
-
-            <pre class="slide-small">if (true) {
+               <pre class="slide-small">if (true) {
    continue to lab exercises 
 } else {
    Read <a target="_blank" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-092-introduction-to-programming-in-java-january-iap-2010/lecture-notes/">Introduction to Programming in Java &dash; from MIT</a>
@@ -4249,10 +4243,174 @@ Git checkout master and merge room branch
    Use the android &amp; stackoverflow search in the header
 }</pre>
 
+            </details>
          </details>
+         
+         <details>
+            <summary>Threads and Synchronisation</summary>
+            <ul>
+               <li>
+                  <code class="prettyprint">Thread</code> is a sequence of instructions that can be managed <em>independantly</em> by a scheduler
+               </li>
+               <li>
+                  <em>Independantly</em> schedulling threads allows for one thread, for example, downloading data while another thread runs the view of an app
+               </li>
+               <li>
+                  <em>Thread safe</em> classes and <em>synchronisation</em> becomes important
+               </li>
+               <li>
+                  <details>
+                     <summary><code class="prettyprint">Thread</code>s a Hello World example</summary>
+                   
+                     <details>
+                        <summary><code class="prettyprint">Runnable Interface</code></summary>
+                        <ul><li>Single method, <code class="prettyprint">public void</code> with no arguments<br />
+                           <code class="prettyprint">public void run()</code></li></ul>
+                     </details>
+                     <details>
+                        <summary>Hello (on a <code class="prettyprint">Thread</code>) World (on another <code class="prettyprint">Thread</code>)</summary>
+                        <pre><code class="prettyprint">public class ThreadDemo {
+   
+   public static void main(String args[]) {
+      
+      System.out.println("Hello (on a thread) World (on another thread)!");
+   
+      Runnable objHello = new Runnable() {
+         /* annoymous class implementing Runnable interface run() 
+            method passed to Runnable */
+         public void run() {
+            for(int i=1; i&lt;=5; i++) {
+               System.out.println("Hello ");
+               /* do some nice processing! */
+               try { Thread.sleep(1000); } catch(Exception e){}
+            }
+         }                  
+      };
+      
+      Runnable objWorld = new Runnable() {
+         /* annoymous class with run() method passed to Runnable */
+         public void run() {
+            for(int i=1; i&lt;=5; i++) {
+               System.out.println("World");
+               try { Thread.sleep(3000); } catch(Exception e){}
+            }
+         }                  
+      };
+      
+      Thread threadHello = new Thread(objHello);
+      Thread threadWorld = new Thread(objWorld);
+      
+      threadHello.start();
+      try { Thread.sleep(1000); } catch(Exception e){}
+      threadWorld.start();
+      
+//      System.out.println(threadHello.isAlive());
+//      try { threadHello.sleep(1000); } catch(Exception e){}
+      
+      /* .join will force the calling thread to wait until it complete */
+//      try { threadHello.join(); } catch(Exception e){}
+//      try { threadWorld.join(); } catch(Exception e){}
+      
+      /* check if method is alive after join */
+      System.out.println(threadHello.getName() + " " + threadHello.isAlive());
+      System.out.println(threadWorld.getName() + " " +  threadWorld.isAlive());
+      
+      System.out.println("Time for poetry");
+      
+   }
+}</code></pre>
+                     </details>    
 
+                   
+                  </details>                 
+               </li>
+               <li>
+                  <details>
+                     <summary><code class="prettyprint">Thread</code>s a Hello World Synchronised example</summary>
+                                       
+                     <details>
+                        <summary><code class="prettyprint">Runnable Interface</code></summary>
+                        <ul><li>Single method, <code class="prettyprint">public void</code> with no arguments<br />
+                           <code class="prettyprint">public void run()</code></li></ul>
+                     </details>
+                     
+                     <details>
+                        <summary>DoWork class to simulate load in a <code class="prettyprint">Thread</code></summary>
+                        <pre><code class="prettyprint">class DoWork {
+   /* Class to run in a thread
+      Simulate the load by the number of calls to increment */
+   int count;
+
+   /* needs to be synchronized and made thread safe */
+   public synchronized void increment() {
+      count++;  // increment is more than one operation!
+   }
+}</code></pre>
+                     </details>    
+                     
+                     <details>
+                        <summary>Synchronised Hello World</summary>
+                        <pre><code class="prettyprint">public class SyncDemo {
+   
+   public static void main(String args[]) {
+      
+      System.out.println("Synchronised value from both Hello and World threads");
+      
+      DoWork doWork = new DoWork();
+
+      /* annoymous class implementing Runnable interface run() 
+         method passed to Runnable */   
+      Runnable objHello = new Runnable() {
+         
+         public void run() {
+            
+            for(int i=1; i<=1000; i++) {
+               doWork.increment();
+            }
+            
+            System.out.println( doWork.count + " Hello ");
+  
+         }                  
+      };
+      
+      Runnable objWorld = new Runnable() {
+
+         public void run() {
+            
+            for(int i=1; i<=1000; i++) {
+               doWork.increment();
+            }
+            
+            System.out.println( doWork.count + " World ");           
+         }                  
+      };
+      
+      Thread threadHello = new Thread(objHello);
+      Thread threadWorld = new Thread(objWorld);
+      
+      threadHello.start();
+      threadWorld.start();
+
+      /* .join will force the calling thread to wait until it complete */
+//      try { threadHello.join(); } catch(Exception e){}
+//      try { threadWorld.join(); } catch(Exception e){}
+      
+      System.out.println(doWork.count + " reminders for poetry");
+      
+   }
+}</code></pre>
+                     </details>                    
+                  </details>                 
+               </li>
+            </ul>
+         </details>
+         
+         
       </article>
 
+      
+      
+      
       <article id="git-repo-setup" class="lab-sheet panel">
 
             <h2>Git Overview &nbsp;

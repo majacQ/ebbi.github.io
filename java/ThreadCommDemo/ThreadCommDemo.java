@@ -1,14 +1,17 @@
 class DoWork {
+   /* Class to run in a thread 
+      Simulate the load by the number of calls to increment
+   */
    
    int count;
  
    // needs to be synchronized and made thread safe
-   public void increment() {
+   public synchronized void increment() {
       count++;
    }
 }
 
-public class SyncDemo {
+public class ThreadCommDemo {
    
    public static void main(String args[]) {
       
@@ -16,6 +19,7 @@ public class SyncDemo {
       
       DoWork doWork = new DoWork();
    
+      /* annonymous class passed to Runnable */
       Runnable objHello = new Runnable() {
          
          public void run() {
