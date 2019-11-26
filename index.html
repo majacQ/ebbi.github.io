@@ -4270,14 +4270,12 @@ Git checkout master and merge room branch
                      <details>
                         <summary>Hello (on a <code class="prettyprint">Thread</code>) World (on another <code class="prettyprint">Thread</code>)</summary>
                         <pre><code class="prettyprint">public class ThreadDemo {
-   
    public static void main(String args[]) {
-      
       System.out.println("Hello (on a thread) World (on another thread)!");
-   
+         
+      /* annoymous class implementing Runnable interface run() 
+            method passed to Runnable */      
       Runnable objHello = new Runnable() {
-         /* annoymous class implementing Runnable interface run() 
-            method passed to Runnable */
          public void run() {
             for(int i=1; i&lt;=5; i++) {
                System.out.println("Hello ");
@@ -4350,10 +4348,8 @@ Git checkout master and merge room branch
                      
                      <details>
                         <summary>Synchronised Hello World</summary>
-                        <pre><code class="prettyprint">public class SyncDemo {
-   
+                        <pre><code class="prettyprint">public class SyncDemo { 
    public static void main(String args[]) {
-      
       System.out.println("Synchronised value from both Hello and World threads");
       
       DoWork doWork = new DoWork();
@@ -4362,22 +4358,19 @@ Git checkout master and merge room branch
          method passed to Runnable */   
       Runnable objHello = new Runnable() {
          
-         public void run() {
-            
-            for(int i=1; i<=1000; i++) {
+         public void run() {           
+            for(int i=1; i&lt;=1000; i++) {
                doWork.increment();
             }
             
-            System.out.println( doWork.count + " Hello ");
-  
+            System.out.println( doWork.count + " Hello "); 
          }                  
       };
       
       Runnable objWorld = new Runnable() {
-
          public void run() {
             
-            for(int i=1; i<=1000; i++) {
+            for(int i=1; i&lt;=1000; i++) {
                doWork.increment();
             }
             
