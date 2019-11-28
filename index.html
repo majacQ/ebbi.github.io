@@ -760,15 +760,20 @@
                      <li data-article="activity-intent-slide">Activity &amp; Intent</li>
                      <li data-article="events-listeners-slide">Events &amp; Listeners</li>
                      <li data-article="fragments-slide" class="nav-section-end">Fragments</li>
+                     <li data-article="java-review">Threads</li>
                      <li data-article="architecture-slide">Architecture</li>
                   </ul>
                </details>
 
             </details>
-
-            <div data-article="java-review" class="nav-section-end">
-               Java Review
-            </div>
+            
+            <details class="nav-section-end">
+            <summary>Java</summary>
+               <ul>
+                  <li data-article="java-review">Java Review</li>
+                  <li data-article="java-review">Threads</li>
+              </ul>             
+            </details>
 
             <div data-article="git-repo-setup" class="nav-section-end">
                Git Version Control
@@ -3217,7 +3222,7 @@ Once Android is running, the default 'Hello World!' message is displayed.
       /* second param requestCode identifies the call as there 
          could be many "intents" */
       startActivityForResult(intent, IS_SUCCESS);
-      /* The result will come back through
+      /* The result will come back through */
       onActivityResult(requestCode, resultCode, Intent) method */
 
    }
@@ -3227,8 +3232,8 @@ Once Android is running, the default 'Hello World!' message is displayed.
                            <ul>
                               <li>What is a static method? and why use it here?</li>
                               <li>What is in <code class="prettyprint">newIntent</code>?</li>
-                              <li>WHere is the <code class="prettyprint">todo</code> index stored?</li>
-                              <li>etc.</li>
+                              <li>Where is the <code class="prettyprint">todo</code> index stored?</li>
+                              <li>&hellip;</li>
                            </ul>
                         </li>
                         <li>
@@ -3242,9 +3247,6 @@ Once Android is running, the default 'Hello World!' message is displayed.
                         </li>
                         <li>
                            Explain <code class="prettyprint">onActivityResult</code>
-                        </li>
-                        <li>
-                           etc.
                         </li>
                      </ul>
 
@@ -3381,10 +3383,7 @@ Once Android is running, the default 'Hello World!' message is displayed.
                      <code class="prettyprint">private</code> constructor
                   </li>
                   <li>
-                     <code class="prettyprint">public static get</code> method to return the same TodoModel object instance
-                  </li>
-                  <li>
-                     i.e. simple implementation of Singleton pattern
+                     <code class="prettyprint">public static get</code> method to return the same TodoModel object instance (simple implementation of Singleton pattern)
                   </li>
                </ul>
             </details>
@@ -3458,7 +3457,7 @@ Once Android is running, the default 'Hello World!' message is displayed.
                            Incorporate the <code class="prettyprint">TodoModel</code> (currently not used; see the <a target="_blank" href="https://github.com/ebbi/todo-list-app">todo-list-app</a> as an example of (non persistant) CRUD operation for creating and updating todos). Implement CRUD operation use cases.
                         </li>
                         <li>
-                           etc. (navigation from previous examples)
+                           &hellip;
                         </li>
                      </ul>
 
@@ -4201,7 +4200,7 @@ Git checkout master and merge room branch
          </details>
 
          <div class="width-three-quarter panel">
-            <span data-class="image width-three-quarter" data-image="Android Room View Model" data-local-src="assets/loading_data_view_model.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Floading_data_view_model.png?v=1573685177028"></span>
+            <span data-class="image width-full" data-image="Android Room View Model" data-local-src="assets/loading_data_view_model.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Floading_data_view_model.png?v=1573685177028"></span>
          </div>
 
 
@@ -4218,7 +4217,7 @@ Git checkout master and merge room branch
                <a target="_blank" href="https://developer.android.com/topic/libraries/architecture/room">Room additional resouces including Samples and Codelabs</a>
             </li>
          </ul>
-          <div class="width-three-quarter panel">
+          <div class="width-full panel">
             <span data-class="image width-three-quarter" data-image="Android MVVM architecture" data-local-src="assets/android-final-architecture.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Fandroid-final-architecture.png?v=1573684803675"></span>
          </div>        
       </article>           

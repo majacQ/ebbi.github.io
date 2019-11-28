@@ -11,7 +11,7 @@ public class ThreadDemo {
             for(int i=1; i<=5; i++) {
                System.out.println("Hello ");
                /* do some nice processing! */
-               try { Thread.sleep(1000); } catch(Exception e){}
+               try { Thread.sleep(1000)h; } catch(Exception e){}
             }
          }                  
       };
