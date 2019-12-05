@@ -8,10 +8,10 @@ public class ThreadDemo {
          /* annoymous class implementing Runnable interface run() 
             method passed to Runnable */
          public void run() {
-            for(int i=1; i<=5; i++) {
+            for(int i=1; i<=3; i++) {
                System.out.println("Hello ");
                /* do some nice processing! */
-               try { Thread.sleep(1000)h; } catch(Exception e){}
+               try { Thread.sleep(2000); } catch(Exception e){}
             }
          }                  
       };
@@ -21,7 +21,7 @@ public class ThreadDemo {
          public void run() {
             for(int i=1; i<=5; i++) {
                System.out.println("World");
-               try { Thread.sleep(3000); } catch(Exception e){}
+               try { Thread.sleep(1000); } catch(Exception e){}
             }
          }                  
       };

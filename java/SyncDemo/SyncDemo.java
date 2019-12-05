@@ -7,7 +7,7 @@ class DoWork {
       try compiling both and see the output */
    // public void increment() {
    public synchronized void increment() {
-      count++;
+      count++; // count = count + 1
    }
 }
 
@@ -53,8 +53,8 @@ public class SyncDemo {
       threadWorld.start();
 
       /* .join will force the calling thread to wait until it complete */
-//      try { threadHello.join(); } catch(Exception e){}
-//      try { threadWorld.join(); } catch(Exception e){}
+      try { threadHello.join(); } catch(Exception e){}
+      try { threadWorld.join(); } catch(Exception e){}
       
       System.out.println(doWork.count + " reminders for poetry");
       

@@ -455,6 +455,9 @@
          float: right;
       }
 
+      .float-left {
+         float: left;
+      }
       .center {
          text-align: center;
       }
@@ -3983,8 +3986,6 @@ private static ContentValues getContentValues(Todo todo) {
     
       <article id="todo-mvvm" class="lab-sheet panel">      
          <h2>A <em>Todo Persistence</em> App &mdash; MVVM</h2>
-
-         <p class="caution">Todo : Complete lab sheet notes and Lect slide</p>
          
          <p>
             The code for this exercise can be found at: <a target="_blank" href="https://github.com/ebbi/TodoMVVM">https://github.com/ebbi/TodoMVVM</a>
@@ -5586,10 +5587,102 @@ public static Intent newIntent(
       <article id="architecture-slide" class="slide panel">
          <h2>Architecture</h2>
          <div class="slide-article">
-            <ul>
-               <li>MVC</li>
-               <li>MVVM</li>
-            </ul>
+            <details>
+               <summary>Model&dash;View&dash;Controller(MVC)</summary>
+               
+               <span data-class="image width-full" data-image="MVC diagram" data-local-src="assets/mvc.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Fmvc.png?v=1575411771781"></span>
+              
+               <ul class="float-left">
+                  <li>
+                     View (Layout files), Controllers (Activities/Fragments), Models (data and persistence)?
+                  </li>
+                  <li>
+                     Business logic in Activity / Fragment
+                  </li>
+                  <li>
+                     Code closely coupled to Android Framework &amp; lifecycle events <em>difficult to test</em>
+                  </li>
+                  <li>
+                     <ul>
+                        <li>
+                           Activities/Fragments and Views should be the View in MVC
+                        </li>
+                        <li>
+                           Controllers should be seperate classes that do not extend Android classes 
+                        </li>
+                        <li>
+                         <a target="_blank" href="https://medium.com/upday-devs/android-architecture-patterns-part-1-model-view-controller-3baecef5f2b6#f68d">Passive Model</a> and <a target="_blank" href="https://medium.com/upday-devs/android-architecture-patterns-part-1-model-view-controller-3baecef5f2b6#f68d">Active Model (model notifies the view)</a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </details>
+            <details>
+               <summary>Model&dash;View&dash;Presenter(MVP)</summary>
+                              
+               <span data-class="image width-full" data-image="MVP diagram" data-local-src="assets/mvp.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Fmvp.png?v=1575411779112"></span>
+               
+               <ul>
+                  <li>Activities/Fragments are part of the View layer</li>
+                  <li>Activity has corresponding Presenter for access to Model</li>
+                  <li>
+                     Code example TodoMVP
+                     <span data-class="image width-full" data-image="MVP Class Structure" data-local-src="assets/MVPClassStructure.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2FMVPClassStructure.png?v=1575417840916"></span>       
+                  </li>
+                  <li>
+                     <a target="_blank" href="https://medium.com/upday-devs/android-architecture-patterns-part-3-model-view-viewmodel-e7eeee76b73b">Google case study, upday app</a></li>
+               </ul>
+               
+            </details>
+            
+            <details>
+               <summary>Model&dash;View&dash;ViewModel</summary>
+               
+               <details>
+                  <summary>Android final architecture, MVx! to MVVM</summary>               
+               <span data-class="image width-full" data-image="MVVM diagram" data-local-src="assets/android-final-architecture.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Fandroid-final-architecture.png?v=1573684803675"></span>
+               
+               <ul>
+                  <li>
+                     Android Data Binding Framework &dash; <code class="prettyprint">ViewModel</code> retrieve data from model when requested from the view</li>
+                  <li>
+                     Data binding pattern reduces code and <code class="prettyprint">Activities/Fragments</code> become very light weight</li>
+                  <li>
+                     Unit testing made easier &dash; <code class="prettyprint">ViewModel</code> are decoupled from the view</li>
+                  <li>
+                     <code class="prettyprint">ViewModel</code> have process scope</li>
+                  <li>
+                     MVP the <code class="prettyprint">Presenter</code> calls the view to display 
+                     </li>
+                  <li>
+                     MVVM the <code class="prettyprint">ViewModel</code> exposes stream of events for <code class="prettyprint">Views</code> to bind to.  No need for all the MVP interfaces.
+                     </li>
+                  <li>
+                     Seperation of concerns (MVC, MVP, MVVM), MVVM advantage is data binding making event driven apps easier by delegating to Model and minimizing logic in Views</li>
+                  <li>
+                     <a target="_blank" href="https://developer.android.com/jetpack/docs/guide">Google guide to app architecture</a></li>
+
+               </ul>
+               
+               </details>
+               
+               <details>
+                  <summary>MVVM Implementation</summary>
+                              
+                  <span data-class="image width-full" data-image="Android MVVM diagram" data-local-src="assets/android-final-architecture.png" data-cdn-src="https://cdn.glitch.com/3943c32b-ac0d-4285-afbf-c67ee5a851ca%2Fandroid-mvvm.png?v=1573685057510"></span>
+                  
+                  <ul>
+                     <li>
+                        <a target="_blank" href="https://github.com/ebbi/TodoMVVM">https://github.com/ebbi/TodoMVVM</a></li>
+                     <li>
+                        Practical: IDE, Gradle plugins, RxJava library <code class="prettyprint">Observable</code> (Java 9 deprecated Observable)</li>
+                     <li>
+                        <a target="_blank" href="https://medium.com/upday-devs/android-architecture-patterns-part-3-model-view-viewmodel-e7eeee76b73b">Google case study, upday app</a></li>
+                  </ul>
+                  
+               </details>
+               
+            </details>
 
          </div>
 
