@@ -115,9 +115,10 @@
          padding: 0.1em;
          border: solid 1px #e8e6e6;
          background: inherit;
-
+/*
          -webkit-transition: font-size 1.5s linear;
          transition: font-size 1.5s linear;
+*/         
       }
 
       /* navbar  =============================== */
@@ -310,7 +311,7 @@
       }
 
       #section-main {
-         transition: all 3s linear;
+/*         transition: all 3s linear; */
          height: 90vh;
          min-width: 70vw;
          padding-top: 1vh;
@@ -1036,7 +1037,7 @@
             </svg>
          </h2>
 
-         <details class="panel">
+         <details open class="panel">
             <summary>Lab Exercises</summary>
 
             <details class="panel">
@@ -1045,26 +1046,261 @@
                </summary>
                <ul>
                   <li>
-                     <em>Sublime</em> is a good programmers editor. <a target="_blank" href="https://www.sublimetext.com/3">Download the portable version for your OS</a>
+                     <a target="_blank" href="http://brackets.io/">Brackets</a> is a Web developers editor that includes a Web server and &quot;live view&quot; (you see the changes in a browser as you code). <br />Once you have installed Brackets, choose:
+                     <br /><code>File > Extension Manger</code>
+                     <br />and search for <code>Beautify</code> and install it (<code>Edit &gt; Beautify</code> will reformat the code with indentation and nesting for easy reading).  
                   </li>
+
                   <li>
-                     A web developers editor that supports a live view in a browser as you code is <a target="_blank" href="http://brackets.io/">Brackets</a>.
-                  </li>
-                  <li>
-                     <em>Web browser</em> to test code. <a target="_blank" href="https://www.google.com/chrome/">Chrome</a> and <a target="_blank" href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> are the most used <em>open source</em> browsers.
+                     <em>Web browser</em> to test code. <a target="_blank" href="https://www.google.com/chrome/">Chrome</a> and <a target="_blank" href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> are the most used <em>open source</em> browsers.  Please install the latest release.
                   </li>
                </ul>
             </details>
 
             <details class="panel">
-               <summary>Getting started with the web</summary>
-               <p>Getting started with the web guide is an introduction to the basics of the three languages, <code class="prettyprint">HTML</code>, <code class="prettyprint">CSS</code>, and <code class="prettyprint">JavaScript</code>. <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">Navigate through each activity and complete all suggested code.</a> </p>
+               <summary>
+                  Initial setup
+               </summary>
+               <p>
+                  In readiness for publishing onto the Web, the aim is to follow a naming convention and keep all files in a folder. <em>Please follow the same naming convention used in these exercises.</em> Filenames are case sensitive and you should avoid spaces and special charachters. 
+               </p>
+               
+                <pre class="slide-small">Using the operating system file manager or a terminal:
+   create a folder named: <code>wsd</code>
+   in folder <code>wsd</code>, create sub-folders: <code>labs</code> and <code>website</code>
+</pre>  
+               <p>
+                  That is all we need for now, further folders and files will be created in the <code>wsd</code> folder as necessary.
+               </p>
+
             </details>
+            
+            <details open class="panel">
+               <summary>HTML &mdash; structuring the web</summary>         
+               <p>HTML is a document specification that structures the document content with appropriate markup.  See the lecture video and lecture notes for explanation of the underlying concepts.  </p>
+               <p>The aim here is to complete lab exercises demonstrating practical use of HTML5.</p>
+             
+               <details class="panel">
+                  <summary>Template &quot;Hello world&quot; HTML5 code</summary>
+               <pre class="slide-small">Initial setup, using Brackets: 
+   <code>File &gt; Open Folder</code> (and select the <code>labs</code> created in the initial setup)
+   <code>File &gt; New </code>
+   <code>File &gt; Save</code> (and Save As: <code>html5-template.html</code>)
+</pre>                  
+                  
+                  <p>Start with a &quot;Hello world&quot; HTML example that has the minimum number of elements that can be used in later exercises as a template.</p>
+                  <p>Insert the following code into the <code>html5-template.html</code> file and <code>save</code></p>
+                  <pre><code class="prettyprint">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;title&gt;Lab exercise html5&lt;/title&gt;
+   &lt;meta charset="utf-8" /&gt;
+   &lt;meta name="author" content="your-name" /&gt;
+   &lt;meta name="description" content="Website development lab exercise html5" /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;p&gt;Hello World&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                  
+                  <p>Refer to the lecture video and lecture notes for the underlying concepts and note:</p>
+                  <ul>
+                     <li><code>doctype</code> indicates the HTML variant and should be included</li>
+                     <li><code>HTML</code> has a tree structure with two child nodes, <code>head</code> and <code>body</code></li>
+                     <li>Elements can be nested, <code>head</code> has information about the document with <code>meta</code> elements and a <code>title</code> and the <code>body</code> element has the content of the document which currently has a single paragraph element, <code>p</code> with content &quot;Hello world&quot;</li>
+                     <li>Elements have openning and closing tags, for example: <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code> or are self-closing such as the <code>meta</code> element which is closed with <code>/&gt;</code></li>
+                     <li>All elements can add attributes to the openning tag, for example, <code>charset="utf-8"</code> or <code>name="author"</code></li>
+                     <li>HTML5 is case sensitive and double quotes are standardised.  There are not many more syntactical rules and we will use a validator program to check the syntax of larger files.</li>
+                     <li>In Brackets, <code>File &gt; Save</code> and in the right hand column, click the lightening symbol, &#x26a1; for the live preview.  The code should be opened in a browser and display the &quot;Hello world&quot; message</li>
+                  </ul>
+               </details>
+               
+               <details class="panel">
+                  <summary>HTML5 Structural Elements</summary>
+                  <pre class="slide-small">Initial setup, using Brackets: 
+   <code>File &gt; Open Folder</code> (and select the <code>labs</code> created in the initial setup)
+   <code>File &gt; New </code>
+   <code>File &gt; Save</code> (and Save As: <code>html5-structural-elements.html</code>)
+   Copy the code from html5-template.html and paste it into html5-structural-elements.html
+   Replace the entire <code>body</code> with the following code:
+</pre>
+                  <pre class="slide-small"><code class="prettyprint">&lt;body&gt;
 
-            <details class="panel">
-               <summary>HTML &mdash; structuring the web</summary>
-               <p>To build websites, you should know about <code class="prettyprint">HTML</code>. For an overview, take a brief look at <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML &mdash; structuring the web</a> &mdash; and complete the following modules and the assessments.</p>
+   &lt;header&gt;
+      &lt;p&gt;This page demonstrates some of the HTML5 structural elements&lt;/p&gt;
+   &lt;/header&gt;
 
+   &lt;nav&gt;
+      &lt;ul&gt;
+         &lt;li&gt;HTML5 Structural elements&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/nav&gt;
+
+   &lt;section id="html-elements"&gt;
+      &lt;h1&gt;HTML5 Elements&lt;/h1&gt;
+      
+      &lt;section id="html5-structural-elements"&gt;
+         &lt;h2&gt;HTML5 Structural Elements&lt;/h2&gt;
+         &lt;p&gt;HTML structural elements include: header, nav, section, 
+            article, aside, and footer&lt;/p&gt;
+         &lt;ul&gt;
+            &lt;li&gt;
+               A header defines the header of a page or a page section
+            &lt;/li&gt;
+            &lt;li&gt;
+               HTML5 introduced the nav to replace: div id=&quot;nav&quot;
+            &lt;/li&gt;
+            &lt;li&gt;
+               Element section is a grouped area of content
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      &lt;/section&gt;
+      
+      &lt;section id="html5-common-elemets"&gt;
+         &lt;h2&gt;HTML5 Common Elements&lt;/h2&gt;
+      &lt;/section&gt;
+      
+   &lt;/section&gt;
+   
+   &lt;footer&gt;
+      &amp;copy; no rights what so ever!
+   &lt;/footer&gt;
+
+&lt;/body&gt;</code></pre>
+                  
+                  <ul>
+                     <li>Note the basic syntax points from the first exercise</li>
+                     <li>Note the <code>html</code> tree structure.  Element <code>ul</code> is an un-ordered list with nested list items (<code>li</code>) nodes.  It is in turn nested within a <code>nav</code> structural element.  (In later exercises we will turn the list items content into clickable hyperlinks for navigation)</li>
+                     <li>Just as a section in a book, each <code>section</code> should have a first child element as a heading and the heading levels should be in sequance</li>
+                     <li>Note the syntax of <code>&amp;copy;</code> which will be displayed in a browser as &copy;.  These are special charachters starting with <code>&amp;</code> charahter and followed by a charachter name and end with a semi-colon<code>;</code>  Other special charachters include: &amp;lt; for &lt; and &amp;gt; for &gt; </li>
+                  </ul>
+               </details>
+               
+               
+               <details class="panel">
+                  <summary>HTML5 Validation</summary>
+                  <pre class="slide-small">Initial setup, using Brackets: 
+   <code>File &gt; Open Folder</code> (and select the <code>labs</code> created in the initial setup)
+   <code>File &gt; New </code>
+   <code>File &gt; Save</code> (and Save As: <code>html5-validation.html</code>)
+   Copy the code from html5-template.html and paste it into html5-validation.html
+   Replace the entire <code>body</code> with the following code:
+</pre>
+                  <pre class="slide-small"><code class="prettyprint">&lt;body&gt;
+
+   &lt;header&gt;
+      &lt;p&gt;This page demonstrates some of the HTML5 structural elements&lt;/p&gt;
+   &lt;/header&gt;
+
+   &lt;nav&gt;
+      &lt;ul&gt;
+         &lt;li&gt;HTML5 Structural elements&lt;/li&gt;
+         &lt;li&gt;HTML5 Validation&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/navs&gt;
+
+   &lt;section id="html-elements"&gt;
+      &lt;h1&gt;HTML5 Elements&lt;/h1&gt;
+      
+      &lt;section id="html5-structural-elements"&gt;
+         &lt;h2&gt;HTML5 Structural Elements&lt;/h2&gt;
+         &lt;p&gt;HTML structural elements include: header, nav, section, 
+            article, aside, and footer&lt;/p&gt;
+         &lt;ul&gt;
+            &lt;li&gt;
+               A header defines the header of a page or a page section
+            &lt;li&gt;
+               HTML5 introduced the nav to replace: div id="nav"
+            &lt;/li&gt;
+            &lt;li&gt;
+               Element section is a grouped area of content
+            &lt;/li&gt;
+          &lt;/ul&gt;
+      &lt;/section&gt;
+      
+      &lt;section id="html5-common-elemets"&gt;
+         &lt;h2&gt;HTML5 Common Elements&lt;/h2&gt;
+      &lt;/section&gt;
+      
+   &lt;/section&gt;&gt;
+   
+   &lt;footer&gt;
+      &copy; no rights what so ever!
+   &lt;/footer&gt;footer&gt;
+
+&lt;/body&gt;</code></pre>
+                  
+                  <p>HTML validation is mainly about meticulously following syntactical rules.</p>
+                  <ul>
+                     <li>The first validation can be by the programmers editors such as Bracket.  Note, the spelling mistake, navs id highlighted in red as it should be nav</li>
+                     <li>Leave the mis-spelt navs and save the file.  Using the operating system file browser find html5-validation.html file and drag it into Firefox browser (or use file > open).  Even with the error, the content is displayed; browsers are very forgiving and correct the code as far as possible.  Right-mouse click and select <code>view page source</code> and note the erros in red.</li>
+                     <li>The third method is to use the W3C Validation service <a href="https://validator.w3.org/" target="_blank">W3C Validation service</a>.  Select <code>Validate by File Upload</code> or cut&amp;paste the HTML source code into <code>Validate by Direct Input</code> and <code>Check</code> for an error report.</li>
+                     <li>Code should be validated in Firefox for XML well-formdness and the W3C validator</li>
+                     <li>Correct the erros and save the file</li>
+                  </ul>
+               </details>
+               
+               
+               
+               <details open class="panel">
+                  <summary>HTML5 Common Elements</summary>
+                  <pre class="slide-small">Initial setup, using Brackets: 
+   <code>File &gt; Open Folder</code> (and select the <code>labs</code> created in the initial setup)
+   <code>File &gt; New </code>
+   <code>File &gt; Save</code> (and Save As: <code>html5-common-elements.html</code>)
+   Copy the code from html5-structural-elements.html and paste it into html5-common-elemets.html
+</pre>
+                  
+                  <p>Take a brief glance at <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML element reference</a>. The following are selected commonly used elements</p>
+                  <h2>Hyperlink</h2>
+                  <p>HTML provides markup for documents that are distributed accross the internet.  This idea of hypertext is implemented with the hyperlink anchor element, <code>a</code>.  For example, the code for the hyperlink to the Mozzilla Developer Network(MDN) is: </p>
+                  
+                  <pre class="slide-small prettyprint"><code class="prettyprint">&lt;a href="https://developer.mozilla.org/">click to go to the href address&lt;/a&gt;</code></pre>
+                  
+                  <p>This is powerfull and allows for sharing documents accross the internet.</p>
+                  
+                  <p>Hyperlinks are commonly used for navigation.  Consider the <code>nav</code> element for these lab exercises and note the nested hyperlink element:</p>
+                  
+                  <pre class="slide-small"><code class="prettyprint">&lt;nav&gt;
+   &lt;ul&gt;
+      &lt;li&gt;
+         &lt;a href=&quot;html5-structural-element.html&quot;&gt;HTML5 Structural elements&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;HTML5 Validation&lt;/li&gt;
+      &lt;li&gt;HTML5 Common Elements&lt;/li&gt;
+   &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                  
+                  <p></p>
+
+                  <p>As well as the Web IP address or a local document name as in the previous two examples, the <code>href</code> attribute can also  point to an <code>id</code> within a document, for example,</p>
+                  <pre class="slide-small"><code class="prettyprint">&lt;a href=&quot;#html5-elements&quot;&gt;HTML5 Structural elements&lt;/a&gt;</code></pre>
+                  
+                  <p>Or to a particular <code>id</code> within a valid local or remote document address, for example:</p>
+<pre class="slide-small"><code class="prettyprint">&lt;a href=&quot;html5-structural-element.html#html5-elements&quot;&gt;HTML5 Structural elements&lt;/a&gt;
+                  
+&lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics">MDN Inline Text Semantics&lt;/a&gt;</code></pre>
+                  
+                  <p>Here is the above MDN example: <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics">Go to the hyperlink element, a, in MDN</a></p>
+                  
+                  <p>Note the <code>#</code> symbol represents an HTML <code>id</code> value; in the above examples:</p>    
+                  <ul>                 
+                     <li><code>#html5-elements</code> is the element with the <code> id = &quot;html5-elements&quot;</code> in the current document</li>
+                     <li><code>html5-structural-element.html#html5-elements</code> is the  element with the <code> id = &quot;html5-elements&quot;</code>  in the <code>html5-structural-element.html</code> document</li>
+                     <li>and in the final example, the document is hosted on the specified web address</li>
+                  </ul>
+
+               </details>
+               
+
+               
+               
+               
+               
+               
+               
+               
+               
                <dl>
                   <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a></dt>
                   <dd>This module sets the stage, getting you used to important concepts and syntax, looking at applying HTML to text, how&nbsp;to create hyperlinks, and how to use HTML to structure a webpage.</dd>
