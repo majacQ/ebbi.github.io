@@ -279,7 +279,7 @@
          color: inherit;
          background: inherit;
          font-size: inherit;
-         width: 100%;
+ /*        width: 100%; */
       }
 
       /* Main Section  ================================ */
@@ -907,15 +907,15 @@
                         And though they are with you, they belong not to you.<br />
                         You may give them your love but not your thoughts,<br />
                         For they have their own thoughts.<br />
-                        You may house their bdoies but not their souls,<br />
+                        You may house their bodies but not their souls,<br />
                         For their souls dwell in the house of tomorrow, <br />
                         Which you can not visit, not even in your dreams. <br />
                         You may strive to be like them, but seek not to make them like you, <br />
                         For life goes not backwards nor tarries with yesterday. <br />
                         You are the bows from which your children as living arrows are sent forth. <br />
-                        The arhcer sees the mark uopn the ptah of the infniite. <br />
+                        The archer sees the mark upon the path of the infinite. <br />
                         And He bends you with His might that His arrows may go swift and far. <br />
-                        Let your bending in the archer&apos;s hadns be for happiness; <br />
+                        Let your bending in the archer&apos;s hands be for happiness; <br />
                         For even as He loves the arrow that flies, <br />
                         So He loves the bow that is stable. <br />
                      </p>                     
@@ -1044,17 +1044,20 @@
                <summary>
                   Software needed for the lab exercises
                </summary>
+               <div class="instruction panel">
+                  <a target="_blank" href="http://brackets.io/">Brackets</a> is a Web developers editor that includes a Web server and &quot;live view&quot; (you see the changes in a browser as you code). <br />
                <ul>
                   <li>
-                     <a target="_blank" href="http://brackets.io/">Brackets</a> is a Web developers editor that includes a Web server and &quot;live view&quot; (you see the changes in a browser as you code). <br />Once you have installed Brackets, choose:
+                     Once you have installed Brackets, choose:
                      <br /><code>File > Extension Manger</code>
-                     <br />and search for <code>Beautify</code> and install it (<code>Edit &gt; Beautify</code> will reformat the code with indentation and nesting for easy reading).  
+                     <br />and search for <code>Beautify</code> and install it.<br /> (<code>Edit &gt; Beautify</code> will reformat the code with indentation and nesting for easy reading).  
                   </li>
 
                   <li>
                      <em>Web browser</em> to test code. <a target="_blank" href="https://www.google.com/chrome/">Chrome</a> and <a target="_blank" href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> are the most used <em>open source</em> browsers.  Please install the latest release.
                   </li>
                </ul>
+               </div>
             </details>
 
             <details class="panel">
@@ -1062,68 +1065,81 @@
                   Initial setup
                </summary>
                <p>
-                  In readiness for publishing onto the Web, the aim is to follow a naming convention and keep all files in a folder. <em>Please follow the same naming convention used in these exercises.</em> Filenames are case sensitive and you should avoid spaces and special charachters. 
+                  In readiness for publishing onto the Web, the aim is to follow a naming convention and keep all files in a folder. <em>Please follow the same naming convention used in these exercises.</em> Filenames are case sensitive and you should avoid spaces and special characters. 
                </p>
                
-                <pre class="slide-small">Using the operating system file manager or a terminal:
-   create a folder named: <code>wsd</code>
-   in folder <code>wsd</code>, create sub-folders: <code>labs</code> and <code>website</code>
-</pre>  
+                <div class="instruction panel">
+                   <p>Using Brackets (or the operating system file manager or a terminal):</p>
+                   <ul>
+                     <li>create a folder named: <code>wsd</code></li>
+                      <li>in folder <code>wsd</code>, create sub-folders: <code>labs</code> and <code>website</code></li>
+                   </ul>
+               </div>  
                <p>
-                  That is all we need for now, further folders and files will be created in the <code>wsd</code> folder as necessary.
+                  That is all that is  need for now, further folders and files will be created in the <code>wsd</code> folder as necessary.
                </p>
 
             </details>
             
-            <details open class="panel">
+            <details class="panel">
                <summary>HTML &mdash; structuring the web</summary>         
                <p>HTML is a document specification that structures the document content with appropriate markup.  See the lecture video and lecture notes for explanation of the underlying concepts.  </p>
                <p>The aim here is to complete lab exercises demonstrating practical use of HTML5.</p>
              
                <details class="panel">
                   <summary>Template &quot;Hello world&quot; HTML5 code</summary>
-               <pre class="slide-small">Initial setup, using Brackets: 
-   <code>File &gt; Open Folder</code> (and select the <code>labs</code> created in the initial setup)
-   <code>File &gt; New </code>
-   <code>File &gt; Save</code> (and Save As: <code>html5-template.html</code>)
-</pre>                  
-                  
-                  <p>Start with a &quot;Hello world&quot; HTML example that has the minimum number of elements that can be used in later exercises as a template.</p>
-                  <p>Insert the following code into the <code>html5-template.html</code> file and <code>save</code></p>
-                  <pre><code class="prettyprint">&lt;!doctype html&gt;
+                  <div class="instruction panel">
+                     <p>Using Brackets (or the operating system file manager or a terminal):</p>
+                     <ul>
+                        <li><code>File &gt; Open Folder</code> (and select the <code>labs</code> folder created in the initial setup)</li>
+                        <li><code>File &gt; New </code></li>
+                        <li><code>File &gt; Save</code> (and Save As: <code>html5-template.html</code>)</li>
+
+                        <li>Start with a &quot;Hello world&quot; HTML example that has the minimum number of elements that can be used in later exercises as a template.  Insert the following code into the <code>html5-template.html</code> file and <code>save</code></li>
+                     </ul>
+                     <pre><code class="prettyprint">&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
    &lt;title&gt;Lab exercise html5&lt;/title&gt;
    &lt;meta charset="utf-8" /&gt;
    &lt;meta name="author" content="your-name" /&gt;
-   &lt;meta name="description" content="Website development lab exercise html5" /&gt;
+   &lt;meta name="description" content="HTML5 lab exercises" /&gt;
 &lt;/head&gt;
 &lt;body&gt;
    &lt;p&gt;Hello World&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
+                     
+                  </div>
                   
-                  <p>Refer to the lecture video and lecture notes for the underlying concepts and note:</p>
-                  <ul>
-                     <li><code>doctype</code> indicates the HTML variant and should be included</li>
-                     <li><code>HTML</code> has a tree structure with two child nodes, <code>head</code> and <code>body</code></li>
-                     <li>Elements can be nested, <code>head</code> has information about the document with <code>meta</code> elements and a <code>title</code> and the <code>body</code> element has the content of the document which currently has a single paragraph element, <code>p</code> with content &quot;Hello world&quot;</li>
-                     <li>Elements have openning and closing tags, for example: <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code> or are self-closing such as the <code>meta</code> element which is closed with <code>/&gt;</code></li>
-                     <li>All elements can add attributes to the openning tag, for example, <code>charset="utf-8"</code> or <code>name="author"</code></li>
-                     <li>HTML5 is case sensitive and double quotes are standardised.  There are not many more syntactical rules and we will use a validator program to check the syntax of larger files.</li>
-                     <li>In Brackets, <code>File &gt; Save</code> and in the right hand column, click the lightening symbol, &#x26a1; for the live preview.  The code should be opened in a browser and display the &quot;Hello world&quot; message</li>
-                  </ul>
+                  <div class="comment panel">
+                     <p>Refer to the lecture video and lecture notes for the underlying concepts and note:</p>
+                     <ul>
+                        <li><code>doctype</code> indicates the HTML variant and should always be included.</li>
+                        <li><code>HTML</code> has a tree structure with two child nodes, <code>head</code> and <code>body</code>.</li>
+                        <li>Elements can be nested, <code>head</code> has information about the document with <code>meta</code> elements and a <code>title</code> and the <code>body</code> element has the content of the document which currently has a single paragraph element, <code>p</code> with content &quot;Hello world&quot;.</li>
+                        <li>Elements have opening and closing tags, for example: <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code> or are self-closing such as the <code>meta</code> element which is closed with <code>/&gt;</code>.</li>
+                        <li>All elements can add attributes to the opening tag, for example, <code>charset="utf-8"</code> or <code>name="author"</code>.</li>
+                        <li>HTML5 is case sensitive and double quotes are standardised.</li>
+                        <li>There are not many more syntactical rules and we will use a validator program to check the syntax of larger files.</li>
+                        <li>In Brackets, <code>File &gt; Save</code> and in the right hand column, click the lightening symbol, &#x26a1; for the live preview.  The code should be opened in a browser and display the &quot;Hello world&quot; message.</li>
+                     </ul>
+                  </div>
+                  
                </details>
                
                <details class="panel">
                   <summary>HTML5 Structural Elements</summary>
-                  <pre class="slide-small">Initial setup, using Brackets: 
-   <code>File &gt; Open Folder</code> (and select the <code>labs</code> created in the initial setup)
-   <code>File &gt; New </code>
-   <code>File &gt; Save</code> (and Save As: <code>html5-structural-elements.html</code>)
-   Copy the code from html5-template.html and paste it into html5-structural-elements.html
-   Replace the entire <code>body</code> with the following code:
-</pre>
+                  <div class="instruction panel">
+                     <p>Using Brackets (or the operating system file manager or a terminal):</p>
+                     <ul>
+                        <li><code>File &gt; Open Folder</code> (and select the <code>labs</code> created in the initial setup)</li>
+                        <li><code>File &gt; New </code></li>
+                        <li><code>File &gt; Save</code> (and Save As: <code>html5-structural-elements.html</code>)</li>
+                        <li>Copy the code from html5-template.html and paste it into html5-structural-elements.html</li>
+                        <li>Replace the entire <code>body</code> with the following code:</li>
+                     </ul>
+                  </div>
                   <pre class="slide-small"><code class="prettyprint">&lt;body&gt;
 
    &lt;header&gt;
@@ -1167,26 +1183,29 @@
    &lt;/footer&gt;
 
 &lt;/body&gt;</code></pre>
-                  
-                  <ul>
-                     <li>Note the basic syntax points from the first exercise</li>
-                     <li>Note the <code>html</code> tree structure.  Element <code>ul</code> is an un-ordered list with nested list items (<code>li</code>) nodes.  It is in turn nested within a <code>nav</code> structural element.  (In later exercises we will turn the list items content into clickable hyperlinks for navigation)</li>
-                     <li>Just as a section in a book, each <code>section</code> should have a first child element as a heading and the heading levels should be in sequance</li>
-                     <li>Note the syntax of <code>&amp;copy;</code> which will be displayed in a browser as &copy;.  These are special charachters starting with <code>&amp;</code> charahter and followed by a charachter name and end with a semi-colon<code>;</code>  Other special charachters include: &amp;lt; for &lt; and &amp;gt; for &gt; </li>
-                  </ul>
+                  <div class="comment panel">
+                     <ul>
+                        <li>Note the basic syntax points from the first exercise.</li>
+                        <li>Note the <code>html</code> tree structure.  Element <code>ul</code> is an un-ordered list with nested list items (<code>li</code>) nodes.  It is in turn nested within a <code>nav</code> structural element.  (In later exercises we will turn the list items content into clickable hyperlinks for navigation).</li>
+                        <li>Just as a section in a book, each <code>section</code> should have a first child element as a heading and the heading levels should be in sequence.</li>
+                        <li>Note the syntax of the special character, &copy; which is coded as <code>&amp;copy;</code><br />  (Special characters start with <code>&amp;</code> character and are followed by a character name and end with a semi-colon<code>;</code>  foe example, &amp;lt; for &lt; and &amp;gt; for &gt;) </li>
+                     </ul>
+                  </div>
                </details>
                
                
                <details class="panel">
                   <summary>HTML5 Validation</summary>
-                  <pre class="slide-small">Initial setup, using Brackets: 
-   <code>File &gt; Open Folder</code> (and select the <code>labs</code> created in the initial setup)
-   <code>File &gt; New </code>
-   <code>File &gt; Save</code> (and Save As: <code>html5-validation.html</code>)
-   Copy the code from html5-template.html and paste it into html5-validation.html
-   Replace the entire <code>body</code> with the following code:
-</pre>
-                  <pre class="slide-small"><code class="prettyprint">&lt;body&gt;
+                  <div class="instruction panel">
+                     <p>Using Brackets (or the operating system file manager or a terminal):</p>
+                     <ul>
+                        <li><code>File &gt; Open Folder</code> (and select the <code>labs</code> folder created in the initial setup)</li>
+                        <li><code>File &gt; New </code></li>
+                        <li><code>File &gt; Save</code> (and Save As: <code>html5-validation.html</code>)</li>
+                        <li>Copy the code from html5-template.html and paste it into html5-validation.html
+   Replace the entire <code>body</code> with the following code:</li>
+                     </ul>              
+                     <pre class="slide-small"><code class="prettyprint">&lt;body&gt;
 
    &lt;header&gt;
       &lt;p&gt;This page demonstrates some of the HTML5 structural elements&lt;/p&gt;
@@ -1229,51 +1248,59 @@
    &lt;/footer&gt;footer&gt;
 
 &lt;/body&gt;</code></pre>
+                                    
+                  </div>
                   
-                  <p>HTML validation is mainly about meticulously following syntactical rules.</p>
-                  <ul>
-                     <li>The first validation can be by the programmers editors such as Bracket.  Note, the spelling mistake, navs id highlighted in red as it should be nav</li>
-                     <li>Leave the mis-spelt navs and save the file.  Using the operating system file browser find html5-validation.html file and drag it into Firefox browser (or use file > open).  Even with the error, the content is displayed; browsers are very forgiving and correct the code as far as possible.  Right-mouse click and select <code>view page source</code> and note the erros in red.</li>
-                     <li>The third method is to use the W3C Validation service <a href="https://validator.w3.org/" target="_blank">W3C Validation service</a>.  Select <code>Validate by File Upload</code> or cut&amp;paste the HTML source code into <code>Validate by Direct Input</code> and <code>Check</code> for an error report.</li>
-                     <li>Code should be validated in Firefox for XML well-formdness and the W3C validator</li>
-                     <li>Correct the erros and save the file</li>
-                  </ul>
-               </details>
+                  <div class="comment panel">
+                     <p>HTML validation is mainly about meticulously following syntactical rules.</p>
+                     <ul>
+                        <li>The first validation can be by a programmers editors such as Bracket.  Note, the spelling mistake, navs id highlighted in red (it should be nav)</li>
+                        <li>Leave the mis-spelt navs and save the file.  Using the operating system file browser find html5-validation.html file and drag it into Firefox browser (or in Firefox, use File > Open).  Even with the error, the content is displayed; browsers are very forgiving and correct the code as far as possible.  Right-mouse click and select <code>view page source</code> and note the errors in red.</li>
+                        <li>The third method is to use the <a href="https://validator.w3.org/" target="_blank">W3C Validation service</a>.  Select <code>Validate by File Upload</code> or cut&amp;paste the HTML source code into <code>Validate by Direct Input</code> and <code>Check</code> for an error report.</li>
+                        <li>Code should be validated in Firefox for XML well-formdness and the W3C validator</li>
+                        <li>Correct the errors and save the file</li>
+                     </ul>
+                  </div>
+               </details>              
                
-               
-               
-               <details open class="panel">
+               <details class="panel">
                   <summary>HTML5 Common Elements</summary>
-                  <pre class="slide-small">Initial setup, using Brackets: 
-   <code>File &gt; Open Folder</code> (and select the <code>labs</code> created in the initial setup)
-   <code>File &gt; New </code>
-   <code>File &gt; Save</code> (and Save As: <code>html5-common-elements.html</code>)
-   Copy the code from html5-structural-elements.html and paste it into html5-common-elemets.html
-</pre>
+                  <div class="instruction panel">
+                     <p>Using Brackets (or the operating system file manager or a terminal):</p>
+                     <ul>
+                        <li><code>File &gt; Open Folder</code> (and select the <code>labs</code> folder created in the initial setup)</li>
+                        <li><code>File &gt; New </code></li>
+                        <li><code>File &gt; Save</code> (and Save As: <code>html5-common-elements.html</code>)</li>
+                        <li>Copy the code from html5-structural-elements.html and 
+   paste it into html5-common-elemets.html</li>
+                        <li>In the <code>html5-structural-elements.html</code> file, under the heading <code>HTML5 Common Elements</code>, include a copy of each of the following common HTML code examples.</li>
+                        <li>Update the <code>nav</code> elements with hyperlinks to each section of the document (similar to the example code)</li>
+                        <li>Validate the code and resolve any error messages</li>
+                     </ul>
+                  </div>
                   
-                  <p>Take a brief glance at <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML element reference</a>. The following are selected commonly used elements</p>
+                  <p>Take a brief glance at <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML element reference</a> and read the description of the HTML elements already used in the previous exercises.  The following are selected further commonly used elements.</p>
+                  
                   <h2>Hyperlink</h2>
-                  <p>HTML provides markup for documents that are distributed accross the internet.  This idea of hypertext is implemented with the hyperlink anchor element, <code>a</code>.  For example, the code for the hyperlink to the Mozzilla Developer Network(MDN) is: </p>
+                  <p>HTML provides markup for documents that are distributed across the internet.  This idea of hypertext is implemented with the hyperlink anchor element, <code>a</code>.  For example, the code for the hyperlink to the default document on the Mozzilla Developer Network(MDN) is: </p>
                   
                   <pre class="slide-small prettyprint"><code class="prettyprint">&lt;a href="https://developer.mozilla.org/">click to go to the href address&lt;/a&gt;</code></pre>
                   
-                  <p>This is powerfull and allows for sharing documents accross the internet.</p>
+                  <p>This is powerful and allows for sharing documents across the internet.</p>
                   
-                  <p>Hyperlinks are commonly used for navigation.  Consider the <code>nav</code> element for these lab exercises and note the nested hyperlink element:</p>
+                  <p>Hyperlinks are commonly used for navigation.  Consider the <code>nav</code> element for these lab exercises and note the hyperlink element nested inside a list item(<code>li</code>):</p>
                   
                   <pre class="slide-small"><code class="prettyprint">&lt;nav&gt;
    &lt;ul&gt;
       &lt;li&gt;
-         &lt;a href=&quot;html5-structural-element.html&quot;&gt;HTML5 Structural elements&lt;/a&gt;
+         &lt;a href=&quot;html5-structural-elements.html&quot;&gt;HTML5 Structural elements&lt;/a&gt;
       &lt;/li&gt;
       &lt;li&gt;HTML5 Validation&lt;/li&gt;
       &lt;li&gt;HTML5 Common Elements&lt;/li&gt;
    &lt;/ul&gt;
 &lt;/nav&gt;</code></pre>
-                  
-                  <p></p>
 
-                  <p>As well as the Web IP address or a local document name as in the previous two examples, the <code>href</code> attribute can also  point to an <code>id</code> within a document, for example,</p>
+                  <p>As well as the Web IP address, such as <code>developer.mozilla.org</code> in the first example or a local document name, <code>html5-structural-elements.html</code> as in the second examples, the <code>href</code> attribute can also  point to an <code>id</code> within a document, for example,</p>
                   <pre class="slide-small"><code class="prettyprint">&lt;a href=&quot;#html5-elements&quot;&gt;HTML5 Structural elements&lt;/a&gt;</code></pre>
                   
                   <p>Or to a particular <code>id</code> within a valid local or remote document address, for example:</p>
@@ -1281,36 +1308,213 @@
                   
 &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics">MDN Inline Text Semantics&lt;/a&gt;</code></pre>
                   
-                  <p>Here is the above MDN example: <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics">Go to the hyperlink element, a, in MDN</a></p>
+                  <p>Here is the above MDN example, try the link: <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics">Go to the hyperlink element, a, in MDN</a> (note, the page opened at the specified <code>id</code> and not the default top of the document).</p>
                   
-                  <p>Note the <code>#</code> symbol represents an HTML <code>id</code> value; in the above examples:</p>    
-                  <ul>                 
-                     <li><code>#html5-elements</code> is the element with the <code> id = &quot;html5-elements&quot;</code> in the current document</li>
-                     <li><code>html5-structural-element.html#html5-elements</code> is the  element with the <code> id = &quot;html5-elements&quot;</code>  in the <code>html5-structural-element.html</code> document</li>
-                     <li>and in the final example, the document is hosted on the specified web address</li>
-                  </ul>
+                  <div class="comment panel">
+                     <p>The <code>#</code> symbol represents an HTML <code>id</code> value; in the above examples:</p>    
+                     <ul>                 
+                        <li><code>#html5-elements</code> is the element with the <code> id = &quot;html5-elements&quot;</code> in the current document</li>
+                        <li><code>html5-structural-element.html#html5-elements</code> is the  element with the <code> id = &quot;html5-elements&quot;</code>  in the <code>html5-structural-element.html</code> document</li>
+                        <li>and in the final example, the document is hosted on the specified web address</li>
+                     </ul>
+                  </div>
+                  
+                  <h2>Graphics (img element)</h2>
+                  <p>The web has moved beyond it&acute;s original text documents and includes other media formats: images, sound and video.</p>
+                  <p>Techniques for including images in HTML documents should be dependent on their purpose.  For example, background images should be separated from content and included with CSS.   Images included with HTML, <code>img</code> element are either for conveying information or commonly used in navigation by being embedded in hyperlinks.</p>
+                  <h3>Images to convey content</h3>
+                  <p>HTML5 provides the <code>figure</code> element that can contain an image and an associated <code>figcaption</code>, this is good semantic code for images that convey content.  For example:</p>
+                  <pre class="slide-small"><code class="prettyprint">&lt;figure&gt;
+  &lt;img src="images/star.svg" alt="Example SVG image" /&gt;
+  &lt;img src="images/star.png" alt="Example PNG image" /&gt;
+  &lt;figcaption&gt;SVG and PNG format comparison.&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+                  
+                  <figure>
+                    <img src="assets/star.svg"
+                         alt="Example SVG image" />
+                     <img src="assets/star.png"
+                         alt="Example PNG image" />
+                    <figcaption>SVG and PNG format comparison</figcaption>
+                  </figure>
+                  <div class="instruction panel">
+                     <p>To try the code:</p>
+                     <ul>
+                        <li>In the <code>lab</code> folder, create an <code>images</code> folder</li>
+                        <li>Right-mouse click on each image and save it in the <code>images</code> folder</li>
+                     </ul>
+                  </div>
+                  <h3>Images in hyperlinks for navigation</h3>
+                  <p>HTML was text based and hypertext allowed text inside hyperlinks to point to documents on the internet.  With hypermedia, non-text formats, such as images (or sound and video) can be nested inside hyperlinks.  For example:</p>
+                  <pre class="slide-small"><code class="prettyprint">&lt;a href=&quot;https://en.wikipedia.org/wiki/Scalable_Vector_Graphics&quot;&gt;
+   &lt;img src=&quot;images/star.svg&quot; alt=&quot;Image formats&quot; /&gt; Read about image formats
+&lt;/a&gt;</code></pre>
+                  
+                  <p>Try clicking the image:
+                     <a target="_blank" href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">
+                     <img src="assets/star.svg" alt="Example SVG image" /> Read about image formats </a>
+                  </p>
+                        
+                  
+                  <h2>Divisions (div)</h2>
+                  <p>The div element was introduced in HTML4 as a general container for grouping elements. It can wrap any other element and is typically selected with an <code>id</code> or a <code>class</code> attribute.</p>
+                  <pre class="slide-small"><code class="prettyprint">&lt;div id=&quot;div-element&quot; class=&quot;highlight&quot;&gt;
+   &lt;p&gt;Any number of element to be grouped into one division&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                  <div class="comment panel">
+                     <p>html5 introduces more semantic sectioning elements, <code class="prettyprint">article, section, header, aside, footer and nav</code> and they should be used in preference to the more generic div.</p>
+                  </div>
+                  
+                  <h2>Span</h2>
+                  <p>The span element was introduced in HTML4 as a general container for selecting part of a block element. It is an inline equivalent of the div element and is typically wrapped inside a block element such as a paragraph. It is often used with an <code>id</code> or a <code>class</code> attribute.</p>
+                  <pre class="slide-small"><code class="prettyprint">&lt;p>The following is part of a paragraph &lt;span class="highlight">wrapped in a span element&lt;/span> so that in can be selected.&lt;/p></code></pre>
+                  <div class="comment panel">
+                     <p>html5 introduces more semantic sectioning elements, <code class="prettyprint">code, strong, em </code> and <code>abbr</code> and they should be used in preference to the more generic div.</p>
+                  </div>
+                  
+                  <h2>Block quotes</h2>
+                  <pre class="slide-small"><code class="prettyprint">&lt;blockquote cite="http://developer.mozilla.org"&gt;
+   &lt;p&gt;This is a quotation taken from the Mozilla Developer Center.&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+                                    
+                  <h2>Inline quoates</h2>
+                  <pre class="slide-small"><code class="prettyprint">&lt;p>In the new world of semantic markup, 
+   &lt;q cite="http://ebbi.github.io">
+   Separation of content from how it is presented is key to modern web development.
+   &lt;/q>.
+&lt;/p></code></pre>
+                  
 
+                  <h2>Forms</h2>
+                  <p>Forms are used to collect user input to be sent to a program on the server for processing. Forms can range from a simple login form with a username and password to complex forms spanning several pages for an online application form or survey. A form contains interactive widgets catering for different input types.</p>
+                  <p>Consider the following:</p>
+                  
+<pre class="slide-small"><code class="prettyprint">&lt;form method="get" action="server_program_name"&gt;
+
+   &lt;label for="email"&gt;Email: &lt;/label&gt;
+   &lt;input type="text" id="email" name="email" /&gt;
+
+   &lt;label for="password"&gt;Password: &lt;/label&gt;
+   &lt;input type="password" id="password" name="password" /&gt;
+
+   &lt;button type="submit" value="submit"&gt;Sign in&lt;/button&gt;
+
+&lt;/form&gt;</code></pre>
+                  
+                  <form method="get" action="server_program_name">
+
+                        <label for="email">Email: </label>
+                        <input type="text" id="email" name="email" />
+
+                        <label for="password">Password: </label>
+                        <input type="password" id="password" name="password" />
+
+                        <button type="submit" value="submit">Sign in</button>
+
+                  </form>
+                  <div class="comment panel">
+                     <ul>
+                        <li>The two common attributes defined for the form element are <code>method</code> and <code>action</code>. The <code>method</code> attribute can set the <code>HTTP</code> request, generally set to <code>post</code>. The <code>action</code> attribute specifies the name of the program on the server that should receive the form input data.</li>
+                        <li>Note the input elements have <code>type</code> values, <code>text</code>, <code>password</code> and <code>submit</code> indicating how the browser should handle the data.</li>
+                        <li>The <code>input</code> elements are paired with <code>label</code> elements through the <code>for</code> and <code>id</code> attributes having the same value.</li>
+                     </ul>
+                  </div>
+                  
+                  <h3>Form widgets</h3>
+                  <p>In the previous example, <code>text</code> and <code>password</code> are two common form input widgets.  The following are further form widget examples.  HTML5 provides a series of input types and validation attributes.</p>
+                  
+                  <h4>Radio buttons</h4>
+ <pre class="slide-small"><code class="prettyprint">&lt;p&gt;Choose your favourite colour:
+   &lt;input type="radio" name="colour" value="red" checked="checked" /&gt; Red
+   &lt;input type="radio" name="colour" value="green" /&gt; Green
+   &lt;input type="radio" name="colour" value="blue" /&gt; Blue
+&lt;/p&gt;
+&lt;p&gt;Which is your favourite pass time?
+   &lt;input type="radio" name="hobby" value="travel" /&gt; Travel
+   &lt;input type="radio" name="hobby" value="food" /&gt; Food
+   &lt;input type="radio" name="hobby" value="sky diving" /&gt; Sky Diving
+&lt;/p&gt;</code></pre>
+                  
+                  <div class="panel">
+                     <p>Choose your favourite colour:
+                        <input type="radio" name="colour" value="red" checked="checked" /> Red
+                        <input type="radio" name="colour" value="green" /> Green
+                        <input type="radio" name="colour" value="blue" /> Blue
+                     </p>
+                     <p>Which is your favourite pass time?
+                        <input type="radio" name="hobby" value="travel" /> Travel
+                        <input type="radio" name="hobby" value="food" /> Food
+                        <input type="radio" name="hobby" value="sky diving" /> Sky Diving
+                     </p>
+                  </div>
+                  
+                  <h4>Check boxes</h4>
+ <pre class="slide-small"><code class="prettyprint">&lt;p&gt;Select your favourite colour(s):
+   &lt;input type="checkbox" name="red" value="true" checked="checked" /&gt; red
+   &lt;input type="checkbox" name="green" value="true" /&gt; green
+   &lt;input type="checkbox" name="blue" value="true" checked="checked" /&gt; blue
+&lt;/p&gt;</code></pre>
+                  
+                  <div class="panel">
+                     <p>Select your favourite colour(s):
+                        <input type="checkbox" name="red" value="true" checked="checked" /> red
+                        <input type="checkbox" name="green" value="true" /> green
+                        <input type="checkbox" name="blue" value="true" checked="checked" /> blue
+                     </p>
+                  </div>
+                  
+                  <h4>File picker</h4>
+                  <p>HTML forms are able to send a file as user input to the server. A file picker widget can be specified with the <code>input</code> element type attribute set to the value <code>file</code>.</p>
+ <pre class="slide-small"><code class="prettyprint">&lt;form method="post" enctype="multipart/form-data" action="my_server_prog"&gt;
+   &lt;p&gt;
+      &lt;label for="fileupload"&gt;Please choose a file to upload: &lt;/label&gt;
+      &lt;input type="file" id="fileupload" name="file1" /&gt;
+   &lt;/p&gt;
+&lt;/form&gt;</code></pre>
+                  
+                  <div class="panel">
+                     <form method="post" enctype="multipart/form-data" action="my_server_prog">
+                        <p>
+                           <label for="fileupload">Please choose a file to upload: </label>
+                           <input type="file" id="fileupload" name="file1" />
+                        </p>
+                     </form>
+                  </div>
+                  <div class="comment panel">
+                     <ul>
+                        <li>
+                           Files are considered as binary data by HTML forms hence they can not be sent with the HTTP <code>get</code> method which appends text data in a URL. Instead the <code>post</code> method is used.
+                        </li>
+                        <li>
+                           The HTTP <code>Content-Type</code> header is set by default to <code >application/x-www-form-urlencoded</code>; i.e. the form data is appended to the URL.  For files, the HTTP <code>Content-Type</code> needs to be set with the HTML attribute <code>enctype</code> to <code>multipart/form-data</code> which splits the form data into multiple parts, one part for each file and one for any other form data.
+                        </li>
+                        <li>
+                           The form files are received by the server program specified by the <code>action</code> attribute.
+                        </li>
+                     </ul>
+                  </div>
+                  
+                  
                </details>
                
-
-               
-               
-               
-               
-               
-               
-               
-               
-               <dl>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a></dt>
-                  <dd>This module sets the stage, getting you used to important concepts and syntax, looking at applying HTML to text, how&nbsp;to create hyperlinks, and how to use HTML to structure a webpage.</dd>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding">Multimedia and embedding</a></dt>
-                  <dd>This module explores how to use HTML to include multimedia in your web pages, including the different ways that images can be included, and how to&nbsp;embed video, audio, and even entire other webpages.</dd>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables">HTML Tables</a></dt>
-                  <dd>Representing tabular data on a webpage in an understandable, <a target="_blank" class="glossaryLink" href="https://developer.mozilla.org/en-US/docs/Glossary/Accessibility" title="accessible: Web Accessibility (A11Y) refers to best practices for keeping a website usable despite&nbsp;physical and technical restrictions.&nbsp;Web accessibility is formally defined and discussed at the W3C through the Web Accessibility Initiative (WAI).">accessible</a> way can be a challenge. This module covers basic table markup, along with more complex features such as implementing captions and summaries.</dd>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms">HTML Forms</a></dt>
-                  <dd>Forms are a very important part of the Web — these provide much of the functionality you need for interacting with websites, e.g. registering and logging in, sending feedback, buying products, and more. This module gets you started with creating the client-side parts of forms.</dd>
-               </dl>
+                              
+               <details class="panel">
+                  <summary>Assessment: HTML5 lab exercise</summary>
+                  <p>The initial setup exercise created the folder structure with a top level folder, named, <code>wsd</code> with sub-folders <code>labs</code> and <code>website</code>.</p>
+                  <p>Having completed the HTML5 exercises, the <code>labs</code> folder should have completed exercise with files:</p>
+                  <ul>
+                     <li><code>html5-structural-elements.html</code></li>
+                     <li><code>html5-validation.html</code></li>
+                     <li><code>html5-common-elements.html</code></li>                     
+                  </ul>
+                  <p>Tasks:</p>
+                  <ul>
+                     <li>Follow the validation exercise and make sure each file is valid both in Firefox > View page source and the W3C validator</li>
+                     <li>Check the <code>nav</code> section has the hyperlinks nested within each list item and clicking each hyperlink does navigate to the correct page
+                     </li>
+                     <li>Insert your full name and group in each page <code>header</code> and <code>footer</code></li>
+                  </ul>
+               </details>
 
             </details>
 
@@ -1464,7 +1668,7 @@
             </details>
 
             <details class="panel">
-               <summary>Guidlines for the second assessment &mdash; Lab Exercises and Website Project</summary>
+               <summary>Guidelines for the second assessment &mdash; Lab Exercises and Website Project</summary>
                <p>
                   The second assessment is in two parts. The Lab Exercises and a project to create a Website for a topic of your own choosing.
                </p>
@@ -1477,7 +1681,7 @@
 
                   <ol>
                      <li>
-                        In the <strong>wd</strong> folder, create a subfolder named, <strong>labs</strong>
+                        In the <strong>wd</strong> folder, create a sub-folder named, <strong>labs</strong>
                      </li>
                      <li>
                         Copy any existing lab exercise into the <code class="prettyprint">labs</code> folder. Please follow <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">naming conventions for files and folders</a>
@@ -1758,7 +1962,7 @@
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids">complex grids</a> and <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">include complex nested flexboxes</a>
                      </li>
                      <li>
-                        Include navigation accross the pages
+                        Include navigation across the pages
                      </li>
                      <li>
                         <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms">Include complex forms</a>
@@ -2039,7 +2243,7 @@
 
                   <ol>
                      <li>
-                        In the <strong>wd</strong> folder, create a subfolder named, <strong>labs</strong>
+                        In the <strong>wd</strong> folder, create a sub-folder named, <strong>labs</strong>
                      </li>
                      <li>
                         Copy any existing lab exercise into the <code class="prettyprint">labs</code> folder. Please follow <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">naming conventions for files and folders</a>
@@ -4100,7 +4304,7 @@ Once Android is running, the default 'Hello World!' message is displayed.
                   It is true that an Activities view may change at run time but the code for the change is inside the activity, hence the tight coupling. To decouple is to abstract the view control code out of the Activity and delegate it to another class. This is achieved in Android with fragments.
                </p>
                <p>
-                  A fragment is a controller object that an activity can delegate view management tasks to. The Activity's own view can have a placeholder(s) defined to insert any framgent(s) view. This decoupling allows for views to be dynamically recomposed as the result of device or user requirements and events.
+                  A fragment is a controller object that an activity can delegate view management tasks to. The Activity's own view can have a placeholder(s) defined to insert any fragment(s) view. This decoupling allows for views to be dynamically recomposed as the result of device or user requirements and events.
                </p>
 
 
@@ -4265,10 +4469,10 @@ Once Android is running, the default 'Hello World!' message is displayed.
                            Why <code class="prettyprint">onCreate</code> and <code class="prettyprint">onCreateView</code>?
                         </li>
                         <li>
-                           Use the code from <a target="_blank" href="https://github.com/ebbi/todo-detail-app">todo-detail-app</a> examples; refactor the views to use framgments
+                           Use the code from <a target="_blank" href="https://github.com/ebbi/todo-detail-app">todo-detail-app</a> examples; refactor the views to use fragments
                         </li>
                         <li>
-                           Incorporate the <code class="prettyprint">TodoModel</code> (currently not used; see the <a target="_blank" href="https://github.com/ebbi/todo-list-app">todo-list-app</a> as an example of (non persistant) CRUD operation for creating and updating todos). Implement CRUD operation use cases.
+                           Incorporate the <code class="prettyprint">TodoModel</code> (currently not used; see the <a target="_blank" href="https://github.com/ebbi/todo-list-app">todo-list-app</a> as an example of (non persistent) CRUD operation for creating and updating todos). Implement CRUD operation use cases.
                         </li>
                         <li>
                            &hellip;
@@ -4829,7 +5033,7 @@ private static ContentValues getContentValues(Todo todo) {
                   <dd>Data Access Object, provides object methods to <code class="prettyprint">SQL</code> queries</dd>
 
                   <dt><code class="prettyprint">Room</code> database</dt>
-                  <dd>Uses the <code class="prettyprint">DAO</code> to issue queries to the <code class="prettyprint">SQLite</code> database ( and thnkfully, hides <code class="prettyprint">SQLiteOpenHelper</code>)</dd>
+                  <dd>Uses the <code class="prettyprint">DAO</code> to issue queries to the <code class="prettyprint">SQLite</code> database ( and thankfully, hides <code class="prettyprint">SQLiteOpenHelper</code>)</dd>
 
                   <dt><code class="prettyprint">Repository</code></dt>
                   <dd>Provides APIs for UI to communicate with the data layer.  Important, Single Source Of Truth (SSOT) pattern, i.e. every data element for the app is stored only once.  <code class="prettyprint">Repository</code> is also used to manage multiple data sources.</dd>
@@ -4841,7 +5045,7 @@ private static ContentValues getContentValues(Todo todo) {
                   <dd>An observable data holder class, hence it always holds/caches the latest data and notifies its observers when data changes.  UI components observe relevant data as <code class="prettyprint">LiveData</code> is aware of the relevant lifecycle status changes while observing.</dd>         
 
                <dt>Fragments</dt>
-                  <dd>UI is built dynamically with <code class="prettyprint">Fragment</code> transactions and seperation of concerns is achieved with <code class="prettyprint">ViewModel</code> and <code class="prettyprint">LiveData</code> implementing the observer pattern.</dd>
+                  <dd>UI is built dynamically with <code class="prettyprint">Fragment</code> transactions and separation of concerns is achieved with <code class="prettyprint">ViewModel</code> and <code class="prettyprint">LiveData</code> implementing the observer pattern.</dd>
 
             </dl>
             </details>
@@ -4849,13 +5053,13 @@ private static ContentValues getContentValues(Todo todo) {
          </div> 
                  
             <p>
-               <code class="prettyprint">ViewModel</code> allows data to survive accross process rather than <code class="prettyprint">Activity</code> lifecycle, hence, configuration changes (such as screen rotations) are easier to manage.
+               <code class="prettyprint">ViewModel</code> allows data to survive across process rather than <code class="prettyprint">Activity</code> lifecycle, hence, configuration changes (such as screen rotations) are easier to manage.
             </p>
             <p>
                <code class="prettyprint">LiveData</code> implements the observer pattern and is an observable data-holder class and a lifecycle aware component.  UI Controllers can observe relevant data and <code class="prettyprint">LiveData</code> can notify them of data changes.  This allows for views to be built only when actual changes to data occurs.
             </p>
             <p>
-               The <code class="prettyprint">Room</code> persistency library provides ORM and makes it easy to build a local cache layer, improving performance and the user experience with less reliance on data pulled from the network.
+               The <code class="prettyprint">Room</code> persistence library provides ORM and makes it easy to build a local cache layer, improving performance and the user experience with less reliance on data pulled from the network.
             </p>
   
          </details> 
@@ -4978,7 +5182,7 @@ public class Todo {
                   <dt><code class="prettyprint">@ColumnInfo(name = "title")</code></dt>
                   <dd>Specify the name of the column in the table if you want it to be different from the name of the member variable.</dd>
                   
-                  <dt>Other minimum costraints</dt>
+                  <dt>Other minimum constraints</dt>
                   <dd>Every field that is stored in the database needs to be either public or have a <em>getter</em> method. This example provides a <code class="prettyprint">getTitle()</code> and <code class="prettyprint">getDetail()</code> methods.</dd>
                   
                </dl>
@@ -5064,7 +5268,7 @@ Git checkout master and merge room branch
                   <code class="prettyprint">Thread</code> is a sequence of instructions that can be managed <em>independantly</em> by a scheduler
                </li>
                <li>
-                  <em>Independantly</em> schedulling threads allows for one thread, for example, downloading data while another thread runs the view of an app
+                  <em>Independently</em> scheduling threads allows for one thread, for example, downloading data while another thread runs the view of an app
                </li>
                <li>
                   <em>Thread safe</em> classes and <em>synchronisation</em> becomes important
@@ -5084,7 +5288,7 @@ Git checkout master and merge room branch
    public static void main(String args[]) {
       System.out.println("Hello (on a thread) World (on another thread)!");
          
-      /* annoymous class implementing Runnable interface run() 
+      /* anonymous class implementing Runnable interface run() 
             method passed to Runnable */      
       Runnable objHello = new Runnable() {
          public void run() {
@@ -5097,7 +5301,7 @@ Git checkout master and merge room branch
       };
       
       Runnable objWorld = new Runnable() {
-         /* annoymous class with run() method passed to Runnable */
+         /* anonymous class with run() method passed to Runnable */
          public void run() {
             for(int i=1; i&lt;=5; i++) {
                System.out.println("World");
@@ -5508,7 +5712,7 @@ and a file strings.xml in the res folder defines:
 
                <details>
                   <summary>
-                     <code class="prettyprint">Activity</code> state, persistance, &amp; lifecycle
+                     <code class="prettyprint">Activity</code> state, persistence, &amp; lifecycle
                   </summary>
                   <ul>
                      <li class="list-style-none">
@@ -5519,7 +5723,7 @@ and a file strings.xml in the res folder defines:
                                  <code class="prettyprint">active</code> (or <em>running</em> at the top of the activity stack)
                               </li>
                               <li>
-                                 <code class="prettyprint">paused</code> &mdash; alive in memeory, visible, lost focus
+                                 <code class="prettyprint">paused</code> &mdash; alive in memory, visible, lost focus
                               </li>
                               <li>
                                  <code class="prettyprint">stopped</code> &mdash; obscured by another activity, alive im memory, not visible
@@ -5549,7 +5753,7 @@ and a file strings.xml in the res folder defines:
                                  <em>visible lifetime</em> between <code class="prettyprint">onStart</code> to <code class="prettyprint">onStop</code>
                               </li>
                               <li>
-                                 <em>forground lifetime</em> between <code class="prettyprint">onResume</code> to <code class="prettyprint">onPause</code>
+                                 <em>foreground lifetime</em> between <code class="prettyprint">onResume</code> to <code class="prettyprint">onPause</code>
                               </li>
 
                            </ul>
@@ -5917,13 +6121,13 @@ View.OnCreateContextMenuListener OnCreateContextMenuListener()</code></pre>
                <details class="panel">
                   <summary>Register event listeners with event handlers</summary>
                   <details>
-                     <summary>Listener defined as an annonymous inner class</summary>
+                     <summary>Listener defined as an anonymous inner class</summary>
                      <ul>
                         <li>
                            Activity <code class="prettyprint">private</code> data conveniently available to <em>anonymous</em> inner class
                         </li>
                         <li>
-                           Seperate <code class="prettyprint">listener</code> for each <code class="prettyprint">view</code> object
+                           Separate <code class="prettyprint">listener</code> for each <code class="prettyprint">view</code> object
                         </li>
                      </ul>
 
@@ -6015,7 +6219,7 @@ android:onClick = "onCheckboxIsCompleteClick"</code></pre>
                            Original architecture <em>coupled</em> <code class="prettyprint">Activity</code> &amp; <code class="prettyprint">View</code>
                         </li>
                         <li>
-                           Tablets and future Wareables
+                           Tablets and future Wearables
                         </li>
                         <li>
                            A <code class="prettyprint">Fragment</code> represents a behavior or a portion of user interface, has its own lifecycle, receives its own input events, and can be added or removed while the activity is running
@@ -6028,7 +6232,7 @@ android:onClick = "onCheckboxIsCompleteClick"</code></pre>
                                     Google <code class="prettyprint">support-v4</code> library includes fragment support
                                  </li>
                                  <li>The single support library is now a group of libraries: <code class="prettyprint">support-v7, appcompat-v7, recyclerview-v7</code> etc.</li>
-                                 <li><em>Avoid the native Android OS implemetations and use the Support library versions. Many more releases and easier to update.</em></li>
+                                 <li><em>Avoid the native Android OS implementations and use the Support library versions. Many more releases and easier to update.</em></li>
                               </ul>
                            </details>
                         </li> 
@@ -6085,7 +6289,7 @@ android:onClick = "onCheckboxIsCompleteClick"</code></pre>
                                  Fragments equivalent to <code class="prettyprint">startActivityForResult()</code> is <code class="prettyprint">Fragment.startActivityForResult()</code>
                               </li>
                               <li>
-                                 Instead of overriding <code class="prettyprint">Activity.onActivityResult()</code> overide <code class="prettyprint">Fragment.Activity.onActivityResult()</code>
+                                 Instead of overriding <code class="prettyprint">Activity.onActivityResult()</code> override <code class="prettyprint">Fragment.Activity.onActivityResult()</code>
                               </li>
                               <li>
                                  Fragments do not have results, there is no <code class="prettyprint">Fragment</code> setResult, only Activity has <code class="prettyprint">Activity.setResult()</code>
@@ -6176,7 +6380,7 @@ android:onClick = "onCheckboxIsCompleteClick"</code></pre>
                                  <li>
                                     The previous Activity <code class="prettyprint">setContentView()</code> is no longer called in the <code class="prettyprint">onCreate</code> method</li>
                                  <li>Instead the <code class="prettyprint">onCreateView()</code> explicitly <em>inflates</em> the fragment's view: <code class="prettyprint">inflater.inflate(R.layout.fragment_todo, container, false)</code><br />
-                                    (the <code class="prettyprint">false</code> parameter indcates the host Activity will add the fragment)
+                                    (the <code class="prettyprint">false</code> parameter indicates the host Activity will add the fragment)
                                  </li>
                                  <li>
                                     Referencing a view object is now with an <code class="prettyprint">int</code> reference; <code class="prettyprint">view.findViewById(R.id.todo_complete)</code>
@@ -6226,7 +6430,7 @@ android:onClick = "onCheckboxIsCompleteClick"</code></pre>
                                  </p>
                                  <ul>
                                     <li>
-                                       The <code class="prettyprint">fragment</code> may already be in the in the <code class="prettyprint">FragmentManager</code> list due to events such as destoyed on rotation or to reclaim memory.
+                                       The <code class="prettyprint">fragment</code> may already be in the in the <code class="prettyprint">FragmentManager</code> list due to events such as destroyed on rotation or to reclaim memory.
                                     </li>
                                  </ul>
                                  <p>
@@ -6419,7 +6623,7 @@ public static Intent newIntent(
                            Activities/Fragments and Views should be the View in MVC
                         </li>
                         <li>
-                           Controllers should be seperate classes that do not extend Android classes 
+                           Controllers should be separate classes that do not extend Android classes 
                         </li>
                         <li>
                          <a target="_blank" href="https://medium.com/upday-devs/android-architecture-patterns-part-1-model-view-controller-3baecef5f2b6#f68d">Passive Model</a> and <a target="_blank" href="https://medium.com/upday-devs/android-architecture-patterns-part-1-model-view-controller-3baecef5f2b6#f68d">Active Model (model notifies the view)</a>
@@ -6469,7 +6673,7 @@ public static Intent newIntent(
                      MVVM the <code class="prettyprint">ViewModel</code> exposes stream of events for <code class="prettyprint">Views</code> to bind to.  No need for all the MVP interfaces.
                      </li>
                   <li>
-                     Seperation of concerns (MVC, MVP, MVVM), MVVM advantage is data binding making event driven apps easier by delegating to Model and minimizing logic in Views</li>
+                     Separation of concerns (MVC, MVP, MVVM), MVVM advantage is data binding making event driven apps easier by delegating to Model and minimizing logic in Views</li>
                   <li>
                      <a target="_blank" href="https://developer.android.com/jetpack/docs/guide">Google guide to app architecture</a></li>
 
