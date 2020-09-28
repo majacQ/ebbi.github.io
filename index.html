@@ -496,7 +496,7 @@
          display: none;
          position: fixed;
          bottom: 1vh;
-         left: 1vw;
+         right: 1vw;
          z-index: 99;
          border: none;
          background-color: #f6f8f8;
@@ -1045,18 +1045,20 @@
                   Software needed for the lab exercises
                </summary>
                <div class="instruction panel">
-                  <a target="_blank" href="http://brackets.io/">Brackets</a> is a Web developers editor that includes a Web server and &quot;live view&quot; (you see the changes in a browser as you code). <br />
-               <ul>
-                  <li>
-                     Once you have installed Brackets, choose:
-                     <br /><code>File > Extension Manger</code>
-                     <br />and search for <code>Beautify</code> and install it.<br /> (<code>Edit &gt; Beautify</code> will reformat the code with indentation and nesting for easy reading).  
-                  </li>
-
-                  <li>
-                     <em>Web browser</em> to test code. <a target="_blank" href="https://www.google.com/chrome/">Chrome</a> and <a target="_blank" href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> are the most used <em>open source</em> browsers.  Please install the latest release.
-                  </li>
-               </ul>
+                  <h3>Programmer&acute;s Editor</h3>
+                  <a target="_blank" href="http://brackets.io/">Brackets</a> is a Web developers editor that includes a Web server and &quot;live view&quot; (you see a &quot;live view&quot; of the edits to code in Bracket reflected in a browser). <br />
+                  <ul>
+                     <li>
+                        Once you have installed Brackets, choose:
+                        <br /><code>File > Extension Manger</code>
+                        <br />and search for <code>Beautify</code> and install it.<br /> (<code>Edit &gt; Beautify</code> will reformat the code with indentation and nesting for easy reading).
+                     </li>
+                  </ul>
+                  
+                  <p><em>Sublime</em> is a good programmers editor. <a target="_blank" href="https://www.sublimetext.com/3">Download the portable version for your OS</a>. (To reformat code for readability: <code>Edit &gt; Select All</code> and <code>Edit &gt; Line &gt; Reindent)</code></p>
+                  
+                  <h3>Web browser</h3>
+                  <p>A standards complaint <em>Web browser</em> is needed to examine and test code. <a target="_blank" href="https://www.google.com/chrome/">Chrome</a> and <a target="_blank" href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> are the most used <em>open source</em> browsers. Please install the latest release.</p>
                </div>
             </details>
 
@@ -1069,11 +1071,11 @@
                </p>
                
                 <div class="instruction panel">
-                   <p>Using Brackets (or the operating system file manager or a terminal):</p>
-                   <ul>
+                   <p>Using the editor (or the operating system file manager or a terminal):</p>
+                   <ol>
                      <li>create a folder named: <code>wsd</code></li>
-                      <li>in folder <code>wsd</code>, create sub-folders: <code>labs</code> and <code>website</code></li>
-                   </ul>
+                     <li>in folder <code>wsd</code>, create sub-folders: <code>labs</code> and <code>website</code></li>
+                   </ol>
                </div>  
                <p>
                   That is all that is  need for now, further folders and files will be created in the <code>wsd</code> folder as necessary.
@@ -1083,20 +1085,19 @@
             
             <details class="panel">
                <summary>HTML &mdash; structuring the web</summary>         
-               <p>HTML is a document specification that structures the document content with appropriate markup.  See the lecture video and lecture notes for explanation of the underlying concepts.  </p>
-               <p>The aim here is to complete lab exercises demonstrating practical use of HTML5.</p>
+               <p>HTML is a document specification that structures the document content with appropriate markup (see the lecture video and lecture notes for explanation of the underlying concepts).  The aim here is to complete lab exercises demonstrating practical use of HTML5.</p>
              
                <details class="panel">
                   <summary>Template &quot;Hello world&quot; HTML5 code</summary>
                   <div class="instruction panel">
-                     <p>Using Brackets (or the operating system file manager or a terminal):</p>
-                     <ul>
-                        <li><code>File &gt; Open Folder</code> (and select the <code>labs</code> folder created in the initial setup)</li>
+                     <p>Using an editor (or the operating system file manager or a terminal):</p>
+                     <ol>
+                        <li><code>Open Folder</code> (and select the <code>labs</code> folder created in the initial setup)</li>
                         <li><code>File &gt; New </code></li>
                         <li><code>File &gt; Save</code> (and Save As: <code>html5-template.html</code>)</li>
 
-                        <li>Start with a &quot;Hello world&quot; HTML example that has the minimum number of elements that can be used in later exercises as a template.  Insert the following code into the <code>html5-template.html</code> file and <code>save</code></li>
-                     </ul>
+                        <li>Start with a &quot;Hello world&quot; minimal HTML example that can be used in later exercises as a template.  Insert the following code into the <code>html5-template.html</code> file and <code>save</code></li>
+                     </ol>
                      <pre><code class="prettyprint">&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -1118,8 +1119,8 @@
                         <li><code>doctype</code> indicates the HTML variant and should always be included.</li>
                         <li><code>HTML</code> has a tree structure with two child nodes, <code>head</code> and <code>body</code>.</li>
                         <li>Elements can be nested, <code>head</code> has information about the document with <code>meta</code> elements and a <code>title</code> and the <code>body</code> element has the content of the document which currently has a single paragraph element, <code>p</code> with content &quot;Hello world&quot;.</li>
-                        <li>Elements have opening and closing tags, for example: <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code> or are self-closing such as the <code>meta</code> element which is closed with <code>/&gt;</code>.</li>
-                        <li>All elements can add attributes to the opening tag, for example, <code>charset="utf-8"</code> or <code>name="author"</code>.</li>
+                        <li>Elements have opening and closing tags, for example, <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code> or alternatively, they are self-closing such as the <code>meta</code> element which is closed with <code>/&gt;</code>.</li>
+                        <li>All elements can add attributes to the opening tag, for example, <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code> has an attribute <code>charset</code> with the value, &quot;utf-8&quot; for <a target="_blank" href="https://home.unicode.org/basic-info/overview/">Unicode</a>.</li>
                         <li>HTML5 is case sensitive and double quotes are standardised.</li>
                         <li>There are not many more syntactical rules and we will use a validator program to check the syntax of larger files.</li>
                         <li>In Brackets, <code>File &gt; Save</code> and in the right hand column, click the lightening symbol, &#x26a1; for the live preview.  The code should be opened in a browser and display the &quot;Hello world&quot; message.</li>
@@ -1131,14 +1132,14 @@
                <details class="panel">
                   <summary>HTML5 Structural Elements</summary>
                   <div class="instruction panel">
-                     <p>Using Brackets (or the operating system file manager or a terminal):</p>
-                     <ul>
-                        <li><code>File &gt; Open Folder</code> (and select the <code>labs</code> created in the initial setup)</li>
+                     <p>Using an editor (or the operating system file manager or a terminal):</p>
+                     <ol>
+                        <li><code>Open Folder</code> (and select the <code>labs</code> created in the initial setup)</li>
                         <li><code>File &gt; New </code></li>
                         <li><code>File &gt; Save</code> (and Save As: <code>html5-structural-elements.html</code>)</li>
                         <li>Copy the code from html5-template.html and paste it into html5-structural-elements.html</li>
                         <li>Replace the entire <code>body</code> with the following code:</li>
-                     </ul>
+                     </ol>
                   </div>
                   <pre class="slide-small"><code class="prettyprint">&lt;body&gt;
 
@@ -1172,7 +1173,7 @@
           &lt;/ul&gt;
       &lt;/section&gt;
       
-      &lt;section id="html5-common-elemets"&gt;
+      &lt;section id="html5-common-elements"&gt;
          &lt;h2&gt;HTML5 Common Elements&lt;/h2&gt;
       &lt;/section&gt;
       
@@ -1186,9 +1187,9 @@
                   <div class="comment panel">
                      <ul>
                         <li>Note the basic syntax points from the first exercise.</li>
-                        <li>Note the <code>html</code> tree structure.  Element <code>ul</code> is an un-ordered list with nested list items (<code>li</code>) nodes.  It is in turn nested within a <code>nav</code> structural element.  (In later exercises we will turn the list items content into clickable hyperlinks for navigation).</li>
+                        <li>Note the <code>html</code> tree structure; it has two top level child elements <code>head</code> and <code>body</code>, which in turn have further child elements, for example, element <code>nav</code> (navigation) is a child node of <code>body</code> with nested child element <code>ul</code> (unordered list).  The unordered list in turn has nested <code>li</code> (list item) elements. (In later exercises we will turn the list items content into clickable hyperlinks for navigation).</li>
                         <li>Just as a section in a book, each <code>section</code> should have a first child element as a heading and the heading levels should be in sequence.</li>
-                        <li>Note the syntax of the special character, &copy; which is coded as <code>&amp;copy;</code><br />  (Special characters start with <code>&amp;</code> character and are followed by a character name and end with a semi-colon<code>;</code>  foe example, &amp;lt; for &lt; and &amp;gt; for &gt;) </li>
+                        <li>Note the syntax of the <a target="_blank" href="https://dev.w3.org/html5/html-author/charref">special character</a>, &copy; which is coded as <code>&amp;copy;</code> (special characters start with <code>&amp;</code> character and are followed by a character name and end with a semi-colon<code>;</code>  foe example, &amp;lt; for &lt; and &amp;gt; for &gt;) </li>
                      </ul>
                   </div>
                </details>
@@ -1197,14 +1198,14 @@
                <details class="panel">
                   <summary>HTML5 Validation</summary>
                   <div class="instruction panel">
-                     <p>Using Brackets (or the operating system file manager or a terminal):</p>
-                     <ul>
-                        <li><code>File &gt; Open Folder</code> (and select the <code>labs</code> folder created in the initial setup)</li>
+                     <p>Using an editor (or the operating system file manager or a terminal):</p>
+                     <ol>
+                        <li><code>Open Folder</code> (and select the <code>labs</code> folder created in the initial setup)</li>
                         <li><code>File &gt; New </code></li>
                         <li><code>File &gt; Save</code> (and Save As: <code>html5-validation.html</code>)</li>
                         <li>Copy the code from html5-template.html and paste it into html5-validation.html
    Replace the entire <code>body</code> with the following code:</li>
-                     </ul>              
+                     </ol>              
                      <pre class="slide-small"><code class="prettyprint">&lt;body&gt;
 
    &lt;header&gt;
@@ -1237,7 +1238,7 @@
           &lt;/ul&gt;
       &lt;/section&gt;
       
-      &lt;section id="html5-common-elemets"&gt;
+      &lt;section id="html5-common-elements"&gt;
          &lt;h2&gt;HTML5 Common Elements&lt;/h2&gt;
       &lt;/section&gt;
       
@@ -1257,7 +1258,7 @@
                         <li>The first validation can be by a programmers editors such as Bracket.  Note, the spelling mistake, navs id highlighted in red (it should be nav)</li>
                         <li>Leave the mis-spelt navs and save the file.  Using the operating system file browser find html5-validation.html file and drag it into Firefox browser (or in Firefox, use File > Open).  Even with the error, the content is displayed; browsers are very forgiving and correct the code as far as possible.  Right-mouse click and select <code>view page source</code> and note the errors in red.</li>
                         <li>The third method is to use the <a href="https://validator.w3.org/" target="_blank">W3C Validation service</a>.  Select <code>Validate by File Upload</code> or cut&amp;paste the HTML source code into <code>Validate by Direct Input</code> and <code>Check</code> for an error report.</li>
-                        <li>Code should be validated in Firefox for XML well-formdness and the W3C validator</li>
+                        <li>Code should be validated in Firefox for XML well-formdness (child/parent tree structure) and the W3C validator for syntactical rules.</li>
                         <li>Correct the errors and save the file</li>
                      </ul>
                   </div>
@@ -1266,17 +1267,17 @@
                <details class="panel">
                   <summary>HTML5 Common Elements</summary>
                   <div class="instruction panel">
-                     <p>Using Brackets (or the operating system file manager or a terminal):</p>
-                     <ul>
-                        <li><code>File &gt; Open Folder</code> (and select the <code>labs</code> folder created in the initial setup)</li>
+                     <p>Using an editor (or the operating system file manager or a terminal):</p>
+                     <ol>
+                        <li><code>Open Folder</code> (and select the <code>labs</code> folder created in the initial setup)</li>
                         <li><code>File &gt; New </code></li>
                         <li><code>File &gt; Save</code> (and Save As: <code>html5-common-elements.html</code>)</li>
                         <li>Copy the code from html5-structural-elements.html and 
-   paste it into html5-common-elemets.html</li>
+   paste it into html5-common-elements.html</li>
                         <li>In the <code>html5-structural-elements.html</code> file, under the heading <code>HTML5 Common Elements</code>, include a copy of each of the following common HTML code examples.</li>
                         <li>Update the <code>nav</code> elements with hyperlinks to each section of the document (similar to the example code)</li>
                         <li>Validate the code and resolve any error messages</li>
-                     </ul>
+                     </ol>
                   </div>
                   
                   <p>Take a brief glance at <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML element reference</a> and read the description of the HTML elements already used in the previous exercises.  The following are selected further commonly used elements.</p>
@@ -1300,10 +1301,10 @@
    &lt;/ul&gt;
 &lt;/nav&gt;</code></pre>
 
-                  <p>As well as the Web IP address, such as <code>developer.mozilla.org</code> in the first example or a local document name, <code>html5-structural-elements.html</code> as in the second examples, the <code>href</code> attribute can also  point to an <code>id</code> within a document, for example,</p>
+                  <p>As well as the Web IP address, such as <code>developer.mozilla.org</code> in the first example or a local document name, <code>html5-structural-elements.html</code> as in the second examples, the <code>href</code> attribute can also  point to an <code>id</code> within a document, for example (note, the # symbol denotes an <code>id</code>),</p>
                   <pre class="slide-small"><code class="prettyprint">&lt;a href=&quot;#html5-elements&quot;&gt;HTML5 Structural elements&lt;/a&gt;</code></pre>
                   
-                  <p>Or to a particular <code>id</code> within a valid local or remote document address, for example:</p>
+                  <p>Or to a particular <code>id</code> (note the # symbol after the filename denoting an <code>id</code>) within a valid local or remote document address, for example:</p>
 <pre class="slide-small"><code class="prettyprint">&lt;a href=&quot;html5-structural-element.html#html5-elements&quot;&gt;HTML5 Structural elements&lt;/a&gt;
                   
 &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics">MDN Inline Text Semantics&lt;/a&gt;</code></pre>
@@ -1320,7 +1321,7 @@
                   </div>
                   
                   <h2>Graphics (img element)</h2>
-                  <p>The web has moved beyond it&acute;s original text documents and includes other media formats: images, sound and video.</p>
+                  <p>The web has moved beyond its original text documents and includes other media formats: images, sound and video.</p>
                   <p>Techniques for including images in HTML documents should be dependent on their purpose.  For example, background images should be separated from content and included with CSS.   Images included with HTML, <code>img</code> element are either for conveying information or commonly used in navigation by being embedded in hyperlinks.</p>
                   <h3>Images to convey content</h3>
                   <p>HTML5 provides the <code>figure</code> element that can contain an image and an associated <code>figcaption</code>, this is good semantic code for images that convey content.  For example:</p>
@@ -1339,10 +1340,10 @@
                   </figure>
                   <div class="instruction panel">
                      <p>To try the code:</p>
-                     <ul>
+                     <ol>
                         <li>In the <code>lab</code> folder, create an <code>images</code> folder</li>
                         <li>Right-mouse click on each image and save it in the <code>images</code> folder</li>
-                     </ul>
+                     </ol>
                   </div>
                   <h3>Images in hyperlinks for navigation</h3>
                   <p>HTML was text based and hypertext allowed text inside hyperlinks to point to documents on the internet.  With hypermedia, non-text formats, such as images (or sound and video) can be nested inside hyperlinks.  For example:</p>
@@ -1358,7 +1359,7 @@
                   
                   <h2>Divisions (div)</h2>
                   <p>The div element was introduced in HTML4 as a general container for grouping elements. It can wrap any other element and is typically selected with an <code>id</code> or a <code>class</code> attribute.</p>
-                  <pre class="slide-small"><code class="prettyprint">&lt;div id=&quot;div-element&quot; class=&quot;highlight&quot;&gt;
+                  <pre class="slide-small"><code class="prettyprint">&lt;div id=&quot;div-example&quot; class=&quot;highlight&quot;&gt;
    &lt;p&gt;Any number of element to be grouped into one division&lt;/p&gt;
 &lt;/div&gt;</code></pre>
                   <div class="comment panel">
@@ -1508,57 +1509,467 @@
                      <li><code>html5-common-elements.html</code></li>                     
                   </ul>
                   <p>Tasks:</p>
-                  <ul>
+                  <ol>
                      <li>Follow the validation exercise and make sure each file is valid both in Firefox > View page source and the W3C validator</li>
-                     <li>Check the <code>nav</code> section has the hyperlinks nested within each list item and clicking each hyperlink does navigate to the correct page
+                     <li>Check the <code>nav</code> section has the hyperlinks nested within each list item and clicking each hyperlink does navigate to the correct file
                      </li>
                      <li>Insert your full name and group in each page <code>header</code> and <code>footer</code></li>
-                  </ul>
+                  </ol>
                </details>
 
             </details>
-
+            
+            
             <details class="panel">
                <summary>CSS &mdash; styling the web</summary>
-               <p>Cascading Stylesheets — or CSS — is the first technology you should start learning after HTML. Take a brief look at <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS">Learn to style HTML using CSS</a> &mdash; and follow the guides and complete the assessments in the following modules.</p>
+               <h1>Cascading Style Sheets (CSS)</h1>
+               <p>Whilst HTML is used to define a web document structure and author its content, the presentation of a web document is defined using a different language called Cascading Style Sheet (CSS). By presentation we mean for example, the paragraph you are reading has a font size and is positioned in a particular place in the browser display. The heading, navigation, borders, background colour are all styled for this specific display. This is the presentation of the document. If you were to do a print preview of the document, you will see another presentation. The document remains the same but its presentation changes. The content of the document is marked-up with HTML and we write a different CSS for each presentation. </p>
+               
+               <details class="panel">
+               <summary id="css-overview">CSS Overview</summary>               
+                  <h2>What is Cascading?</h2>
+                  <p>Cascading Style Sheet (CSS) declarations can be specified in several place:</p>
+                  <ul>
+                     <li>In the absence of any CSS, the browser applies its default styles</li>
+                     <li>CSS in an external file can be linked in the HTML <code>head</code> element</li>
+                     <li>HTML <code> head element</code> can include a <code>style</code> element with CSS declaration <strong>(avoid)</strong></li>
+                     <li>An HTML element can include CSS declarations as attributes <strong>(avoid)</strong></li>
+                  </ul>
+                  <p><strong>Separation of content from presentation is key to successful web development.</strong> Always keep HTML as purely marked-up content and link to an external CSS file for the presentation of the content. This way the same HTML content can be displayed on different devices or be read more efficiently by other programs such as screen readers.  </p>
+                  <h2>Box Model</h2>
+                  <p>CSS applies a Box Model with properties width and height of the content of an element, padding space around the content, and any border or margin between the boxes.  To see the box model:    </p>
+                  <div class="instruction panel">
+                     <ol>
+                        <li>Use Firefox to open the <code>common-elements.html</code> </li>
+                        <li><code>Right-mouse click</code> on any HTML element and <code>select Inspect Element</code></li>
+                        <li>The <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Tools">developer tool</a> panel opens (select Inspector on the HTML top tool bar, and select <code>layout</code> on the CSS panel tool bar.  You should see a similar image for the chosen element. </li>
+                        <li>
+                           <figure>
+                              <img src="assets/box-model-devtools.png" alt="Example SVG image" />
+                              <figcaption> <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Tools">Firefox Developer Tool</a> Box Model</figcaption>
+                           </figure>
+                        </li>
+                        <li>Note, the <code>display</code> attribute is normally <code>Block</code> or <code>inline</code>.  Block elements are positioned at the top right corner of the display and stacked on top of each other; inline elements will not break into new line and width and height attributes will not apply.  Think of a paragraph as a block element with a hyperlink inline element inside the paragraph.</li>
+                        <li>HTML5 introduces displays, <code>grid</code> and <code>flexbox</code> to simplify positioning of elements.  See the lab exercises for examples.</li>
+                     </ol>
+                  </div>
+                  
+                  <h2>CSS syntax</h2>
+                  <p>CSS is a declarative language, syntactically very simple but deceptively difficult to implement due to its simplicity.  Consider the following CSS declaration:</p>
+                  <pre><code class="prettyprint">body { color: black; padding: 1em; }</code></pre>
+                  <p>Here is the generic syntax:</p>
+                  <figure>
+                    <img src="assets/css-rule.gif" alt="Example VSS declaration" />
+                    <figcaption>CSS syntax</figcaption>
+                  </figure>
+                  <p>Selectors select HTML elements so that CSS declarations grouped in <code>{ }</code> can be applied to them.</p>
+                  <p>CSS declarations are <code>property: value</code> pairs, separated by a colon <code>:</code> and end with a semi-colon <code>;</code></p>
+                  <h2>Selectors</h2>
+                  <p>CSS has selectors for selecting particular HTML element(s).  It is possible to select individual or groups of HTML elements based on their <code>id</code> or <code>class</code> attribute values. Consider:</p>
+                  <pre><code class="prettyprint">&lt;p class=&quot;highlight&quot;</code> &hellip; &gt; &hellip;
+<code class="prettyprint">&lt;a id=&quot;top-level&quot; class=&quot;highlight&quot; &hellip; </code>&gt; &hellip;  </pre>
+                  <ul>
+                     <li>
+                        <strong>Element type selectors:</strong>
+                        <pre><code class="prettyprint">p { any CSS declaration }</code></pre>
+                     </li>
+                     <li>
+                        <strong>Class selectors:</strong>
+                        <p>Both the <code>p</code> and the <code>a</code> elements above can be selected with the CSS class selector: </p>
+                        <pre><code class="prettyprint">.highlight { any CSS declaration }</code></pre>
+                        <p>(Note the dot (.) in CSS corresponds to a class attribute in HTML) </p>
+                     </li>
+                     <li>
+                        <strong>Id selectors:</strong>   
+                        <p>The <code>id</code> selector returns a unique element as an <code>id</code> should be unique in any  HTML document.  For example,</p> 
 
-               <dl>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS">CSS first steps</a></dt>
-                  <dd>This module gets you started with the basics of how CSS works, including using selectors and properties; writing CSS rules; applying CSS to HTML; specifying length, color, and other units in CSS; controlling cascade and inheritance; understanding box model basics; and debugging CSS.</dd>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text">Styling text</a></dt>
-                  <dd>Here, we look at text-styling fundamentals, including setting font, boldness, and italics; line and letter spacing; and drop shadows and other text features. We round off the module by looking at applying custom fonts to your page and styling lists and links.</dd>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks">CSS building blocks</a></dt>
-                  <dd>Next up, we look at styling boxes, one of the fundamental steps towards laying out a web page. In this module, we recap the box model, then look at controlling box layouts by setting padding, borders and margins, setting custom background colors, images, and fancy features such as drop shadows and filters on boxes.</dd>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout">CSS layout</a></dt>
-                  <dd>At this point, we've already looked at CSS fundamentals, how to style text, and how to style and manipulate the boxes that your content sits inside. Now, it's time to look at how to place your boxes in the right place in relation to the viewport, and one another. We have covered the necessary prerequisites so we can now dive deep into CSS layout, looking at different display settings, modern layout tools like flexbox, CSS grid, and positioning, and some of the legacy techniques you might still want to know about.</dd>
-               </dl>
+                        <pre><code class="prettyprint">#top-level { any CSS declaration }</code> </pre>
+                        <p>(Note the hash symbol (#) in CSS corresponds to an id attribute in HTML)</p>
+                     </li>
+                     <li>
+                        <strong>Pseudo selector:</strong>
+                        <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">A CSS pseudo-class</a> is a keyword added to a selector that specifies a special state of the selected element(s). For example,</p>
+                        <pre><code class="prettyprint">a:click { any CSS declaration }</code> </pre>
+                        <pre><code class="prettyprint">.highlight:hover { any CSS declaration }</code> </pre>
+                     </li>
+                     <li>There are further selectors and syntactical rules but as a general approach, CSS should be kept as generic as possible, for example: <code>p.highlight</code> and <code>a.highlight</code> are more specific selectors but <code>.highlight</code> is more generic and reusable and leads to maintainable code.</li>
+                  </ul>
+                  <h2>CSS specificity</h2>
+                  <p>Consider the following HTML:</p>
+                  <pre><code class="prettyprint">&lt;p class=&quot;highlight&quot; id=&quot;intro&quot;>Example paragraph&lt;/p&gt;</code></pre>
+                  <p>and the following CSS:</p>
+                  <pre><code class="prettyprint">p { color: black; }
+#intro { color: red; }
+.highlight { color: green; }
+p { color: blue; }</code></pre>
+                  <p>In the example paragraph above, what is the resulting paragraph colour? The answer is red, because id selectors take precedence over class selectors which in turn have precedence over element type selectors. </p>
+                  <p>What is the resulting colour of all paragraph without a <code>class</code> or <code>id</code> attribute? The answer is blue as the order of the declaration matter and the last declaration is blue.</p>              
+                  <h2>CSS units</h2>
+                  <p>For length units:</p>
+                  <ul>
+                     <li>Absolute units are often defined in pixels (px)</li>
+                     <li>Relative units are more responsive across devices (desktop, tablet, mobile) and include:
+                        <ul>
+                           <li>vh &dash; e.g. 1vh is 1% of the viewport&acute;s height </li>
+                           <li>vw &dash; e.g. 1vw is 1% of the viewport&acute;s width </li>
+                           <li>em &dash; e.g. 1em is 1 times the base font size</li>
+                        </ul>
+                     </li>
+                  </ul>
+                  <p>Colour can be defined by it&acute;s name, such as red, green, blue, &hellip; hexadecimal value, such as, #85b7e7 or RGB value, such as, rgb(2, 121, 139)</p>
+                  <p>
+                   The most common units are mentioned above; for an overview of CSS values and units, refer to <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units" target="blank">this article</a> .
+               </p>
+                  <h2>CSS shorthand notation</h2>
+                  <p>Shorthand notation can apply to properties as well as values, for example: </p>
+                  <ul>
+                       <li>
+                          <code>margin: 1em;</code> 
+                          <br />is equivalent to:
+                          <br /><code>margin-top: 1em;	margin-right: 1em;	margin-bottom: 1em; margin-left: 1em; </code>
+                       </li>
+                       <li>
+                          <code>margin: 1em 2em 3em 4em;</code> 
+                          <br />is equivalent to:
+                          <br /><code>margin-top: 1em;	margin-right: 2em;	margin-bottom: 3em; margin-left: 4em; </code>
+                       </li>
+                       <li>
+                          <code>border: 1px solid gray;</code> 
+                          <br />is equivalent to:
+                          <br /><code>border-width: 1px; border-style: solid; border-color: gray; </code>
+                       </li>
+                   </ul>
+               </details>
+               
+               <details class="panel">
+                  <summary>Initial design</summary>
+                  <h2>Sketch</h2>
+                  <p>A site development often involves a group of graphics designers with a ecstatic eye, developers who code the design and information architects. The purpose here is to learn CSS.  Start with a sketch of an idea for a page to practice code.</p>
+                  
+                  <details class="panel">
+                  <summary>Sketch</summary>
+                     <figure>
+                        <figcaption>Initial page sketch to code</figcaption>
+                        <img class="width-three-quarter" src="assets/style-page-flex-sketch.png" alt="MDN Web documents">
+                     </figure>
+                  </details>
+               </details>
+                  
+               <details class="panel">
+                  <summary>Initial setup</summary>
+                  <h2>Initial setup</h2>
+                  <p>
+                     CSS has a deceptively simple syntax but it remains difficult to implement designs. This is partly due to a bewildering number of properties as well as the simplicity of the language. Refer to the <code>CSS Overview</code> section for an overview of basic concepts; our aim here is to take a tour through the most commonly used CSS properties.
+                  </p>
+                  <p>Create an HTML file and link a CSS file as it&acute;s stylesheet.</p>
+                  <div class="instruction panel">
+
+                     <p>Using an editor (or the operating system file manager or a terminal):</p>
+                     <ol>
+                        <li><code>Open Folder</code> (and select the <code>labs</code> folder created in the initial setup)</li>
+                        <li><code>File &gt; New </code></li>
+                        <li><code>File &gt; Save</code> (and Save As: <code>style-page.html</code>)</li>
+                     </ol>
+                     <details class="panel">
+                        <summary>Code for <code>style-page.html</code></summary>
+                        <pre><code class="prettyprint">&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+   &lt;title&gt;Lab exercise CSS&lt;/title&gt;
+   &lt;meta charset=&quot;utf-8&quot; /&gt;
+   &lt;meta name=&quot;author&quot; content=&quot;your-name&quot; /&gt;
+   &lt;meta name=&quot;description&quot; content=&quot;CSS lab exercises&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;header&gt;
+      &lt;p&gt;Joe Blogs&lt;/p&gt;
+      &lt;img id=&quot;logo&quot; src=&quot;images/star.svg&quot; alt=&quot;logo&quot; /&gt;
+   &lt;/header&gt;
+   &lt;nav id=&quot;nav-labs&quot;&gt;
+      &lt;ul&gt;
+         &lt;li&gt;&lt;a href=&quot;html5-structural-elements.html&quot;&gt;HTML5 structural elements&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;html5-validation.html&quot;&gt;HTML5 validation&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;html5-common-elements.html&quot;&gt;HTML5 vommon elements&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href=&quot;style-page.html&quot;&gt;Style page&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/nav&gt;
+   &lt;section id=&quot;section-mark-calculator&quot;&gt;
+      &lt;h1&gt;Mark calculator&lt;/h1&gt;
+      &lt;form class=&quot;panel&quot;&gt;
+         &lt;div id=&quot;div-labs&quot;&gt;
+            &lt;p&gt;Select completed exercises&lt;/p&gt;
+            &lt;div&gt;
+               &lt;input type=&quot;checkbox&quot; id=&quot;lab-structural-elements&quot; name=&quot;lab-structural-elements&quot; /&gt;
+               &lt;label for=&quot;lab-structural-elements&quot;&gt;Structural Elements&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+               &lt;input type=&quot;checkbox&quot; id=&quot;lab-validation&quot; name=&quot;lab-validation&quot; /&gt;
+               &lt;label for=&quot;lab-validation&quot;&gt;Validation&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+               &lt;input type=&quot;checkbox&quot; id=&quot;lab-common-elements&quot; name=&quot;lab-common-elements&quot; /&gt;
+               &lt;label for=&quot;lab-common-elements&quot;&gt;Common elements&lt;/label&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;div&gt;
+            &lt;p&gt;Checked for XML well-formdness in Firefox?&lt;/p&gt;
+            &lt;label for=&quot;radio-xml-valid-yes&quot;&gt;Yes&lt;/label&gt;
+            &lt;input type=&quot;radio&quot; id=&quot;radio-xml-valid-yes&quot; name=&quot;xml-valid&quot; value=&quot;Yes&quot; /&gt;
+            &lt;label for=&quot;radio-xml-valid-no&quot;&gt;No&lt;/label&gt;
+            &lt;input type=&quot;radio&quot; id=&quot;radio-xml-valid-no&quot; name=&quot;xml-valid&quot; value=&quot;No&quot; checked=&quot;checked&quot; /&gt;
+            &lt;p&gt;Any errors from W3C validator?&lt;/p&gt;
+            &lt;label for=&quot;radio-w3c-valid-yes&quot;&gt;Yes&lt;/label&gt;
+            &lt;input type=&quot;radio&quot; id=&quot;radio-w3c-valid-yes&quot; name=&quot;w3c-valid&quot; value=&quot;Yes&quot; checked=&quot;checked&quot; /&gt;
+            &lt;label for=&quot;radio-w3c-valid-no&quot;&gt;No&lt;/label&gt;
+            &lt;input type=&quot;radio&quot; id=&quot;radio-w3c-valid-no&quot; name=&quot;w3c-valid&quot; value=&quot;No&quot; /&gt;
+         &lt;/div&gt;
+         &lt;div class=&quot;panel&quot;&gt;
+            &lt;button id=&quot;button-calculate&quot;&gt;Calculate&lt;/button&gt;
+            &lt;label for=&quot;calculated-mark&quot;&gt;mark: &lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;calculated-mark&quot; name=&quot;calculated-mark&quot; disabled=&quot;disabled&quot; /&gt;
+         &lt;/div&gt;
+      &lt;/form&gt;
+   &lt;/section&gt;
+   &lt;footer&gt;
+      &lt;p&gt;Joe Bloggs &mdash; j.blogs@example.com&lt;/p&gt;
+   &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                     </details>
+                     <ol>
+                        <li><code>File &gt; New </code></li>
+                        <li><code>File &gt; Save</code> (and Save As: <code>style-page.css</code>)</li>
+                     </ol>
+                  </div>
+                  
+                  <h2>Link <code>HTML</code> and <code>CSS</code> files</h2>
+                  <p>Best practice is to keep HTML content in a separate file from the CSS declarations and link them together with an HTML <code>link</code> element (see, What is Cascading? in CSS Overview)</p>
+                  
+                  <p>Insert the following <code>link</code> element into the <code>head</code> element of <code>style-page.html</code> file:
+<pre><code class="prettyprint">&lt;link href=&quot;style-page.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</code></pre>
+               </details>
+
+               <details class="panel">
+                  <summary>Developer tools</summary>
+                  <h2>Developer tools</h2>
+                  <p>The <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Tools">Mozzilla Developer Tool</a> is useful for development and should be left open as you code:</p>
+                  <div class="instruction panel">
+                     <ol>
+                        <li>Open <code>style-page.html</code> in Firefox</li>
+                        <li>In Firefox, <code>Right-mouse click</code> on any HTML element and <code>select Inspect Element</code></li>
+                        <li>The <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Tools">developer tool</a> panel opens (select Inspector on the HTML top tool bar, and select <code>Rules</code> on the CSS panel tool bar.</li>
+                        <li>Click on any HTML element to see the CSS rules applied to the element (CSS rules will appear as they are added to the CSS file and the page reloaded.</li>
+                     </ol>
+                  </div>
+               </details>
+               <details class="panel">
+                  <summary>Typography</summary>                  
+                  <h2>Typography</h2>
+
+                  <p>
+                     Traditionally, developers had to rely on the fonts installed locally and this varied a great deal on different systems. It is now more common to <code>link</code> a CSS definition of fonts in the <code>HTML</code> file 
+                  </p>
+                  
+                  <div class="instruction panel">
+                     <p>Insert the following <code>link</code> elements into the <code>head</code> element of <code>style-page.html</code> file:</p>
+                     <pre><code class="prettyprint">&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Delius&display=swap&quot; 
+   rel=&quot;stylesheet&quot; /&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Syncopate&display=swap&quot; 
+   rel=&quot;stylesheet&quot; /&gt;</code></pre>
+
+                     <details>
+                        <summary>Choosing other Google fonts</summary>
+                        <div class="instruction panel">
+                        <ol>
+                           <li>
+                              Visit <a alt="Opens in a new window" href="http://www.google.com/fonts" rel="external" target="blank" title="Opens in a new window">Google fonts</a>.
+                           </li>
+                           <li>
+                              Select a font (and add a style).  Click on the <code>Embed</code> tab
+                           </li>
+                           <li>
+                              In the <code>Embed</code> panel, note the <code>link</code> element to include in the HTML file and the CSS, <code>font-family</code> declaration to include in your CSS file.
+                           </li>
+                           <li>
+                              In the <code>Embed</code> panel, copy the <code>link</code> element and paste it into the <code>head</code> element of the <code>HTML</code> file.
+                           </li>
+                           <li>
+                              In the <code>Embed</code> panel, copy the CSS rule for <code>font-family</code> and apply it to a <code>selector</code> in the <code>CSS</code> file.
+                           </li>
+                        </ol>
+                        </div>                                    
+                     </details>                     
+                     <p>Use the font definition in CSS by inserting the following CSS rule in the <strong>main.css</strong> file:</p>
+                     <pre><code class="prettyprint">body { font-family: 'Delius', cursive; }</code> </pre>
+                     <ul>
+                        <li>In Firefox, refresh the <code>style-page.html</code> file to see the font change</li>
+                        <li>Note the CSS rule in the <code>Developer tools</code> CSS panel </li>
+                     </ul>
+                  </div>
+               </details>
+               
+               <details class="panel">
+                  <summary>Colour scheme</summary>             
+                  <h2>Colour scheme</h2>
+                  <p>
+                     Graphics designers talk of colour theory and complementary or triad schemes. For implementation, what is required is the values of colours to be specified by CSS for various elements within a page. There are various tools that help with colour schemes.
+                  </p>
+                  <p>Visit the Mozzilla Developer Network <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Tools/ColorPicker_Tool#ColorPIcker_Tool" rel="external" target="blank" title="Opens in a new window">color picker tool</a>. Click the small circle on the main colour pallet and the colour bar until the desired color is displayed with its value. Click on any of the colour boxes and copy its hexadecimal (HEXA) values to use in CSS.
+                  </p>
+                  <p>Set a base colour to the <code>body</code> element (which will be inherited by all child elements).  It is good practice to specify <code>color</code> and <code>background-color</code> together.    Open the  <strong>main.css</strong> file and add the following code:</p>
+                  <pre><code class="prettyprint">body { 
+   background-color: #FFFFFF;
+   color: #000000; 
+}</code> </pre>
+               </details>
+               
+               <details class="panel">
+                  <summary>Layout Flexbox</summary> 
+                  <h2>Layout</h2>
+                  <p>CSS3 introduces two major modules for positioning HTML elements in page layouts.  <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> is intended for one-dimensional layout such as navigation and <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids">Grid</a> for two-dimensional page layouts.  This supersedes previous CSS techniques and often simplifies multitude of lines of code to a few declarations.</p>
+                  <p>Insert the following <code>CSS</code> rules for the header layout into the <code>style-page.css</code> file:
+<pre><code class="prettyprint">header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}</code></pre>
+
+                  
+                  <p>Similarly, the following code for the navigation:
+<pre><code class="prettyprint">#nav-labs ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+</code></pre>      
+                  <ul>
+                     <li>Note, the <code>display</code> property is set to <code>flex</code></li>
+                     <li>Read <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligning Items in a Flex Container</a> and note the values for <code>align-items</code> and <code>justify-content</code> and try them in the Firefox developer tool panel (clicking the current value in the tools panel will display alternative values; also try the checkbox to switch the CSS declarations on/off)</li>
+                     <li>Note, the element type selector, <code>header</code> and the <code>id</code> selector for navigation.  See the CSS overview, Selectors and CSS specificity for an explanation.</li>
+                  </ul>
+                  
+               </details>
+               
+               <details class="panel">
+                  <summary>Common CSS</summary>                
+                  <h2>Common CSS</h2>
+                  <p>It is difficult to organise CSS code and the style of coding is varied.  The approach here is to set typography, colour scheme, layout and navigation for the entire document and then fill the gap for the detail of the design.</p>
+                  
+                  <p>Consider the following code and in each case:</p>
+                  <ul>
+                     <li>add the code to the <code>style-page.css</code>, save and refresh the page in Firefox</li>
+                     <li>examine the code in the developer tools by selecting /de-selecting the CSS properties and changing their values</li>
+                     <li>read the relevant sections in the <code>CSS overview</code></li>
+                  </ul>
+               
+                  <p><strong>Header:</strong> insert a border, change the font and reduce the logo height</p>
+<pre><code class="prettyprint">header {
+   font-family: 'Syncopate', sans-serif;
+   border-bottom: 0.1vw solid #f7b7b7;
+}
+#logo { 
+   height: 5vh; 
+}</code></pre>
+               
+                  <p><strong>Navigation:</strong> change the box model padding, insert a border and border radius, and switch off the default browser list style bullet point.  See the <code>CSS Overview section</code> for explanation of concepts and syntax.</p>
+<pre><code class="prettyprint">#nav-labs ul {
+   padding: 1vh 1vw;
+   border: 0.1vw solid #f7b7b7;
+   border-radius: 0.5vw;
+   list-style-type: none;
+}</code></pre>                  
+               
+                  <p><strong>footer:</strong> change the box model margin top, insert a top border.</p>
+<pre><code class="prettyprint">footer {
+   margin-top: 10vh;
+   border-top: 0.1vw solid #f7b7b7;
+}</code></pre>                  
+               
+                  <p><strong>Reusable classes</strong> A generic reusable class with box model padding and margins and border to frame any content; we name the CSS class, <strong>panel</strong></p>
+<pre><code class="prettyprint">.panel {
+   border: 0.1vw solid #e8e6e6;
+   border-radius: 0.5vw;
+   padding: 1vw;
+   margin: 1vh 0;
+}</code></pre>
+                  <p>The styled page should now be similar to the original sketch.</p>
+               </details>
+               
+               
+               <details class="panel">
+                  <summary>Layout Grid</summary>               
+                  <h2>Layout revisited</h2>
+                  <p>The previous example introduced the CSS <code>flex</code> module to position HTML elements in one dimension; the header logo and the navigation were arranged in a row.  <code>Flex</code> can also be used to arrange elements in a column.  The limitation of flex is the one-dimension, either row or column.  To arrange HTML elements in both row and column, CSS3 introduces the <code>Grid</code> module.</p>
+                  
+                  <p>To demonstrate use of the CSS <code>Grid</code> module, assume the original design is changed so that the navigation with a list of lab exercises is no longer a flex row but a left-hand column.  The overall page layout is now, a header row above two columns (navigation sidebar next to a content column) and a footer row at the bottom.  </p>
+                  
+                  <details class="panel">
+                  <summary>Sketch</summary>
+                     <figure>
+                        <figcaption>Revised page sketch to code</figcaption>
+                        <img class="width-three-quarter" src="assets/style-page-grid-sketch.png" alt="MDN Web documents">
+                     </figure>
+                  </details>
+                  
+                  <p>To code the revised sketch, copy the style-page HTML and CSS code and add the new Grid layout in CSS</p>
+                  <div class="instruction panel">
+                     <p>Using an editor (or the operating system file manager or a terminal):</p>
+                     <ol>
+                        <li><code>Open Folder</code> (and select the <code>labs</code> folder created in the initial setup)</li>
+                        <li>Copy the file <code>style-page.html</code>  and Save As: <code>style-page-grid.html</code></li>
+                        <li>Copy the file <code>style-page.css</code>  and Save As: <code>style-page-grid.css</code></li>
+                     </ol>
+                  </div>
+                  <p>Update the <code>link</code> element in the <code>head</code> element of <code>style-page-grid.html</code> to point to the new <code>style-page-grid.css</code> file:
+<pre><code class="prettyprint">&lt;link href=&quot;style-page-grid.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</code></pre>
+                  <p>Insert the following code into <code>style-page-grid.css</code> for the <code>grid</code> definition</p>
+ <pre><code class="prettyprint">/* Grid layout, header, 2 columns (sidebar nav, content), footer */
+body {
+  display: grid;
+  grid-template-areas: 
+      "header header"
+      "sidebar content"
+      "footer footer";
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 1em;
+}
+header { grid-area: header; }
+section { grid-area: content; }
+nav { grid-area: sidebar; }
+footer { grid-area: footer; }
+</code></pre> 
+                  <div class="panel>">
+                     <ul>
+                        <li>Note the <code>grid-template-areas</code> labels the two columns and three rows; <code>header header</code> is the first row and spans across both columns; <code>sidebar content</code> is the second row with a column each; and <code>footer footer</code> is the third row with the <code>footer</code> spanning across both columns.</li>
+                        <li>The <code>grid-template-columns: 1fr 3fr;</code> specifies the second column to be 3 times wider than the first column (<code>fr</code> is short for fraction)</li>
+                        <li>The <code>grid-template-areas</code> are now named and the individual <code>grid-area</code> can be associated with selectors from HTML; in this example, element type selectors, <code>header, section, nav</code> and <code>footer</code></li>
+                     </ul>
+                  </div>
+                  
+                  <div class="panel instruction">
+                     <ol>
+                        <li>Open <code>style-page-grid.html</code> in Firefox</li>
+                        <li>Right-mouse click on any element and <code>Inspect Element</code> to open the developer tools panels</li>
+                        <li>In the developer tools <code>Inspector</code> panel, select the <code>body</code> element and in the CSS panel select <code>Layout</code>.  In the <code>Grid</code> panel in <code>layout</code>, select the <code>Display area names</code> checkbox and hover the mouse over each grid area.</li>
+                        <li>In the developer tool <code>Inspector</code> panel, select the <code> nav ul</code> element</li>
+                        <li>
+                           Note, the previous navigation was formated for a flex row; now it has to be changed into a flex column. Edit the <code>style-page-grid.css</code> file: 
+                           <ol>
+                              <li>Under the <code>#nav-labs ul</code> selector, insert: 
+                                 <br /><code>flex-direction: column;</code></li>
+                              <li>The previous row formatting, 
+                                 <br /><code>align-items: center;</code> and <code>justify-content: space around;</code> 
+                                 <br />are now redundant, delete both declarations. </li>
+                              <li>Save, and refresh the <code>style-page-grid.html</code> page</li>
+                           </ol>      
+                        </li>
+                     </ol>
+                     <p>For further explanation of Grid including a video demonstration, <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids#Positioning_with_grid-template-areas">see the MDN article on <code>Grids</code></a>.</p>
+                  </div>
+                  
+                  
+               </details>
+               
             </details>
-
-            <details class="panel">
-               <summary>Accessibility</summary>
-               <p>By default, HTML is accessible, if used correctly. Web accessibility involves ensuring that content remains accessible, regardless of who and how the web is accessed. Take a brief look at <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility">Accessibility overview</a> &mdash; and follow the guides and complete the assessments in the following modules.</p>
-
-               <dl>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">What is accessibility?</a></dt>
-                  <dd>This article starts off the module with a good look at what accessibility actually is — this includes what groups of people we need to consider and why, what tools different people use to interact with the web, and how we can make accessibility part of our web development workflow.</dd>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a></dt>
-                  <dd>A great deal of web content can be made accessible just by making sure the correct HTML elements are used for the correct purpose at all times. This article looks in detail at how HTML can be used to ensure maximum accessibility.</dd>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript">CSS and JavaScript accessibility best practices</a></dt>
-                  <dd>CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences, but if misused&nbsp;they can significantly harm accessibility. This article outlines some CSS and JavaScript best practices that should be considered to ensure that even complex content is as accessible as possible.</dd>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA basics</a></dt>
-                  <dd>Following on from the previous article, sometimes making complex UI controls that involve unsemantic HTML and dynamic JavaScript-updated content can be difficult. WAI-ARIA is a technology that can help with such problems by adding in further semantics that browsers and assistive technologies can recognize and use to let users know what is going on. Here we'll show how to use it at a basic level to improve accessibility.</dd>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Multimedia">Accessible multimedia</a></dt>
-                  <dd>Another category of content that can create accessibility problems is multimedia — video, audio, and image content need to be given proper textual alternatives, so they can be understood by assistive technologies and their users. This article shows how.</dd>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Mobile">Mobile accessibility</a></dt>
-                  <dd>With web access on mobile devices being so popular, and popular platforms such as iOS and Android having fully-fledged accessibility tools, it is important to consider the accessibility of your web content on these platforms. This article looks at mobile-specific accessibility considerations.</dd>
-               </dl>
-
-            </details>
-            <p class="nav-section-end">
-               <em class="green">
-                  N.B. The lab test questions are based on the exercises above.
-               </em>
-            </p>
 
             <details class="panel">
                <summary>HTTP and Security</summary>
@@ -1621,376 +2032,6 @@
                   <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a></dt>
                   <dd>When writing web pages and apps, one of the most common things you'll want to do is manipulate the document structure in some way. This is usually done by using the Document Object Model (DOM), a set of APIs for controlling HTML and styling information that makes heavy use of the Document object. In this article we'll look at how to use the DOM in detail, along with some other interesting APIs that can alter your environment in interesting ways.</dd>
                </dl>
-            </details>
-
-         </details>
-
-         <details class="panel">
-            <summary>Assessment</summary>
-
-            <details class="panel">
-               <summary>Guidelines for the first assessment &mdash; Lab Test with multiple choice questions based on the Lab Exercises</summary>
-               <p>
-                  The Getting started with the Web, HTML and CSS lab exercises form the basis of the multiple choice questions in the lab test.
-               </p>
-               <ul>
-                  <li>
-                     Answer the easy questions first
-                  </li>
-                  <li>
-                     Process of elimination, 2 wrong answers and 2 likely correct with only one correct answer
-                  </li>
-                  <li>
-                     Use the Ask MDN search (toolbar at the top)
-                  </li>
-               </ul>
-               <p>
-                  Example:
-               </p>
-               <p>
-                  What is an HTML <code class="prettyprint">head</code>?
-               </p>
-               <ol>
-                  <li>
-                     Root node of an html document
-                  </li>
-                  <li>
-                     A reference to the beginning of the document
-                  </li>
-                  <li>
-                     Container element for metadata
-                  </li>
-                  <li>
-                     All of the above
-                  </li>
-               </ol>
-
-            </details>
-
-            <details class="panel">
-               <summary>Guidelines for the second assessment &mdash; Lab Exercises and Website Project</summary>
-               <p>
-                  The second assessment is in two parts. The Lab Exercises and a project to create a Website for a topic of your own choosing.
-               </p>
-               <p>
-                  Create a folder named, <strong>wd</strong> and save all your Lab Exercise and Website Project files in this folder. <em>N.B. <strong>wd</strong> is the folder you will host on a Web server.</em>
-               </p>
-
-               <details class="panel">
-                  <summary>Lab Exercises Submission (includes check list and questions asked in the presentation)</summary>
-
-                  <ol>
-                     <li>
-                        In the <strong>wd</strong> folder, create a sub-folder named, <strong>labs</strong>
-                     </li>
-                     <li>
-                        Copy any existing lab exercise into the <code class="prettyprint">labs</code> folder. Please follow <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">naming conventions for files and folders</a>
-                     </li>
-                     <li>
-                        In the <strong>labs</strong> folder, create a <code class="prettyprint">labs.html</code> file.
-                     </li>
-                     <li>
-                        <details>
-                           <summary>copy &amp; paste this code into <code class="prettyprint">labs.html</code> file</summary>
-                           <pre class="slide-small"><code class="prettyprint">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;title>labs&lt;/title&gt;
-&lt;meta charset="utf-8" /&gt;
-&lt;meta name="author" content="insert your name here" /&gt;
-&lt;meta name="description" content="Portfolio of lab exercises" /&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;main class="panel"&gt;
-   &lt;header&gt;
-      &lt;h1&gt;
-         Website Development
-      &lt;/h1&gt;
-      &lt;h2&gt;
-         Your full name
-      &lt;/h2&gt;
-      &lt;p&gt;
-         &lt;strong&gt;ID: &lt;em&gt;insert your id&lt;/em&gt;&lt;/strong&gt;, 
-         &lt;strong&gt;Group: &lt;em&gt;insert your group&lt;/em&gt;&lt;/strong&gt;
-      &lt;/p&gt;
-   &lt;/header&gt;
-   &lt;h2&gt;
-      Lab exercises
-   &lt;/h2&gt;
-   &lt;header&gt;Getting started with the web&lt;/header&gt;
-   &lt;ul&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;
-            Getting started with the web&lt;/a&gt;
-      &lt;/li&gt;
-   &lt;/ul&gt;
-   &lt;header&gt;HTML &mdash; Structuring the web&lt;/header&gt;
-   &lt;ul&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;
-            Marking up a letter&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;
-            Structuring a page of content&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;
-            Mozilla splash page&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;
-            Structuring planet data&lt;/a&gt;
-      &lt;/li&gt;
-   &lt;/ul&gt;
-   &lt;header&gt;CSS &mdash; Styling the web&lt;/header&gt;
-   &lt;ul&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;
-            Fundamental CSS comprehension&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;
-            Typesetting a community school homepage&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;
-            Creating fancy letterheaded paper&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;
-            A cool looking box&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;
-            Fundamental Layout Comprehension&lt;/a&gt;
-      &lt;/li&gt;
-   &lt;/ul&gt;
-   &lt;header&gt;Accessibility &mdash; Make the web usable by everyone&lt;/header&gt;
-   &lt;ul&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;
-            Accessibility troubleshooting&lt;/a&gt;
-      &lt;/li&gt;
-   &lt;/ul&gt;      
-   &lt;p class="green"&gt;
-      N.B. The lab test questions are based on the exercises above.
-   &lt;/p&gt;
-   &lt;hr /&gt;
-   &lt;header&gt;JavaScript &mdash; Dynamic client&lt;/header&gt;
-   &lt;ul&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;
-            Silly story generator&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;
-            A dynamic shopping list&lt;/a&gt;
-      &lt;/li&gt;
-   &lt;/ul&gt;                                
-
-   &lt;header&gt;HTTP &amp; Security&lt;/header&gt;
-   &lt;ul&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;
-            HTTP &amp; Security&lt;/a&gt;
-      &lt;/li&gt;
-   &lt;/ul&gt;
-
-   &lt;h2>Main Website&lt;/h2&gt;
-   &lt;ul&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;Page 1&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;Page 2&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;Page 3&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;Page 4&lt;/a&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-         &lt;a href="insert_your_url_for_this_exercise"&gt;Page 5&lt;/a&gt;
-      &lt;/li&gt;               
-   &lt;/ul&gt;     
-&lt;/main&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-                        </details>
-
-                        <details class="panel">
-                           <summary>This is how the <code class="prettyprint">labs.html</code> will be typically displayed in a browser.</summary>
-                           <article class="panel">
-                              <h3>
-                                 Website Development
-                              </h3>
-                              <h4>Your full name</h4>
-                              <p>
-                                 <strong>ID: <em>your id</em></strong>, <strong>Group: <em>your group</em></strong>
-                              </p>
-                              <h3>
-                                 Lab exercises
-                              </h3>
-                              <h4>Getting started with the web</h4>
-                              <ul>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Getting started with the web (local server)</a>
-                                 </li>
-                              </ul>
-                              <h4>HTML &mdash; Structuring the web</h4>
-                              <ul>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Marking up a letter</a>
-                                 </li>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Structuring a page of content</a>
-                                 </li>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Mozilla splash page</a>
-                                 </li>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Structuring planet data</a>
-                                 </li>
-                              </ul>
-                              <h4>CSS &mdash; Styling the web</h4>
-                              <ul>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Fundamental CSS comprehension</a>
-                                 </li>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Typesetting a community school homepage</a>
-                                 </li>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Creating fancy letterheaded paper</a>
-                                 </li>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">A cool looking box</a>
-                                 </li>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Fundamental Layout Comprehension</a>
-                                 </li>
-                              </ul>
-                              <h4>Accessibility &mdash; Make the web usable by everyone</h4>
-                              <ul>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Accessibility troubleshooting</a>
-                                 </li>
-                              </ul>
-                              <p class="green">
-                                 N.B. The lab test questions are based on the exercises above.
-                              </p>
-                              <hr />
-                              <h4>JavaScript &mdash; Dynamic client</h4>
-                              <ul>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Silly story generator</a>
-                                 </li>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">A dynamic shopping list</a>
-                                 </li>
-
-                              </ul>
-                              <h4>HTTP &amp; Security</h4>
-                              <ul>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">HTTP &amp; Security</a>
-                                 </li>
-                              </ul>
-                              <hr />
-                              <h3>Website project</h3>
-                              <ul>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Page 1</a>
-                                 </li>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Page 2</a>
-                                 </li>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Page 3</a>
-                                 </li>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Page 4</a>
-                                 </li>
-                                 <li>
-                                    <a href="insert_your_url_for_this_exercise">Page 5</a>
-                                 </li>
-                              </ul>
-
-                           </article>
-                        </details>
-
-                     </li>
-                     <li>
-                        Edit the <code class="prettyprint">labs.html</code> file, and insert your details (your full name, id and group) in the <code class="prettyprint">labs.html</code> file
-                     </li>
-                     <li>
-                        Edit the <code class="prettyprint">labs.html</code> file, and update the hyperlink <code class="prettyprint">href="insert_your_url_for_this_exercise" </code> with the URL of your exercise. Please use <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL">relative URLs</a>
-                     </li>
-                     <li>
-                        Use Firefox and <code class="prettyprint">view page source</code> for each page and check for errors (highlighted in <span class="red">red</span>)
-                     </li>
-                     <li>
-                        <a target="_blank" href="https://validator.w3.org/">Validate</a> all html documents for HTML5 conformance
-                     </li>
-                     <li>
-                        See the seperate lab sheet for hosting and upload your <strong>wd</strong> folder to the server
-                     </li>
-                     <li>
-                        Surf to the <code class="prettyprint">labs.html</code> file on the server and check for any broken links.
-                     </li>
-                  </ol>
-
-               </details>
-
-               <details class="panel">
-                  <summary>Website Project Submission (includes check list and questions asked in the presentation)</summary>
-                  <ol>
-                     <li>
-                        Use the <code class="prettyprint">wd</code> folder to save all your project files.
-                     </li>
-                     <li>
-                        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files#What_structure_should_your_website_have">Follow these guidelines and create the project structure</a>
-                     </li>
-                     <li>
-                        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">Follow these guidelines, sketch out your design for the 5 pages, choose fonts, colour schemes and images.</a>
-                     </li>
-                     
-                     <li>
-                        Code the layout first. Start with watching <a target="_blank" href="https://hacks.mozilla.org/2019/10/faster-layouts-with-css-grid-and-subgrid/">this video on Grids</a>. Use
-                        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids">complex grids</a> and <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">include complex nested flexboxes</a>
-                     </li>
-                     <li>
-                        Include navigation across the pages
-                     </li>
-                     <li>
-                        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms">Include complex forms</a>
-                     </li>
-                     <li>
-                        Include any additional lab exercises (forms, JS, etc.) not submitted in the Lab exercises submission.
-                     </li>
-                
-                     <li>
-                        <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">Check your code for accessibility and good semantics</a>
-                     </li>
-                     <li>
-                        Use Firefox and <code class="prettyprint">view page source</code> and check for errors (highlighted in <span class="red">red</span>)
-                     </li>
-                     <li>
-                        <a target="_blank" href="https://validator.w3.org/">Validate</a> all html documents for HTML5 conformance
-                     </li>
-                     <li>
-                        Edit the <code class="prettyprint">labs.html</code> file and update the <code class="prettyprint">href</code> addresses for the project pages. Please use <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL">relative URLs</a>.
-                     </li>
-                     <li>
-                        See the seperate lab sheet for hosting and upload your <code class="prettyprint">project</code> folder to the server. Upload the <strong>wd</strong> folder to the Web server and surf the project pages for any broken links.
-                     </li>
-                     <li>
-                        For advanced project implementation consider a project page with examples of general <code class="prettyprint">JavaScript</code> and the more complex <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents APIs</a>. Try the Active learning exercise and modify the shopping list by styling it and adding an update button and validation for the form input.
-                     </li>
-                  </ol>
-               </details>
             </details>
 
          </details>
