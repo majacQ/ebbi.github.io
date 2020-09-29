@@ -499,12 +499,11 @@
          right: 1vw;
          z-index: 99;
          border: none;
-         background-color: #f6f8f8;
-         color: grey;
+         background-color: inherit;
+         color: inherit;
          cursor: pointer;
-         padding: 0.5em;
          border-radius: 5em;
-         width: auto;
+         font-size: 1.5em;
       }
 
       #btnToTop:hover {
@@ -801,7 +800,7 @@
    
    </main>
 
-   <button id="btnToTop" title="Go to top">Top</button>
+   <button id="btnToTop" title="Go to top">&#128285;</button>
    
    <!-- HIDDEN section *********************************************** -->
 
@@ -1511,9 +1510,6 @@
                   <p>Tasks:</p>
                   <ol>
                      <li>Follow the validation exercise and make sure each file is valid both in Firefox > View page source and the W3C validator</li>
-                     <li>Check the <code>nav</code> section has the hyperlinks nested within each list item and clicking each hyperlink does navigate to the correct file
-                     </li>
-                     <li>Insert your full name and group in each page <code>header</code> and <code>footer</code></li>
                   </ol>
                </details>
 
@@ -1968,6 +1964,66 @@ footer { grid-area: footer; }
                   
                   
                </details>
+                                  
+               <details class="panel">
+                  <summary>Assessment: CSS lab exercise</summary>
+                  <p>The initial setup exercise created the folder structure with a top level folder, named, <code>wsd</code> with sub-folders <code>labs</code> and <code>website</code>.</p>
+                  <p>Having completed the CSS exercises, the <code>labs</code> folder should have completed exercise with files:</p>
+                  <ul>
+                     <li><code>style-page.html</code> (with linked <code>style-page.css</code>)</li>
+                     <li><code>style-page-grid.html</code> (with linked <code>style-page-grid.css)</code></li>                   
+                  </ul>
+                  <p>Tasks:</p>
+                  <ol>
+                     <li>Follow the validation exercise and make sure each file is valid both in Firefox > View page source and the W3C validator</li>
+                  </ol>
+               </details>
+               
+            </details>
+
+            <details class="panel">
+               <summary>JavaScript</summary>
+               
+               <details class="panel">
+                  <summary>
+                     Initial setup
+                  </summary>
+                  
+                  <p>Within the <code>wsd</code> folder, create sub-folders for each JavaScript exercise.</p>
+
+                   <div class="instruction panel">
+                      <p>Using the editor (or the operating system file manager or a terminal):</p>
+                      <ol>
+                        <li>Within the <code>wsd</code> folder, create a sub-folder named: <code>silly-story-generator</code> for all the files for this exercise.</li>
+                        <li>Within the <code>wsd</code> folder, create a sub-folder named: <code>dynamic-shopping-list</code> for all the files for this exercise.</li>
+                      </ol>
+                  </div>  
+                  <p>
+                     That is all that is  need for now, further folders and files will be created in the <code>wsd</code> folder as necessary.
+                  </p>
+
+               </details>
+               
+               <dl>
+                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps">JavaScript First Steps</a></dt>
+                  <dd>In our first JavaScript module, we first answer some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", before moving on to taking you through your first practical experience of writing JavaScript. After that, we discuss some key building blocks in detail, such as variables, strings, numbers and arrays.</dd>
+               </dl>
+               <dl>
+                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a></dt>
+                  <dd>When writing web pages and apps, one of the most common things you'll want to do is manipulate the document structure in some way. This is usually done by using the Document Object Model (DOM), a set of APIs for controlling HTML and styling information that makes heavy use of the Document object. In this article we'll look at how to use the DOM in detail, along with some other interesting APIs that can alter your environment in interesting ways.</dd>
+               </dl>
+                                                 
+               <details class="panel">
+                  <summary>Assessment: JavaScript lab exercise</summary>
+                  <p>The initial setup exercise created the folder structure with a top level folder, named, <code>wsd</code> with sub-folders <code>labs</code> and <code>website</code>.</p>
+                  <p>Having completed the JavaScript exercises, the <code>labs</code> folder should have completed exercise with folders:</p>
+                  <ul>
+                     <li><code>silly-story-generator</code> (folder includes the HTML and JavaScript files)</li>
+                     <li><code>dynamic-shopping-list</code> (folder includes the HTML and JavaScript files)</li>                   
+                  </ul>
+
+               </details>
+               
                
             </details>
 
@@ -1975,12 +2031,27 @@ footer { grid-area: footer; }
                <summary>HTTP and Security</summary>
                <article class="lab-sheet panel">
                   <h2>Introduction to HTTP and Security</h2>
+                  
+                  <details class="panel">
+                     <summary>Initial setup</summary>
+                     <h2>Initial setup</h2>
+                     <div class="instruction panel">
+                        <p>
+                           Create an HTML file and markup the following questions (and answers).
+                        </p>
+                        <p>Using an editor (or the operating system file manager or a terminal):</p>
+                        <ol>
+                           <li><code>Open Folder</code> (and select the <code>labs</code> folder created in the initial setup)</li>
+                           <li><code>File &gt; New </code></li>
+                           <li><code>File &gt; Save</code> (and Save As: <code class="prettyprint">http_exercise.html</code>)</li>
+                        </ol>
+                     </div>
+                  </details>
+                  
                   <p>
                      The aim is to have an overview understanding of <em>Hypertext Transfer Protocol</em> (HTTP). How does HTTP allows for <em>surfing</em> the web? and what are the common security issues on the web?
                   </p>
-                  <p>
-                     Create an HTML file and markup the following questions (and answers). Save the file as <code class="prettyprint">http_exercise.html</code>
-                  </p>
+                  
                   <p>
                      The answers are in the relevant <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTTP">articles in the HTTP tutorials</a>.
                   </p>
@@ -2016,24 +2087,90 @@ footer { grid-area: footer; }
                         What are Cross-site HTTP requests (CORS) and what requests use CORS?
                      </li>
                   </ol>
+                  
+                                                    
+               <details class="panel">
+                  <summary>Assessment: HTTP and Security</summary>
+                  <p>The initial setup exercise created the folder structure with a top level folder, named, <code>wsd</code> with sub-folders <code>labs</code> and <code>website</code>.</p>
+                  <p>Having completed the HTTP and Security exercise, the <code>labs</code> folder should have completed exercise with the file:</p>
+                  <ul>
+                     <li><code>http_exercise.html</code></li>
+                  </ul>
+                  <p>Tasks:</p>
+                  <ol>
+                     <li>Follow the validation exercise and make sure each file is valid both in Firefox > View page source and the W3C validator</li>
+                  </ol>
+               </details>
 
                </article>
             </details>
 
+            
             <details class="panel">
-               <summary>JavaScript</summary>
-               <p>JavaScript is more difficult to learn than related technologies such as HTML and CSS. Before attempting to learn JavaScript, you are strongly advised to get familiar with at least these two technologies first.</p>
-               <p> Take a brief look at <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript">JavaScript</a> &mdash; and follow the guides and complete the code and any assessments in the following modules.</p>
-               <dl>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps">JavaScript First Steps</a></dt>
-                  <dd>In our first JavaScript module, we first answer some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", before moving on to taking you through your first practical experience of writing JavaScript. After that, we discuss some key building blocks in detail, such as variables, strings, numbers and arrays.</dd>
-               </dl>
-               <dl>
-                  <dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">Manipulating documents</a></dt>
-                  <dd>When writing web pages and apps, one of the most common things you'll want to do is manipulate the document structure in some way. This is usually done by using the Document Object Model (DOM), a set of APIs for controlling HTML and styling information that makes heavy use of the Document object. In this article we'll look at how to use the DOM in detail, along with some other interesting APIs that can alter your environment in interesting ways.</dd>
-               </dl>
-            </details>
-
+               <summary>Assessment</summary>
+               <p>The assessment brief refers to an <strong>index.html</strong> file with hyperlinks to each exercise to be used in a presentation.</p>
+               <p>Tasks:</p>
+               <ol>
+                  <li>In the <code>wsd</code> folder, create a file named, <code>index.html</code></li>
+                  <li>Insert the following code into, <code>index.html</code></li>
+               </ol>
+               
+               <details class="panel">
+               <summary>Code for the lab exercises index page</summary>
+               <pre><code class="prettyprint">&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;title&gt;Lab exercise CSS&lt;/title&gt;
+   &lt;meta charset="utf-8" /&gt;
+   &lt;meta name="author" content="insert-your-name-here" /&gt;
+   &lt;meta name="description" content="WSD lab exercises" /&gt;
+   &lt;link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet"&gt;
+   &lt;!-- css to external file! --&gt;
+   &lt;style type="text/css"&gt;
+     body { font-family: 'Delius', cursive; }
+     header { border-bottom: 0.1vw solid #f7b7b7; }
+     footer { margin-top: 5vh; border-top: 0.1vw solid #f7b7b7; }
+   &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;header&gt;
+      &lt;h1&gt;Your Name, Group: ??&lt;/h1&gt;
+   &lt;/header&gt;
+   &lt;h2&gt;Lab exercises&lt;/h2&gt;
+   &lt;p&gt;For marking and the presentation, you will be asked to use this file to demonstrate each of the lab exercises and explain the code.&lt;/p&gt;
+   &lt;p&gt;Please check the hyperlinks find your lab exercises (if in doubt, please ask before the presentation!)&lt;/p&gt;
+   &lt;nav id="lab"&gt;
+      &lt;h3&gt;HTML&lt;/h3&gt;
+      &lt;p&gt;&lt;a target="_blank" href="labs/html5-validation.html"&gt;html5-validation.html&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a target="_blank" href="labs/html5-validation.html"&gt;html5-common-elements.html&lt;/a&gt;&lt;/p&gt;
+      &lt;h3&gt;CSS&lt;/h3&gt;
+      &lt;p&gt;&lt;a target="_blank" href="labs/style-page.html"&gt;style-page.html&lt;/a&gt;&lt;/label&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a target="_blank" href="labs/style-page-grid.html"&gt;style-page-grid.html&lt;/a&gt;&lt;/p&gt;
+      &lt;h3&gt;JavaScript&lt;/h3&gt;
+      &lt;p&gt;&lt;a target="_blank" href="labs/silly-story-generator.html"&gt;silly-story-generator&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a target="_blank" href="labs/dynamic-shopping-list.html"&gt;dynamic-shopping-list&lt;/a&gt;&lt;/p&gt;
+      &lt;h3&gt;HTTP and Security&lt;/h3&gt;
+      &lt;p&gt;&lt;a target="_blank" href="labs/http_exercise.html"&gt;http_exercise.html&lt;/a&gt;&lt;/p&gt;
+      &lt;h3&gt;Website&lt;/h3&gt;
+      &lt;ol&gt;
+         &lt;li&gt;&lt;a target="_blank" href="website/name-of-first-page.html"&gt;page-1.html&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a target="_blank" href="website/name-of-second-page.html"&gt;page-2.html&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a target="_blank" href="website/name-of-third-page.html"&gt;page-3.html&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a target="_blank" href="website/name-of-fourth-page.html"&gt;page-4.html&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a target="_blank" href="website/name-of-fifth-page.html"&gt;page-5.html&lt;/a&gt;&lt;/li&gt;
+      &lt;/ol&gt;
+   &lt;/nav&gt;
+   &lt;footer&gt;
+      &lt;p&gt;Your name &mdash; your email address&lt;/p&gt;
+   &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></details>
+               
+               <p>For marking and the presentation, you will be asked to use the <code>index.html</code> file to demonstrate each of the lab exercises and explain the code.</p>
+	           <p>Please check the hyperlinks find your lab exercises (if in doubt, please ask before the presentation!)</p>
+               
+            </details>  
+            
          </details>
 
          <details class="panel external-link">
@@ -2051,7 +2188,7 @@ footer { grid-area: footer; }
                <li data-article="css-slide"> CSS</li>
             </ul>
             <ul class="nav-section-end">
-               <li data-article="temporal-slide">MIME types</li>
+               <li data-article="temporal-slide">Temporal Data</li>
             </ul>
             <ul class="nav-section-end">
                <li data-article="js-slide"> JavaScript</li>
