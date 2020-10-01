@@ -587,21 +587,12 @@
                      <li><button id="night">&#9790; night</button></li>
                      <li><button id="high-contrast">High Contrast</button></li>
                   </ul>
-
-
-                  <!--span class="push">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <span id="font-small" class="font-small">A</span>&nbsp;&nbsp;&nbsp;
-                        <span id="font-normal" class="font-normal">A</span>&nbsp;&nbsp;&nbsp;
-                        <span id="font-medium" class="font-medium">A</span>&nbsp;&nbsp;&nbsp;
-                        <span id="font-large" class="font-large">A</span>
-                     </span-->
-
                </nav>
 
                </div>
             </details>
 
-            <details open class="nav-section-end">
+            <details class="nav-section-end">
                <summary data-article="wd-overview">Website Development</summary>              
                
                <!--
@@ -629,7 +620,7 @@
                   </ul>
                </details>
 -->
-               <details open class="nav-section-end">
+               <details class="nav-section-end">
                   <summary>Lecture Notes</summary>
                   <ul class="nav-section-end">
                      <li data-article="internet-slide">The Internet</li>
@@ -641,10 +632,10 @@
                      <li data-article="validation-slide">Validating HTML</li>
                   </ul>
                   <ul class="nav-section-end">
-                     <li data-article="css-slide">CSS</li>
+                     <li data-article="temporal-slide">Temporal Data</li>
                   </ul>
                   <ul class="nav-section-end">
-                     <li data-article="temporal-slide">Temporal Data</li>
+                     <li data-article="css-slide">CSS</li>
                   </ul>
                   <ul class="nav-section-end">
                      <li data-article="js-slide">JavaScript</li>
@@ -653,7 +644,7 @@
 
             </details>
 
-            <details open id="nav-android" class="nav-section-end">
+            <details id="nav-android" class="nav-section-end">
                <summary data-article="android-overview">Android</summary>
 
                <details class="nav-section-end">
@@ -723,7 +714,7 @@
 
                      </li>
                      <li class="nav-section-end left-margin-none">
-                        <details open>
+                        <details>
                            <summary>Todo App &mdash; revisited</summary>
                            <ul>
                               <li data-article="todo-fragment">Todo Fragment App</li>
@@ -755,7 +746,7 @@
                   </ul>
                </details>
 
-               <details open class="nav-section-end">
+               <details class="nav-section-end">
                   <summary>Lecture Notes</summary>
                   <ul>
                      <li data-article="java-review-slide">Java Review</li>
@@ -825,7 +816,7 @@
                   <canvas id="canvasClock" width="150" height="150"></canvas>
                   <canvas id="canvasSolar" width="300" height="300"></canvas>
                   
-                  <span lang="en">Hello World</span> &dash; <span lang="zh">你好 世界</span> &dash; <span lang="th">สวัสดีชาวโลก</span> &dash; <span lang="ar" dir="rtl">مرحبا بالعالم</span>
+                  <span lang="en">Hello World</span> &dash; <span lang="ne">नमस्कार संसार</span> &dash; <span lang="km">សួស្តី​ពិភពលោក</span> &dash;  <span lang="zh">你好 世界</span> &dash; <span lang="th">สวัสดีชาวโลก</span> &dash; <span lang="ar" dir="rtl">مرحبا بالعالم</span>
                   &dash; <span lang="bn">ওহে বিশ্ব ਸਤਿ ਸ੍ਰੀ</span> &dash; <span lang="te">హలో వరల్డ్</span> &dash; <span lang="pa">ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ ਦੁਨਿਆ</span> &dash; <span lang="gu">હેલો વર્લ્ડ</span> &dash; <span lang="ta">ஹலோ வேர்ல்ட்</span> &dash; <span lang="fa" dir="rtl">سلام دنیا</span>
                   <br />
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149 107" data-v-66efae72="" data-v-35260849="" class="bottom">
@@ -1036,7 +1027,7 @@
             </svg>
          </h2>
 
-         <details open class="panel">
+         <details class="panel">
             <summary>Lab Exercises</summary>
 
             <details class="panel">
@@ -1303,7 +1294,7 @@
                   <p>As well as the Web IP address, such as <code>developer.mozilla.org</code> in the first example or a local document name, <code>html5-structural-elements.html</code> as in the second examples, the <code>href</code> attribute can also  point to an <code>id</code> within a document, for example (note, the # symbol denotes an <code>id</code>),</p>
                   <pre class="slide-small"><code class="prettyprint">&lt;a href=&quot;#html5-elements&quot;&gt;HTML5 Structural elements&lt;/a&gt;</code></pre>
                   
-                  <p>Or to a particular <code>id</code> (note the # symbol after the filename denoting an <code>id</code>) within a valid local or remote document address, for example:</p>
+                  <p>Or to a particular <code>id</code>  within a valid local or remote document address,(note the # symbol after the filename denoting an <code>id</code>) for example:</p>
 <pre class="slide-small"><code class="prettyprint">&lt;a href=&quot;html5-structural-element.html#html5-elements&quot;&gt;HTML5 Structural elements&lt;/a&gt;
                   
 &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Inline_text_semantics">MDN Inline Text Semantics&lt;/a&gt;</code></pre>
@@ -1369,7 +1360,7 @@
                   <p>The span element was introduced in HTML4 as a general container for selecting part of a block element. It is an inline equivalent of the div element and is typically wrapped inside a block element such as a paragraph. It is often used with an <code>id</code> or a <code>class</code> attribute.</p>
                   <pre class="slide-small"><code class="prettyprint">&lt;p>The following is part of a paragraph &lt;span class="highlight">wrapped in a span element&lt;/span> so that in can be selected.&lt;/p></code></pre>
                   <div class="comment panel">
-                     <p>html5 introduces more semantic sectioning elements, <code class="prettyprint">code, strong, em </code> and <code>abbr</code> and they should be used in preference to the more generic div.</p>
+                     <p>html5 introduces more semantic sectioning elements, <code class="prettyprint">code, strong, em </code> and <code>abbr</code> and they should be used in preference to the more generic <code>span</code>.</p>
                   </div>
                   
                   <h2>Block quotes</h2>
@@ -1377,7 +1368,7 @@
    &lt;p&gt;This is a quotation taken from the Mozilla Developer Center.&lt;/p&gt;
 &lt;/blockquote&gt;</code></pre>
                                     
-                  <h2>Inline quoates</h2>
+                  <h2>Inline quotes</h2>
                   <pre class="slide-small"><code class="prettyprint">&lt;p>In the new world of semantic markup, 
    &lt;q cite="http://ebbi.github.io">
    Separation of content from how it is presented is key to modern web development.
@@ -1441,7 +1432,7 @@
                         <input type="radio" name="colour" value="green" /> Green
                         <input type="radio" name="colour" value="blue" /> Blue
                      </p>
-                     <p>Which is your favourite pass time?
+                     <p>Which is your favourite pastime?
                         <input type="radio" name="hobby" value="travel" /> Travel
                         <input type="radio" name="hobby" value="food" /> Food
                         <input type="radio" name="hobby" value="sky diving" /> Sky Diving
@@ -2176,6 +2167,9 @@ footer { grid-area: footer; }
          <details class="panel external-link">
             <summary>Lecture Notes</summary>
             <ul class="nav-section-end">
+               <li data-article="wsd-intro-slide"> What, Where, When and How?</li>
+            </ul>
+            <ul class="nav-section-end">
                <li data-article="internet-slide"> The Internet</li>
                <li data-article="client-server-slide"> HTTP</li>
             </ul>
@@ -2183,12 +2177,10 @@ footer { grid-area: footer; }
                <li data-article="html-slide"> HTML</li>
                <li data-article="xml-slide"> XML (&amp; JML)</li>
                <li data-article="validation-slide"> Validating HTML</li>
-            </ul>
+               <li data-article="temporal-slide">Temporal Data</li>               
+            </ul>          
             <ul class="nav-section-end">
                <li data-article="css-slide"> CSS</li>
-            </ul>
-            <ul class="nav-section-end">
-               <li data-article="temporal-slide">Temporal Data</li>
             </ul>
             <ul class="nav-section-end">
                <li data-article="js-slide"> JavaScript</li>
@@ -3396,6 +3388,33 @@ myParagraph.style.backgoroundColor = "red";
             </details>
 
       </article>
+      
+      <article id="wsd-intro-slide" class="slide panel">
+         <h2>What, Where, When, and How?</h2>
+         <h3>What?</h3>
+         <ul>
+            <li>Develop a website adhering to current standards.</li>
+            <li>Deploy and evaluate a website using appropriate techniques.</li>
+            <li>Acquire an understanding of issues pertaining to security for websites deployment.</li>
+         </ul>
+         <h3>Where?</h3>
+         <ul>
+            <li><a target="_blank" href="https://ebbi.github.io">Module Website: https://ebbi.github.io</a></li>
+         </ul>
+         <h3>When?</h3>
+         <ul>
+            <li>6 hours self study per week plus scheduled time</li>
+            <li><a target="_blank" href="https://ebbi.github.io">Week 5 &mdash; HTML and CSS labs complete</a></li>
+            <li><a target="_blank" href="https://ebbi.github.io">Week 8 &mdash; JavaScript and HTTP and Security labs complete</a></li>
+         </ul>
+         <h3>How?</h3>
+         <ul>
+            <li><a target="_blank" href="https://ebbi.github.io">Install software needed in the labs section (Brackets and Sublime editors, Firefox and Chrome browsers) </a></li>
+            <li>Complete lab exercises</li>
+            <li>Watch the lecture videos and read the lecture notes</li>
+            <li>Post questions on the collaboration forum</li>
+         </ul>
+      </article>
 
       <article id="internet-slide" class="slide panel">
          <h2>The internet</h2>
@@ -3408,7 +3427,7 @@ myParagraph.style.backgoroundColor = "red";
                   <li>A network of networks</li>
                   <li>Scale infinitely</li>
                   <li>Telephone infrastructure &mdash; <em>modem</em></li>
-                  <li>Internat Service Provider (ISP)</li>
+                  <li>Internet Service Provider (ISP)</li>
                   <li>ISP router to ISP router</li>
                </ul>
                <p>Finding Computers</p>
@@ -5242,7 +5261,7 @@ private static ContentValues getContentValues(Todo todo) {
   
          </details> 
 
-         <details open class="panel">
+         <details class="panel">
             <summary>MVVM lab sheet</summary>
  
             <details class="panel">
@@ -5424,7 +5443,7 @@ Git checkout master and merge room branch
             <p>
                The Introduction to Programming in Java is a good concise reference. See the lecture notes and complete the exercises. This is a minimum needed before attempting to code in any framework such as Android.
             </p>              
-            <details open>
+            <details>
                <summary>can you explain <code class="prettyprint">static</code> types and methods?</summary>
 
                <pre class="slide-small">if (true) {
@@ -5711,7 +5730,7 @@ git log </code></pre>
 
       <article id="java-review-slide" class="slide panel">
          <h2>Prerequisites for Mobile Apps</h2>
-         <details open>
+         <details>
             <summary>Java Language and Memory Management</summary>
             <ul>
                <li>
