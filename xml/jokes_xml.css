@@ -1,0 +1,26 @@
+/* CSS Document */
+jokebook {
+	font-family: verdana, Courier, mono;
+	font-size: 48px;
+	background-color:#CCFFFF;
+	margin: 40px;
+}
+
+joke {
+	display: block;
+	background-color:#FFFF99;
+	border: 2px solid green;
+	border-radius: 5px;
+	margin: 1em;
+	padding: 1em;
+}
+
+question {
+	display: block;
+	color:#CC0000;
+}
+
+punchline {
+	display: block;
+	color:#000099;
+}				
