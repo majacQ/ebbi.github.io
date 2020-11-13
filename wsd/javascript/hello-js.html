@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <title>Lab exercise html5</title>
+   <meta charset="utf-8" />
+   <meta name="author" content="your-name" />
+   <meta name="description" content="JavaScript lab exercises" />
+</head>
+
+<body>
+   <p>Hello JavaScript World</p>
+
+
+   <script>
+      const person = {
+         name: ['Bob', 'Smith'],
+         age: 32,
+         gender: 'male',
+         interests: ['music', 'skiing'],
+         bio: function() {
+            alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+         },
+         greeting: function() {
+            alert('Hi! I\'m ' + this.name[0] + '.');
+         }
+      };
+   </script>
+</body>
+
+</html>
