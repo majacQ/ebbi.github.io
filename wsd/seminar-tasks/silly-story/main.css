@@ -1,0 +1,26 @@
+body {   
+  margin: 5vh 5vw;
+  padding: 3vh 3vw;
+  border: 1px solid lightgrey;
+  font-size: 24px;
+}
+
+label, button {  
+  font-size: 2em;
+}
+
+div {
+  padding-bottom: 3vh;
+}
+
+input[type="text"] {
+  padding: 3vh 3vw;
+  font-size: 2em;
+}
+
+p {
+  background: #DAFF25;
+  color: #5E2612;
+  padding: 3vh 3vw;
+  visibility: hidden;
+}
