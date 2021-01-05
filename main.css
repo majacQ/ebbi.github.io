@@ -200,7 +200,7 @@ input::-webkit-input-placeholder {
 }
 
 .nav-indent {
-   padding-left: 1.5vw;
+   padding-left: 1.0vw;
 }
 
 /*      
@@ -363,7 +363,7 @@ pre,
 }
 
 .lab-sheet {
-   /* A4 in px */
+   /* A4 in px  */
    min-width: 595px;
    min-height: 842px;
 }
@@ -376,7 +376,7 @@ pre,
 
 .external-link li:before {
    content: '\279A';
-   padding-right: 0.5em;
+   margin-left: -1.0em; 
 }
 
 
