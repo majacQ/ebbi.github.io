@@ -305,24 +305,16 @@
             
             <details class="panel" open>
                <summary>
-               Delivery 2020
+               Lectures and Labs
                </summary>           
-               <nav class="external-link">
+               <nav>
                   <ul>
                      <li class="panel" data-article="wd-overview">Website Development</li>
+                     <li class="panel" data-article="android-overview">Developing Mobile Apps &mdash; Android</li>
                   </ul>
                </nav>
             </details>
-            <details class="panel">
-               <summary>
-               Delivery 2019
-               </summary>
-               <nav class="external-link">
-                  <ul>
-                     <li class="panel" data-article="android-overview">2019 Delivery: Android Mobile Apps</li>
-                  </ul>
-               </nav>
-            </details>             
+            
             <details class="panel">
                <summary>
                   Dr Pikul&apos;s Guide to Happiness
@@ -476,7 +468,18 @@
                </details>
          
             </details>            
-  
+              
+            <details class="panel">
+               <summary>
+               Delivery 2019
+               </summary>
+               <nav class="external-link">
+                  <ul>
+                     <li class="panel" data-article="android-overview">2019 Delivery: Android Mobile Apps</li>
+                  </ul>
+               </nav>
+            </details>
+
          </div>
          
       </article>
@@ -2458,48 +2461,159 @@ myParagraph.style.backgoroundColor = "red";
 
       <article id="android-overview" class="lab-sheet panel">
 
-            <h2>Android Overview &nbsp;
-               <svg data-speak="true" data-event="click" data-speak-id="speech-android-overview" class="icon speak-icon-android-overview" x="0" y="0" viewbox="0 0 295.928 295.928">
-                  <use xlink:href="#speaker" href="#speaker" />
-               </svg></h2>
-
-            <span hidden="hidden" id="speech-android-overview">
-               Android exercises. It&apos;s bear sick init!
-            </span>
-         <p>Start wih a review &mdash; indicates the JAVA and OO knowlege you should have before starting with Android development.</p>
+         <h2>Mobile Apps &mdash; Android &nbsp;
+            <svg data-speak="true" data-event="click" data-speak-id="speech-android-overview" class="icon speak-icon-android-overview" x="0" y="0" viewbox="0 0 295.928 295.928">
+               <use xlink:href="#speaker" href="#speaker" />
+            </svg></h2>
+         <span hidden="hidden" id="speech-android-overview">
+            Android. It&apos;s bear sick init!
+         </span>
 
          <details class="panel">
             <summary>
-               Start with a review
+               Assumed programming knowledge.  Start with a review.
             </summary>
 
-            <pre class="slide-small"><code class="prettyprint">can you explain static types and methods?
+            <pre class="slide-small"><code class="prettyprint">Can you explain static types and methods?
 if (true) {
    continue with the lab exercises  
 } else {
    Read <a target="_blank" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-092-introduction-to-programming-in-java-january-iap-2010/lecture-notes/">Introduction to Programming in Java &dash; from MIT</a>
    Watch <a target="_blank" href="https://www.youtube.com/watch?v=ckYwv4_Qtmo">Java Memory Management</a>, video from Virtual Pair Programmers   
    <a target="_blank" href="http://www.greenteapress.com/thinkjava5/index.html">Think Java</a> is useful as reference
-   Use the android &amp; stackoverflow search in the header
+   Use the Android &amp; Stackoverflow search in the header
 }</code></pre>
             <p>
                The Introduction to Programming in Java is a good concise reference. See the lecture notes and complete the exercises. This is a minimum needed before attempting to code in any framework such as Android.
             </p>
          </details>
 
-         <p>See the side panel for Lecture notes and Lab exercises.  Complete the lab exercises and read the corresponding articles in the Reading and Lab test preparation.</p>
+
+         <details class="panel nav-section-end">
+            <summary>Lab Exercises</summary>
+            <ul class="list-style-type-none">
+               <li>
+                  <details>
+                     <summary>Activity, Intent, LifeCycle, State</summary>
+                     <ul class="external-link">
+                        <li>
+                           <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-hello-world/index.html?index=..%2F..%2Fandroid-training#0">Hello world</a>
+                        </li>
+                        <li>
+                           <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-layout-editor-part-a/#0">Your first interactive UI</a>
+                        </li>
+                        <li>
+                           <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-layout-editor-part-b/#0">The layout editor</a>
+                        </li>
+                        <li class="nav-section-end">
+                           <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-text-and-scrolling-views/#0">Text and scrolling views</a>
+                        </li>
+
+                        <li>
+                           <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-create-an-activity/#0">Activities and intents</a>
+                        </li>
+                        <li class="nav-section-end">
+                           <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-activity-lifecycle-and-state/#0">Activity lifecycle and state</a>
+                        </li>
+                     </ul>
+                  </details>
+               </li>
+
+               <li>
+                  <details>
+                     <summary>Todo App</summary>
+                     <ul>
+                        <li data-article="todo-first">First todo app</li>
+                        <li data-article="todo-detail">Todo detail app</li>
+                     </ul>
+                  </details>
+               </li>
+
+               <li>
+                  <details>
+                     <summary>Navigation</summary>
+                     <ul>        
+                        <li>
+                           <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-clickable-images/index.html?index=..%2F..android-training#0">Clickable images</a>
+                        </li>
+                        <li>
+                           <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-provide-user-navigation/#0">User navigation</a>
+                        </li>
+                        <li class="nav-section-end">
+                           <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-create-recycler-view/#0">RecyclerView</a>
+                        </li>
+                     </ul>
+                  </details>
+               </li>
+
+               <li>
+                  <details>
+                     <summary>Fragments</summary>
+                     <ul>
+                        <li>
+                           <a target="_blank" class="nav-indent" href="https://codelabs.developers.google.com/codelabs/advanced-android-training-fragments/index.html?index=..%2F..index#0">Fragments</a>
+                        </li>
+                     </ul>
+                  </details>
+               </li>
+               <li>
+                  <details>
+                     <summary>Todo App &mdash; revisited</summary>
+                     <ul>
+                        <li data-article="todo-fragment">Todo Fragment App</li>
+                        <li data-article="todo-component">Todo Component App</li>
+                        <li class="nav-section-end" data-article="todo-sqlite-persistence">Todo Persistence App</li>
+                        <li data-article="todo-mvvm">Todo MVVM App</li>
+                     </ul>
+                  </details>
+               </li>
+
+               <!--li class="nav-section-end">
+                  <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-activity-with-implicit-intent/#0">Implicit intents</a>
+               </li-->
+               <li>
+                  <details>
+                     <summary>Android Developer</summary>
+                     <ul>
+                        <li>
+                           <a target="_blank" href="https://github.com/android/architecture-samples/tree/dev-todo-mvvm-live/todoapp/app/src/main/java/com/example/android/architecture/blueprints/todoapp">Google blueprint Todo App</a>
+                        </li>
+                        <li>
+                           <a target="_blank" href="https://codelabs.developers.google.com/android-training/">Fundamentals Course</a>
+                        </li>
+                     </ul>
+
+                  </details>
+               </li>
+
+            </ul>
+         </details>
+
+         <details class="panel nav-section-end">
+            <summary>Lecture Notes</summary>
+            <ul>
+               <li data-article="java-review-slide">Java Review</li>
+               <li data-article="android-platform-slide">Android Platform</li>
+               <li data-article="activity-intent-slide">Activity &amp; Intent</li>
+               <li data-article="events-listeners-slide">Events &amp; Listeners</li>
+               <li data-article="fragments-slide" class="nav-section-end">Fragments</li>
+               <li data-article="architecture-slide">Architecture</li>
+            </ul>
+         </details>
+
+
          <details class="panel">
             <summary>
                Reading &amp; Lab test preparation
             </summary>
-            <h3>Books</h3>
+            <h3>Book</h3>
             <ul>
                <li>
                   Android Programming, The Big Nerd Ranch Guide, Bill Phillips et. al.
                </li>
             </ul>
             <h3>Articles (Android Developer)</h3>
-            <ul>
+            <ul class="external-link">
                <li>
                   <a target="_blank" href="https://developer.android.com/guide/components/fundamentals/">Android application fundamentals</a>
                </li>
@@ -2562,16 +2676,16 @@ if (true) {
             <details class="panel">
                <summary>Overview</summary>
 
-               <h2>MVC pattern, Activity class, XML Layouts and View objects</h2>
+               <h2>Activity class, XML Layouts and View objects</h2>
 
                <p>
-                  <code class="prettyprint">Model</code> objects, the M in MVC, implement the application logic and the data the logic is applied to. The <code class="prettyprint">Todo</code> app should implement the logic for creating and updating todo lists. For simplicity, in this implementation the data is a simple <code class="prettyprint">static-array</code> defined as a resource; in later exercises, the model logic and data is abstracted into its own model classes.
+                  For simplicity, in this TODO app implementation the data is a simple <code class="prettyprint">static-array</code> defined as a resource; in later exercises, the model logic and data is abstracted into its own model classes.
                </p>
                <p>
-                  Android <code class="prettyprint">View</code> objects, the V in MVC, know how to draw themselves on the screen and respond to user input. The layout and the View objects hierarchy are defined in XML and are inflated into <code class="prettyprint">View</code> objects as part of a controller class initialisation.
+                  Android <code class="prettyprint">View</code> objects, implement methods to draw themselves on the screen and provide for Events to handle user input. The layout and the View objects hierarchy are defined in XML and are inflated into <code class="prettyprint">View</code> objects as part of a <code class="prettyprint">Activity</code> class initialisation.
                </p>
                <p>
-                  Controller objects, the C in MVC, (typically, <code class="prettyprint">Activity</code> classes in Android), connect the view and the model objects together by responding to events triggered by View objects and manage the flow of data between the model and the view. A <code class="prettyprint">click</code> on a <code class="prettyprint">Button</code> View object is a common example of an event handled by a controller class.
+                  <code class="prettyprint">Activity</code> classes in Android, connect the view and the model objects together by responding to events triggered by View objects and manage the flow of data between the model and the view. A <code class="prettyprint">click</code> on a <code class="prettyprint">Button</code> View object is a common example of an event handled by a <code class="prettyprint">Activity</code> class.
                </p>
                <p>
                   Android framework lends itself to the MVC architecture and it follows naturally particularly with the view objects and layout being abstracted and separately defined in XML and the <code class="prettyprint">Activity</code> classes controlling the User Interaction(UI) on the view objects. The separation of the Model and the Controller has to follow good programming practice. A controller as its name suggest should only have control logic and delegate all else to model classes.
@@ -2592,7 +2706,8 @@ Company Domain: <code class="prettyprint">example.com</code>
 <kbd>Next</kbd>
 
 select the option, <strong>Phone and Tablet</strong>
-and from the drop-down list, select: <strong>API 27: Android 8.1 (Oreo)</strong>
+For Language select: <strong>Java</strong>
+and for Minimum SDK, select: <strong>API 30: Android 11.0 (R)</strong>
 <kbd>Next</kbd>
 
 <strong>Select Empty Activity</strong>
@@ -2606,12 +2721,21 @@ change the Activity Name to <code class="prettyprint">TodoActivity</code>, keep 
 <kbd>Run &gt; Run App</kbd>
 
 Setup or use an existing virtual device, 
-choose <strong>Nexus 5X API 27 targeted for Android 8.1 (Google Play)</strong>
+choose <strong>Pixel XL API 30 targeted for Android 11.0 (Google Play)</strong>
 
-(installing the virtual device may take some time.)  
+(installing the virtual device may take some time.)
 Once Android is running, the default 'Hello World!' message is displayed.
 </pre>
-
+               <details>
+                  <summary>Bug Alert! Emulator breaks on rotation</summary>
+                  <p>Jan/20 &mdash; Android Studio 4.1.1 has an issue with emulators.  The display is messed up on rotation.  A fix for now:</p>
+                  <ol>
+                     <li>Select AVD Manager from the top level Tools menu</li>
+                     <li>Right-mouse click on the device and click Show on Disk</li>
+                     <li>Edit the config.ini file and change hw.gpu.mode = software</li>
+                     <li>Restart the emulator</li>
+                  </ol>
+               </details>
             </details>
 
             <details class="panel">
@@ -4618,14 +4742,15 @@ git log </code></pre>
          <h2>Android Platform</h2>
          <ul>
             <li>
+               Where is the <code class="prettyprint">main</code> thread? 
+            </li>
+            <li>
                <code class="prettyprint">ActivityManager</code> in the OS is in charge, not You!
             </li>
             <li>
                <code class="prettyprint">Activity</code> class is the entry point for UI
             </li>
-            <li>
-               Where is the <code class="prettyprint">main</code> thread? and is it MVC?
-            </li>
+
             <li class="list-style-none">
 
                <details>

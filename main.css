@@ -368,7 +368,7 @@ pre,
    min-height: 842px;
 }
 
-.external-link ul {
+.list-style-type-none, .external-link {
    list-style-type: none;
 }
 
