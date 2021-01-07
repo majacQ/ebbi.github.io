@@ -2487,7 +2487,25 @@ if (true) {
                The Introduction to Programming in Java is a good concise reference. See the lecture notes and complete the exercises. This is a minimum needed before attempting to code in any framework such as Android.
             </p>
          </details>
-
+         
+         <details class="panel">
+            <summary>Install Android Studio Development Environment</summary>
+            <details class="panel">
+               <summary>Bug Alert! (Jan/2020) Emulator breaks on rotation fix!</summary>
+               <p>Jan/20 &mdash; Android Studio 4.1.1 has an issue with emulators.  The display is messed up on rotation.  A fix for now:</p>
+               <ol>
+                  <li>Select AVD Manager from the top level Tools menu</li>
+                  <li>Right-mouse click on the device and click Show on Disk</li>
+                  <li>Edit the config.ini file and change hw.gpu.mode = software</li>
+                  <li>Restart the emulator</li>
+               </ol>
+            </details>
+             <ul class="external-link">
+               <li>
+                  <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-hello-world/index.html?index=..%2F..%2Fandroid-training#0">Hello world</a>
+               </li>
+            </ul>
+         </details>
 
          <details class="panel nav-section-end">
             <summary>Lab Exercises</summary>
@@ -2496,9 +2514,6 @@ if (true) {
                   <details open>
                      <summary>Manifest, View, Activity, Intent, LifeCycle, State</summary>
                      <ul class="external-link">
-                        <li>
-                           <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-hello-world/index.html?index=..%2F..%2Fandroid-training#0">Hello world</a>
-                        </li>
                         <li>
                            <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-layout-editor-part-a/#0">Your first interactive UI</a>
                         </li>
