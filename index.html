@@ -2490,9 +2490,27 @@ if (true) {
          
          <details class="panel">
             <summary>Install Android Studio Development Environment</summary>
+
+
+            <ul class="external-link">
+               <li>
+                  <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-hello-world/index.html?index=..%2F..%2Fandroid-training#0">Install Android Studio and related Tasks</a>
+               </li>
+            </ul>
+            <p>During the installation, Select:</p>
+            <ul>
+               <li>SDK platform: Android 11.0 (R)</li>
+               <li>Virtual Device: Pixcel 4 API 30</li>
+            </ul>
+            <p>Test the installation with a Hello World App.  For:</p>
+            <ul>
+               <li>Task 2: select Java and an Empty Activity for the Project Template</li>
+               <li>Task 3 and 4: for slower computers, instead of virtual device try connecting a physical phone</li>
+            </ul>
+                        
             <details class="panel">
-               <summary>Bug Alert! (Jan/2020) Emulator breaks on rotation fix!</summary>
-               <p>Jan/20 &mdash; Android Studio 4.1.1 has an issue with emulators.  The display is messed up on rotation.  A fix for now:</p>
+               <summary>Bug Alert! (Jan/2020) Emulators do break on some platforms</summary>
+               <p>Jan/20 &mdash; Android Studio 4.1.1 has issues with emulators on some platforms.  For example, the display is messed up on rotation.  A possible fix:</p>
                <ol>
                   <li>Select AVD Manager from the top level Tools menu</li>
                   <li>Right-mouse click on the device and click Show on Disk</li>
@@ -2500,15 +2518,14 @@ if (true) {
                   <li>Restart the emulator</li>
                </ol>
             </details>
-             <ul class="external-link">
-               <li>
-                  <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-hello-world/index.html?index=..%2F..%2Fandroid-training#0">Hello world</a>
-               </li>
-            </ul>
+            
          </details>
 
          <details class="panel nav-section-end">
             <summary>Lab Exercises</summary>
+            <ul>
+               <li>For all exercises, select <strong>Java</strong> and use <strong>API 30: Android 11.0 (R) for Minimum SDK</strong></li>
+            </ul>
             <ul class="list-style-type-none">
                <li>
                   <details open>
@@ -2516,6 +2533,7 @@ if (true) {
                      <ul class="external-link">
                         <li>
                            <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-layout-editor-part-a/#0">Your first interactive UI</a>
+                           <br /> (fine for a prototype, but not the best practice for adding a click event! see lecture notes.)
                         </li>
                         <li>
                            <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-layout-editor-part-b/#0">The layout editor</a>
