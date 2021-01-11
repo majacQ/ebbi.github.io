@@ -2501,7 +2501,7 @@ if (true) {
                <li>SDK platform: Android 11.0 (R)</li>
                <li>Virtual Device: Pixcel 4 API 30</li>
             </ul>
-            <p>Test the installation with a <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-hello-world/index.html?index=..%2F..%2Fandroid-training#0">Hello World App and related tasks</a> For:</p>
+            <p>Test the installation with a <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-hello-world/index.html?index=..%2F..%2Fandroid-training#0">Hello World App and related tasks</a>. For:</p>
             <ul>
                <li>Task 2: select Java and an Empty Activity for the Project Template</li>
                <li>Task 3 and 4: for slower computers, instead of virtual device try connecting a physical phone</li>
@@ -2509,7 +2509,8 @@ if (true) {
                         
             <details class="panel">
                <summary>Bug Alert! (Jan/2020) Emulators do break on some platforms</summary>
-               <p>Jan/20 &mdash; Android Studio 4.1.1 has issues with emulators on some platforms.  For example, the display is messed up on rotation.  A possible fix:</p>
+               <p>Jan/21 &mdash; Android Studio 4.1.1 has issues with emulators on some platforms.  Generally, these are resolved by lower level graphics card settings or other configuration.  A good start is to search for the error message online.</p>
+               <p>Other errors could be resolved with settings within Android.  A recent example, the display is messed up on rotation.  A possible fix:</p>
                <ol>
                   <li>Select AVD Manager from the top level Tools menu</li>
                   <li>Right-mouse click on the device and click Show on Disk</li>
@@ -2532,20 +2533,27 @@ if (true) {
                      <ul class="external-link">
                         <li>
                            <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-layout-editor-part-a/#0">Your first interactive UI</a>
-                           <br /> (fine for a prototype, but not the best practice for adding a click event! see lecture notes.)
+                           &mdash; (fine for a prototype, but not the best practice for adding a click event! see lecture notes.)
                         </li>
                         <li>
                            <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-layout-editor-part-b/#0">The layout editor</a>
                         </li>
-                        <li class="nav-section-end">
+                        <li>
                            <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-text-and-scrolling-views/#0">Text and scrolling views</a>
                         </li>
 
                         <li>
                            <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-create-an-activity/#0">Activities and intents</a>
+                           &mdash; (fine for a prototype, but not the best practice for adding a click event! see lecture notes.)
+                           <ul class="list-style-type-none">
+                              <li> Read the <a target="_blank" href="https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-1-c-activities-and-intents/2-1-c-activities-and-intents.html">Activities and intents concepts</a></li>
+                           </ul>
                         </li>
                         <li class="nav-section-end">
                            <a target="_blank" href="https://codelabs.developers.google.com/codelabs/android-training-activity-lifecycle-and-state/#0">Activity lifecycle and state</a>
+                           <ul class="list-style-type-none">
+                              <li> Read the <a target="_blank" href="https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/unit-1-get-started/lesson-2-activities-and-intents/2-2-c-activity-lifecycle-and-state/2-2-c-activity-lifecycle-and-state.html">Activity lifecycle and state concepts</a></li>
+                           </ul>
                         </li>
                      </ul>
                   </details>
@@ -4883,12 +4891,13 @@ and a file strings.xml in the res folder defines:
                   How many steps are there in the <code class="prettyprint">Hello World</code> walk-through?
                </li>
                <li>
-                  What is <code class="prettyprint">@override</code> and <code class="prettyprint">callback</code> function?
+                  Where is the main thread defined?
                </li>
                <li>
-                  How is the <code class="prettyprint">Activity</code> <em>life cycle</em> related to <code class="prettyprint">callback</code> functions? Explain with <em>rotation</em> event as an example.</li>
+                  How are views defined?
+               </li>
                <li>
-                  Is the MVC architectural design pattern useful for Android app development?
+                  What is <code class="prettyprint">@override</code> and <code class="prettyprint">callback</code> function?
                </li>
             </ol>
 
